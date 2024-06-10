@@ -1,31 +1,31 @@
 :root {
-  /* Color palette */
-  --color-primary: "#02CF5F";
-  --color-secondary: "#5DFDA4";
-  --color-tertiary: "#111a28";
-  --color-quaternary: "#1D2939";
-  --color-quinary: "#535b6b";
+  /* color palette */
+  --color-primary: #02cf5f;
+  --color-secondary: #5dfda4;
+  --color-tertiary: #111a28;
+  --color-quaternary: #1d2939;
+  --color-quinary: #535b6b;
+  --color-white: #ffffff;
 
   /* font sizes */
   --font-size-small: clamp(1.1rem, 4vw, 1.2rem);
   --font-size-medium: clamp(1.2rem, 4vw, 1.4rem);
   --font-size-large: clamp(1.4rem, 4vw, 1.6rem);
   --font-size-extra-large: clamp(1.6rem, 4vw, 1.8rem);
+
+  /* responsive design */
+  --max-md: 768px;
+  --min-md: 769px;
 }
 
-html {
-  color-scheme: light dark;
+body {
+  background-color: var(--color-tertiary);
+  color: var(--color-white);
 }
 
-h1 {
-  font-size: var(--font-size-small);
-}
-h2 {
-  font-size: var(--font-size-medium);
-}
-h3 {
-  font-size: var(--font-size-large);
-}
-h4 {
-  font-size: var(--font-size-extra-large);
+html * {
+  box-sizing: border-box;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
