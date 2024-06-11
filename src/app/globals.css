@@ -1,7 +1,7 @@
 :root {
   /* color palette */
   --color-primary: #02cf5f;
-  --color-secondary: #5dfda4;
+  --color-secondary: #0f8142;
   --color-tertiary: #111a28;
   --color-quaternary: #1d2939;
   --color-quinary: #535b6b;
@@ -9,9 +9,9 @@
 
   /* font sizes */
   --font-size-small: clamp(1.1rem, 4vw, 1.2rem);
-  --font-size-medium: clamp(1.2rem, 4vw, 1.4rem);
+  --font-size-medium: clamp(1.3rem, 4.5vw, 1.5rem);
   --font-size-large: clamp(1.4rem, 4vw, 1.6rem);
-  --font-size-extra-large: clamp(1.6rem, 4vw, 1.8rem);
+  --font-size-extra-large: clamp(1.8rem, 6.5vw, 2.5rem);
 
   /* responsive design */
   --max-md: 768px;
@@ -28,4 +28,47 @@ html * {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+}
+
+main {
+  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+@media not all and (min-width: 768px) {
+  main {
+    max-width: 90%;
+  }
+}
+
+.primaryButton {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+  background-color: var(--color-secondary);
+}
+
+.secondaryButton {
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--color-white);
+  padding: 7px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  border: 2px solid var(--color-white);
 }

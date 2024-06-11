@@ -32,7 +32,13 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar} style={navbarStyle}>
       <a href="/">
-        <Image src={Logo} alt={"My logo"} width={60} height={60} />
+        <Image
+          priority={true}
+          src={Logo}
+          alt={"My logo"}
+          width={60}
+          height={60}
+        />
       </a>
 
       <div className={styles.menuToggle}>

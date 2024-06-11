@@ -1,10 +1,10 @@
+import SectionTitle from "@/components/UI/SectionTitle/SectionTitle"
+import Hero from "@/sections/Home/Hero/Hero"
+
 export default function Home() {
   return (
     <main>
-      <h1>Hello World!</h1>
-      <h2>Hello World!</h2>
-      <h3>Hello World!</h3>
-      <h4>Hello World!</h4>
+      <Hero />
     </main>
   )
 }
