@@ -6,9 +6,9 @@ import Link from "next/link"
 
 export default function Hero() {
   return (
-    <section className={styles.portfolio_heroSection}>
+    <section className={styles.home_heroSection}>
       <div>
-        <div className={styles.portfolio_heroSection__icons}>
+        <div className={styles.home_heroSection__icons}>
           {icons.map((_) =>
             _.social_media.map((icon) => (
               <a
@@ -26,7 +26,7 @@ export default function Hero() {
         <SectionTitle title="Sígueme" />
       </div>
 
-      <article className={styles.portfolio_heroSection__article}>
+      <article className={styles.home_heroSection__article}>
         <span>Hola usuario, soy...</span>
         <h1>Miguel Terán</h1>
         <div>

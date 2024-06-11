@@ -1,11 +1,12 @@
-.portfolio_heroSection {
+.home_heroSection {
   min-height: 85vh;
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 20px 0;
 }
 
-.portfolio_heroSection__icons {
+.home_heroSection__icons {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -27,29 +28,29 @@
   color: var(--color-primary);
 }
 
-.portfolio_heroSection__article {
+.home_heroSection__article {
   max-width: 320px;
 }
 
-.portfolio_heroSection__article > span {
+.home_heroSection__article > span {
   color: var(--color-primary);
   font-size: var(--font-size-small);
   margin-bottom: 20px;
 }
 
-.portfolio_heroSection__article > h1 {
+.home_heroSection__article > h1 {
   color: var(--color-white);
   font-size: var(--font-size-extra-large);
   text-transform: uppercase;
 }
 
-.portfolio_heroSection__article > div > h3 {
+.home_heroSection__article > div > h3 {
   color: var(--color-primary);
   font-size: var(--font-size-medium);
   margin-bottom: 10px;
 }
 
-.portfolio_heroSection__article > div > ul {
+.home_heroSection__article > div > ul {
   width: max-content;
   list-style: none;
   display: flex;
@@ -57,54 +58,54 @@
   gap: 8px;
 }
 
-.portfolio_heroSection__article > div > ul li:nth-child(2n - 2) {
+.home_heroSection__article > div > ul li:nth-child(2n - 2) {
   display: block;
   font-size: var(--font-size-small);
 }
 
-.portfolio_heroSection__article > div > div {
+.home_heroSection__article > div > div {
   display: flex;
   align-items: center;
   gap: 18px;
   margin-top: 20px;
 }
 
-@media not all and (min-width: 768px) {
-  .portfolio_heroSection__article {
+@media not all and (min-width: 1024px) {
+  .home_heroSection__article {
     text-align: center;
   }
 
-  .portfolio_heroSection {
+  .home_heroSection {
     min-height: 85vh;
     justify-content: center;
   }
 
-  .portfolio_heroSection > div {
+  .home_heroSection > div {
     display: flex;
     flex-direction: column-reverse;
     gap: 14px;
   }
 
-  .portfolio_heroSection:first-child {
+  .home_heroSection:first-child {
     flex-direction: column-reverse;
     margin: 0;
   }
 
-  .portfolio_heroSection__icons {
+  .home_heroSection__icons {
     flex-direction: row;
     margin-bottom: 14px;
   }
 
-  .portfolio_heroSection__article > div > ul {
+  .home_heroSection__article > div > ul {
     flex-direction: column;
     margin: 0 auto;
   }
 
-  .portfolio_heroSection__article > div > ul li:nth-child(2n - 1) {
+  .home_heroSection__article > div > ul li:nth-child(2n - 1) {
     display: none;
   }
 
-  .portfolio_heroSection__article > div > div {
+  .home_heroSection__article > div > div {
     justify-content: center;
     margin-bottom: 16px;
   }

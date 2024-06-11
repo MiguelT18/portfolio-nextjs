@@ -1,4 +1,3 @@
-import { UrlWithStringQuery, parse } from "url"
 // Images
 import AltavidaImage from "@/public/images/portfolio/altavida.jpg"
 import HotmartCourseImage from "@/public/images/portfolio/hotmart_course.jpg"

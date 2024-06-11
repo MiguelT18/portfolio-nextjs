@@ -1,13 +1,15 @@
 "use client"
 
-import Logo from "@/images/logo.png"
+import Link from "next/link"
 import Image from "next/image"
+import Logo from "@/images/logo.png"
 import styles from "./styles.module.css"
 import { useEffect, useState } from "react"
 
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPost] = useState(0)
   const [isNavbarHidden, setIsNavbarHidden] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +26,10 @@ export default function Navbar() {
     }
   }, [prevScrollPos])
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+  }
+
   const navbarStyle = {
     transform: `translateY(${isNavbarHidden ? "-120px" : "0px"})`,
     transition: "transform 0.3s ease-in-out",
@@ -31,7 +37,7 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar} style={navbarStyle}>
-      <a href="/">
+      <Link href="/">
         <Image
           priority={true}
           src={Logo}
@@ -39,30 +45,35 @@ export default function Navbar() {
           width={60}
           height={60}
         />
-      </a>
+      </Link>
 
       <div className={styles.menuToggle}>
-        <input id="toggle" type="checkbox" />
+        <input
+          id="toggle"
+          type="checkbox"
+          checked={isMobileMenuOpen}
+          onChange={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        />
         <span></span>
         <span></span>
         <span></span>
 
         <ul className={styles.menu__mobileItems}>
-          <li>
-            <a href="/">Inicio</a>
+          <li onClick={closeMobileMenu}>
+            <Link href="/">Inicio</Link>
           </li>
-          <li>
-            <a href="/portfolio">Portafolio</a>
+          <li onClick={closeMobileMenu}>
+            <Link href="/portfolio">Portafolio</Link>
           </li>
         </ul>
       </div>
 
       <ul className={styles.menu__deskItems}>
         <li>
-          <a href="/">Inicio</a>
+          <Link href="/">Inicio</Link>
         </li>
         <li>
-          <a href="/portfolio">Portafolio</a>
+          <Link href="/portfolio">Portafolio</Link>
         </li>
       </ul>
     </nav>
