@@ -31,6 +31,9 @@
       "@/lib/*": [
         "./src/lib/*"
       ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
       "@/public/*": [
         "./public/*"
       ],

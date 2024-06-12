@@ -93,3 +93,17 @@ main {
   outline: none;
   border: 2px solid var(--color-white);
 }
+
+.errorMessage {
+  display: block;
+  color: red;
+  font-size: var(--font-size-small);
+  margin: -15px 0 15px;
+}
+
+.successMessage {
+  display: block;
+  color: var(--color-primary);
+  font-size: var(--font-size-small);
+  margin: -15px 0 15px;
+}

@@ -18,7 +18,7 @@
 .contactForm textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   background-color: var(--color-tertiary);
   border: 2px solid var(--color-primary);
   border-radius: 5px;
