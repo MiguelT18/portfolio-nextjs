@@ -38,39 +38,44 @@ export const icons: SocialMediaIcon[] = [
 
 export const projects: Project[] = [
   {
-    name: "Alta Vida",
+    id: 1,
+    title: "Alta Vida",
     description:
       "Aplicación web desarrollada para una empresa que se dedica al desarrollo inmobiliario.",
     image: AltavidaImage,
-    reference: "https://altavidasrl.vercel.app/",
+    url: "https://altavidasrl.vercel.app/",
   },
   {
-    name: "Curso Programación",
+    id: 2,
+    title: "Curso Programación",
     description:
       "Landing page desarrollada para un proyecto personal dedicado a la venta de un curso digital de programación.",
     image: HotmartCourseImage,
-    reference: "https://hotmart-course.vercel.app/",
+    url: "https://hotmart-course.vercel.app/",
   },
   {
-    name: "Dr. Cristian Simons",
+    id: 3,
+    title: "Dr. Cristian Simons",
     description:
       "Aplicación web desarrollada para las consultas y la newsletter del Dr.Simons.",
     image: DrSimonsImage,
-    reference: "https://drsimons-app-miguelt18s-projects.vercel.app/",
+    url: "https://drsimons-app-miguelt18s-projects.vercel.app/",
   },
   {
-    name: "BIO Pharma",
+    id: 4,
+    title: "BIO Pharma",
     description:
       "Landing page desarrollada para una empresa que se dedica a la elaboración de productos naturales para la diabetes, rendimiento deportivo, intimidad, etc.",
     image: BiopharmaImage,
-    reference: "https://biopharma-landing.vercel.app/",
+    url: "https://biopharma-landing.vercel.app/",
   },
   {
-    name: "Néstor Árce",
+    id: 5,
+    title: "Néstor Árce",
     description:
       "Landing page desarrollada para un entrenador personal con experiencia en la nutrición y biomecánica de los ejercicios.",
     image: NestorImage,
-    reference: "https://nestorarce.vercel.app/",
+    url: "https://nestorarce.vercel.app/",
   },
 ]
 

@@ -1,0 +1,14 @@
+.portfolio__hero__section {
+  max-width: 90%;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 20px 0 6rem;
+}
+
+.portfolio__hero__projects {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}

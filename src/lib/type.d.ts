@@ -23,10 +23,11 @@ export interface FormData {
 }
 
 export interface Project {
-  name: string
+  id?: number
+  title: string
   description: string
   image: ImageMetadata
-  reference: string
+  url: string
 }
 
 interface Skill {

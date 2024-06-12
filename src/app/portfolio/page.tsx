@@ -1,3 +1,6 @@
+import ContactForm from "@/components/UI/ContactForm/ContactForm"
+import Footer from "@/components/UI/Footer/Footer"
+import Hero from "@/sections/Portfolio/Hero/Hero"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -6,8 +9,12 @@ export const metadata: Metadata = {
 
 export default function Portfolio() {
   return (
-    <div>
-      <h4>Mi Portafolio</h4>
-    </div>
+    <>
+      <main>
+        <Hero />
+        <ContactForm />
+      </main>
+      <Footer />
+    </>
   )
 }
