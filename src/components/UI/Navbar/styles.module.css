@@ -111,6 +111,7 @@
   padding: 16px 0;
   background-color: #0000007f;
   border-bottom: 2px solid var(--color-primary);
+  backdrop-filter: blur(8px);
 }
 
 .navbar > ul li a {

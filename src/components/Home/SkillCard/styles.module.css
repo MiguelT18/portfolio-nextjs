@@ -1,0 +1,11 @@
+.skillCard_container {
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: var(--color-quaternary);
+  font-size: var(--font-size-small);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

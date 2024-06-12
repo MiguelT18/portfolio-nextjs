@@ -1,0 +1,42 @@
+.home_sectionSkills {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 20px 0;
+}
+
+.home_skillsButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.home_skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media not all and (min-width: 1024px) {
+  .home_sectionSkills {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  .home_skillsContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .home_skillsButtons {
+    max-width: max-content;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  .home_skills {
+    justify-content: center;
+  }
+}

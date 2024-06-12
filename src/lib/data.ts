@@ -76,10 +76,11 @@ export const projects: Project[] = [
 
 export const skills: SkillsCategory[] = [
   {
+    id: 1,
     category: "Frontend",
     list_skill: [
-      { skill: "HTML", icon: "skill-icons:html" },
-      { skill: "CSS", icon: "skill-icons:css" },
+      { skill: "HTML", icon: "devicon:html5" },
+      { skill: "CSS", icon: "devicon:css3" },
       { skill: "JavaScript", icon: "logos:javascript" },
       { skill: "NextJS", icon: "logos:nextjs-icon" },
       { skill: "AstroJS", icon: "logos:astro-icon" },
@@ -88,6 +89,7 @@ export const skills: SkillsCategory[] = [
     ],
   },
   {
+    id: 2,
     category: "Backend",
     list_skill: [
       { skill: "Python", icon: "skill-icons:python-dark" },
@@ -100,6 +102,7 @@ export const skills: SkillsCategory[] = [
     ],
   },
   {
+    id: 3,
     category: "Herramientas",
     list_skill: [
       { skill: "Figma", icon: "skill-icons:figma-dark" },
@@ -107,6 +110,7 @@ export const skills: SkillsCategory[] = [
     ],
   },
   {
+    id: 4,
     category: "Other...",
     list_skill: [
       { skill: "Arduino", icon: "vscode-icons:file-type-arduino" },

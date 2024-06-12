@@ -28,11 +28,12 @@ html * {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  font-family: inherit;
 }
 
 main {
   width: 100%;
-  max-width: 65%;
+  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -43,7 +44,30 @@ main {
 }
 
 .primaryButton {
+  width: fit-content;
   background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.primaryButton:hover {
+  background-color: var(--color-secondary);
+}
+
+.primaryButton:active {
+  transform: scale(0.9);
+}
+
+.secondaryButton {
+  width: fit-content;
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
   color: var(--color-white);
   padding: 8px 18px;
   border-radius: 6px;
@@ -53,22 +77,19 @@ main {
   transition: all 0.3s ease;
 }
 
-.primaryButton:hover {
-  background-color: var(--color-secondary);
-}
-
-.secondaryButton {
-  border: 2px solid var(--color-primary);
-  background-color: transparent;
-  color: var(--color-white);
-  padding: 7px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: var(--font-size-small);
-  transition: all 0.3s ease;
-}
-
 .secondaryButton:hover {
+  border: 2px solid var(--color-white);
+}
+
+.secondaryButton:active {
+  transform: scale(0.9);
+}
+
+.secondaryButton:focus {
+  border: 2px solid var(--color-white);
+}
+
+.secondaryButton:focus-visible {
+  outline: none;
   border: 2px solid var(--color-white);
 }

@@ -35,6 +35,12 @@ interface Skill {
 }
 
 export interface SkillsCategory {
+  id: number
   category: string
   list_skill: Skill[]
+}
+
+export interface SkillCardProps {
+  name: string
+  icon: string
 }

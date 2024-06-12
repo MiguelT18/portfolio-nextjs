@@ -1,16 +1,16 @@
 .home_aboutSection {
   min-height: 40vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
-  padding: 18px 0;
+  padding: 20px 0;
 }
 
 .home_aboutSection > div {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  margin: 0 80px 0 0;
 }
 
 .home_aboutImage {
@@ -32,6 +32,7 @@
   .home_aboutSection > div {
     flex-direction: column-reverse;
     gap: 24px;
+    margin: 0 auto;
   }
   .home_aboutSection > p {
     margin: 18px 0 0;
