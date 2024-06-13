@@ -6,8 +6,13 @@ import { icons } from "@/lib/data"
 import Link from "next/link"
 import Typewriter from "typewriter-effect"
 import { Icon } from "@iconify/react/dist/iconify.js"
+import { useEffect } from "react"
 
 export default function Hero() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section className={styles.home_heroSection}>
       <div>
