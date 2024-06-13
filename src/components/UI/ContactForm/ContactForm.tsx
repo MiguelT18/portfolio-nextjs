@@ -1,6 +1,6 @@
 "use client"
 
-import { Icon } from "@iconify/react/dist/iconify.js"
+import { Icon } from "@iconify/react"
 import styles from "./styles.module.css"
 import SectionTitle from "../SectionTitle/SectionTitle"
 import { useForm } from "react-hook-form"
