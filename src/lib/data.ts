@@ -116,7 +116,7 @@ export const skills: SkillsCategory[] = [
   },
   {
     id: 4,
-    category: "Other...",
+    category: "Otros...",
     list_skill: [
       { skill: "Arduino", icon: "vscode-icons:file-type-arduino" },
       { skill: "C++", icon: "logos:c-plusplus" },

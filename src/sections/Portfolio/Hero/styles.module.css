@@ -1,8 +1,34 @@
 .portfolio__hero__section {
   max-width: 90%;
   margin: 0 auto;
-  min-height: 100vh;
   padding: 20px 0 6rem;
+}
+
+.portfolio__hero__section > div {
+  display: flex;
+  align-items: center;
+  min-height: 30vh;
+  max-width: 90%;
+}
+
+.portfolio__hero__formSearch {
+  width: 100%;
+}
+
+.portfolio__hero__formSearch > input {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--color-tertiary);
+  border: 2px solid var(--color-primary);
+  color: var(--color-white);
+  border-radius: 8px;
+  margin-top: 14px;
+  font-size: 16px;
+}
+
+.portfolio__hero__formSearch > input:focus {
+  outline: none;
+  border: 2px solid white;
 }
 
 .portfolio__hero__projects {
