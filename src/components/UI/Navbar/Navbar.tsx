@@ -70,7 +70,7 @@ export default function Navbar() {
             <Link href="/login">Iniciar Sesión</Link>
           </li>
           <li onClick={closeMobileMenu}>
-            <Link href="/register">Crear una cuenta</Link>
+            <Link href="/register">Crear cuenta</Link>
           </li>
         </ul>
       </div>
@@ -89,7 +89,7 @@ export default function Navbar() {
               <Link href="/login">Iniciar Sesión</Link>
             </li>
             <li>
-              <Link href="/register">Crear una cuenta</Link>
+              <Link href="/register">Crear cuenta</Link>
             </li>
           </ul>
         </div>
