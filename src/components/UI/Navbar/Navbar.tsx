@@ -5,6 +5,7 @@ import Image from "next/image"
 import Logo from "@/images/logo.png"
 import styles from "./styles.module.css"
 import { useEffect, useState } from "react"
+import { Icon } from "@iconify/react/dist/iconify.js"
 
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPost] = useState(0)
@@ -65,17 +66,43 @@ export default function Navbar() {
           <li onClick={closeMobileMenu}>
             <Link href="/portfolio">Portafolio</Link>
           </li>
+          <li onClick={closeMobileMenu}>
+            <Link href="/login">Iniciar Sesión</Link>
+          </li>
+          <li onClick={closeMobileMenu}>
+            <Link href="/register">Crear una cuenta</Link>
+          </li>
         </ul>
       </div>
 
-      <ul className={styles.menu__deskItems}>
-        <li>
-          <Link href="/">Inicio</Link>
-        </li>
-        <li>
-          <Link href="/portfolio">Portafolio</Link>
-        </li>
-      </ul>
+      <div className={styles.menu__desk}>
+        <div className={styles.menu__user}>
+          <Icon
+            className={styles.menu__userIcon}
+            icon="solar:user-circle-bold-duotone"
+            width="35"
+            height="35"
+          />
+
+          <ul className={styles.menu__userItems}>
+            <li>
+              <Link href="/login">Iniciar Sesión</Link>
+            </li>
+            <li>
+              <Link href="/register">Crear una cuenta</Link>
+            </li>
+          </ul>
+        </div>
+
+        <ul className={styles.menu__deskItems}>
+          <li>
+            <Link href="/">Inicio</Link>
+          </li>
+          <li>
+            <Link href="/portfolio">Portafolio</Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   )
 }

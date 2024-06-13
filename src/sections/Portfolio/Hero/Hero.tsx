@@ -5,7 +5,6 @@ import styles from "./styles.module.css"
 import { projects } from "@/lib/data"
 import SectionTitle from "@/components/UI/SectionTitle/SectionTitle"
 import { useForm } from "react-hook-form"
-import { useEffect } from "react"
 
 export default function Hero() {
   const { register, watch } = useForm()

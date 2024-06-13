@@ -1,8 +1,11 @@
+"use client"
+
 import SectionTitle from "@/components/UI/SectionTitle/SectionTitle"
 import styles from "./styles.module.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { icons } from "@/lib/data"
 import Link from "next/link"
+import Typewriter from "typewriter-effect"
+import { Icon } from "@iconify/react/dist/iconify.js"
 
 export default function Hero() {
   return (
@@ -11,14 +14,13 @@ export default function Hero() {
         <div className={styles.home_heroSection__icons}>
           {icons.map((_) =>
             _.social_media.map((icon) => (
-              <a
-                href={icon.url}
-                target="_blank"
-                rel="noopener"
-                key={icon.id}
-                className={styles.icon}
-              >
-                <FontAwesomeIcon icon={icon.icon} />
+              <a href={icon.url} target="_blank" rel="noopener" key={icon.id}>
+                <Icon
+                  icon={icon.icon}
+                  width="30"
+                  height="30"
+                  className={styles.icon}
+                />
               </a>
             ))
           )}
@@ -28,7 +30,24 @@ export default function Hero() {
 
       <article className={styles.home_heroSection__article}>
         <span>Hola usuario, soy...</span>
-        <h1>Miguel Terán</h1>
+        <Typewriter
+          options={{
+            cursorClassName: styles.typewriterCursor,
+            autoStart: true,
+            loop: true,
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString(
+                '<span class="' +
+                  styles.typewriterText +
+                  '">Miguel Terán</span>'
+              )
+              .pauseFor(2000)
+              .deleteAll()
+              .start()
+          }}
+        />
         <div>
           <h3>FullStack Developer</h3>
           <ul>

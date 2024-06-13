@@ -17,19 +17,19 @@ export const icons: SocialMediaIcon[] = [
       {
         id: 1,
         name: "github",
-        icon: faGithub,
+        icon: "line-md:github-loop",
         url: "https://github.com/MiguelT18",
       },
       {
         id: 2,
         name: "instagram",
-        icon: faInstagram,
+        icon: "line-md:instagram",
         url: "https://www.instagram.com/miguelterann01?igsh=MWZrN3Bqem54MXRvaQ==",
       },
       {
         id: 3,
         name: "tiktok",
-        icon: faTiktok,
+        icon: "line-md:tiktok",
         url: "https://www.tiktok.com/@miguel_terann?_t=8mcg76fX2lK&_r=1",
       },
     ],

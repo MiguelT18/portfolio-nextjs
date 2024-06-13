@@ -38,3 +38,19 @@
   flex-wrap: wrap;
   gap: 28px;
 }
+
+@media not all and (min-width: 1024px) {
+  .portfolio__hero__section > div {
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .portfolio__hero__formSearch > h2 {
+    text-align: center;
+    margin-top: 18px;
+    font-size: var(--font-size-small);
+  }
+  .portfolio__hero__formSearch > input {
+    margin-bottom: 28px;
+  }
+}

@@ -1,9 +1,7 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
-
 interface Icon {
   id: number
   name: string
-  icon: IconDefinition
+  icon: string
   url?: string
 }
 
