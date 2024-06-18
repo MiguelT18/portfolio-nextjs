@@ -1,12 +1,12 @@
-"use client"
+'use client'
 
-import { Icon } from "@iconify/react"
-import styles from "./styles.module.css"
-import SectionTitle from "../SectionTitle/SectionTitle"
-import { useForm } from "react-hook-form"
-import type { FormData } from "@/lib/type"
-import { useRef, useState } from "react"
-import useEmailJS from "@/hooks/useEmailJS"
+import { Icon } from '@iconify/react'
+import styles from './styles.module.css'
+import SectionTitle from '../SectionTitle/SectionTitle'
+import { useForm } from 'react-hook-form'
+import type { FormData } from '@/types/type'
+import { useRef, useState } from 'react'
+import useEmailJS from '@/hooks/useEmailJS'
 
 export default function ContactForm() {
   const [isMessageSent, setIsMessageSent] = useState(false)
@@ -14,7 +14,7 @@ export default function ContactForm() {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+    reset
   } = useForm<FormData>()
   const form = useRef<HTMLFormElement>(null)
   const { sendEmail } = useEmailJS()
@@ -28,13 +28,13 @@ export default function ContactForm() {
         setIsMessageSent(false)
       }, 3000)
     } catch (error: any) {
-      console.error("FAILED...", error)
+      console.error('FAILED...', error)
     }
   }
 
   return (
     <section className={styles.sectionContact}>
-      <SectionTitle title="Contáctame" />
+      <SectionTitle title='Contáctame' />
 
       <form
         ref={form}
@@ -47,61 +47,61 @@ export default function ContactForm() {
         </p>
 
         <input
-          {...register("user_name", {
-            required: { value: true, message: "Este campo es requerido." },
-            minLength: { value: 3, message: "Mínimo 3 caracteres." },
+          {...register('user_name', {
+            required: { value: true, message: 'Este campo es requerido.' },
+            minLength: { value: 3, message: 'Mínimo 3 caracteres.' }
           })}
-          type="text"
-          placeholder="Nombre Completo"
-          autoComplete="off"
+          type='text'
+          placeholder='Nombre Completo'
+          autoComplete='off'
         />
         {errors.user_name && (
-          <span className="errorMessage">{errors.user_name?.message}</span>
+          <span className='errorMessage'>{errors.user_name?.message}</span>
         )}
 
         <input
-          {...register("user_email", {
-            required: { value: true, message: "Este campo es requerido." },
+          {...register('user_email', {
+            required: { value: true, message: 'Este campo es requerido.' },
             pattern: {
               value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-              message: "Correo electrónico inválido.",
-            },
+              message: 'Correo electrónico inválido.'
+            }
           })}
-          type="user_email"
-          placeholder="Correo Electrónico"
-          autoComplete="off"
+          type='user_email'
+          placeholder='Correo Electrónico'
+          autoComplete='off'
         />
         {errors.user_email && (
-          <span className="errorMessage">{errors.user_email?.message}</span>
+          <span className='errorMessage'>{errors.user_email?.message}</span>
         )}
 
         <textarea
-          {...register("message", {
-            required: { value: true, message: "Este campo es requerido." },
-            minLength: { value: 10, message: "Mínimo 10 caracteres." },
+          {...register('message', {
+            required: { value: true, message: 'Este campo es requerido.' },
+            minLength: { value: 10, message: 'Mínimo 10 caracteres.' }
           })}
-          placeholder="Escribe tu mensaje..."
+          placeholder='Escribe tu mensaje...'
           rows={3}
-          autoComplete="off"
+          autoComplete='off'
         />
         {errors.message && (
-          <span className="errorMessage">{errors.message?.message}</span>
+          <span className='errorMessage'>{errors.message?.message}</span>
         )}
         {isMessageSent && (
-          <span className="successMessage">
+          <span className='successMessage'>
             ¡El mensaje ha sido enviado correctamente!
           </span>
         )}
 
         <div className={styles.contactForm__buttonContainer}>
-          <button className="primaryButton" type="submit">
+          <button className='primaryButton' type='submit'>
             Enviar
           </button>
-          <a className="secondaryButton" href="https://wa.link/fknvmv">
+          <a className='secondaryButton' href='https://wa.link/fknvmv'>
             <span>WhatsApp</span>
             <Icon
-              className="w-fit rounded-full"
-              icon={"logos:whatsapp-icon"}
+              className='w-fit rounded-full'
+              icon={'logos:whatsapp-icon'}
               width={25}
               height={25}
             />

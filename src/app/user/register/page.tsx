@@ -3,7 +3,7 @@
 import styles from './styles.module.css'
 import { useForm } from 'react-hook-form'
 import Link from 'next/link'
-import { RegisterForm } from '@/types/type'
+import { RegisterUser } from '@/types/type'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
@@ -12,7 +12,7 @@ export default function Register() {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<RegisterForm>()
+  } = useForm<RegisterUser>()
 
   const router = useRouter()
 
@@ -168,7 +168,7 @@ export default function Register() {
           )}
 
           <button className='primaryButton fullWidth'>Registrarse</button>
-          <span className={styles.toLogin}>
+          <span className={styles.formFooter}>
             Ya tienes una cuenta? <Link href='/user/login'>Inicia sesión</Link>
           </span>
         </form>

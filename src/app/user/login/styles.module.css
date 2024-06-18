@@ -34,19 +34,19 @@
   gap: 24px;
 }
 
-.form span {
+.formFooter {
   display: block;
   font-size: var(--font-size-small);
   color: var(--color-white);
   margin-top: 16px;
 }
 
-.form span > a {
+.formFooter > a {
   color: var(--color-white);
   text-decoration: underline;
   margin-left: 6px;
   transition: all 0.2s ease;
 }
-.form span > a:hover {
+.formFooter > a:hover {
   color: var(--color-primary);
 }

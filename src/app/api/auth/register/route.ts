@@ -2,11 +2,11 @@ import { NextResponse } from 'next/server'
 import { NextRequest } from 'next/server'
 import bcrypt from 'bcrypt'
 import db from '@/lib/db'
-import { RegisterForm } from '@/types/type'
+import { RegisterUser } from '@/types/type'
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
   try {
-    const data: RegisterForm = await request.json()
+    const data: User = await request.json()
 
     const userFoundByEmail = await db.user.findUnique({
       where: { email: data.email }

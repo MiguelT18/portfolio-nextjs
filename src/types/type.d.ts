@@ -1,7 +1,4 @@
-/*
-  FRONTEND TYPES
-*/
-export interface RegisterForm {
+export interface RegisterUser {
   username: string
   email: string
   password: string
@@ -10,6 +7,14 @@ export interface RegisterForm {
   lastName: string
 }
 
+export interface Credentials {
+  email: string
+  password: string
+}
+export interface UserData {
+  email: string
+  username: string
+}
 interface Icon {
   id: number
   name: string
@@ -54,12 +59,4 @@ export interface SkillsCategory {
 export interface SkillCardProps {
   name: string
   icon: string
-}
-
-/*
-  BACKEND TYPES
-*/
-export interface UserData {
-  email: string
-  username: string
 }
