@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import { signIn } from 'next-auth/react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 export default function Login() {
@@ -18,6 +18,18 @@ export default function Login() {
   const router = useRouter()
 
   const [error, setError] = useState<string | null>(null)
+  const [success, setSuccess] = useState<string | null>(null)
+
+  useEffect(() => {
+    const registrationSuccess = localStorage.getItem('registrationSuccess')
+    if (registrationSuccess) {
+      setSuccess('Usuario registrado correctamente.')
+      localStorage.removeItem('registrationSuccess')
+      setTimeout(() => {
+        setSuccess(null)
+      }, 3000)
+    }
+  }, [])
 
   const onSubmit = handleSubmit(async (data) => {
     const res = await signIn('credentials', {
@@ -33,7 +45,6 @@ export default function Login() {
       }, 2000)
     } else {
       router.push('/')
-      router.refresh()
     }
   })
 
@@ -45,6 +56,9 @@ export default function Login() {
           <p>Llena el siguiente formulario para poder iniciar sesión.</p>
 
           {error && <span className='secondaryErrorMessage'>{error}</span>}
+          {success && (
+            <span className='secondarySuccessMessage'>{success}</span>
+          )}
 
           <input
             {...register('email', {

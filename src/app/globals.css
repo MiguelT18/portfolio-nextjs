@@ -121,6 +121,17 @@ main {
   margin-bottom: 15px;
 }
 
+.secondarySuccessMessage {
+  display: block;
+  width: 100%;
+  color: var(--color-white);
+  font-size: var(--font-size-small);
+  background-color: var(--color-secondary);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
 input,
 textarea {
   width: 100%;

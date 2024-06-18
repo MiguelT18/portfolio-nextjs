@@ -43,7 +43,7 @@ export default function Register() {
     if (!res.ok) {
       setError('Error desconocido')
     }
-
+    localStorage.setItem('registrationSuccess', 'true')
     router.push('/user/login')
   })
 
@@ -55,6 +55,7 @@ export default function Register() {
           <p>Llena el siguiente formulario para poder crear tu cuenta.</p>
 
           {error && <span className='secondaryErrorMessage'>{error}</span>}
+
           <div>
             <div>
               <input
