@@ -7,7 +7,8 @@ const authOptions = {
     CredentialsProvider({
       name: 'Credentials',
       credentials: {
-        email: { label: 'Email', type: 'text', placeholder: 'jsmith' },
+        username: { label: 'Username', type: 'text', placeholder: 'jsmith' },
+        email: { label: 'Email', type: 'text', placeholder: 'jsmith@test.xyz' },
         password: {
           label: 'Password',
           type: 'password',
@@ -15,11 +16,16 @@ const authOptions = {
         }
       },
       async authorize(credentials) {
-        const userFound = await db.user.findUnique({
+        const userFound = await db.user.findFirst({
           where: {
-            email: credentials?.email
+            OR: [
+              { email: credentials?.email },
+              { username: credentials?.username }
+            ]
           }
         })
+
+        console.log(userFound)
 
         if (!userFound) throw new Error('Usuario no encontrado')
 

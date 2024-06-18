@@ -48,7 +48,7 @@
   .portfolio__hero__formSearch > h2 {
     text-align: center;
     margin-top: 18px;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
   }
   .portfolio__hero__formSearch > input {
     margin-bottom: 28px;

@@ -152,7 +152,7 @@
   display: block;
   color: var(--color-white);
   text-decoration: none;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   padding: 8px;
   transition: all 0.2s ease;
 }
@@ -178,7 +178,7 @@
 
 .menu__desk > ul {
   list-style: none;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   display: flex;
 }
 
@@ -196,7 +196,7 @@
 }
 
 .menu__desk > ul li a::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -5px;

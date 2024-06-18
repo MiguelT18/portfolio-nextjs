@@ -2,11 +2,10 @@ import { NextResponse } from 'next/server'
 import { NextRequest } from 'next/server'
 import bcrypt from 'bcrypt'
 import db from '@/lib/db'
-import { RegisterUser } from '@/types/type'
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
   try {
-    const data: User = await request.json()
+    const data = await request.json()
 
     const userFoundByEmail = await db.user.findUnique({
       where: { email: data.email }
@@ -43,6 +42,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     })
 
     const { password: _, ...user } = newUser
+
+    console.log(user)
 
     return NextResponse.json(user)
   } catch (error) {

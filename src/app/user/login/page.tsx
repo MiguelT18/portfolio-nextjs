@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form'
 import { signIn } from 'next-auth/react'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { Icon } from '@iconify/react/dist/iconify.js'
 
 export default function Login() {
   const {
@@ -19,6 +20,7 @@ export default function Login() {
 
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState<string | null>(null)
+  const [passwordHidden, setPasswordHidden] = useState(true)
 
   useEffect(() => {
     const registrationSuccess = localStorage.getItem('registrationSuccess')
@@ -33,20 +35,28 @@ export default function Login() {
 
   const onSubmit = handleSubmit(async (data) => {
     const res = await signIn('credentials', {
-      email: data.email,
+      username: data.username,
       password: data.password,
       redirect: false
     })
 
+    console.log(res)
+
     if (res?.error) {
-      setError('Ha ocurrido un error')
+      console.log(res.error)
+
+      setError('No se encontró el usuario.')
       setTimeout(() => {
         setError(null)
-      }, 2000)
+      }, 3000)
     } else {
       router.push('/')
     }
   })
+
+  const handleShowPassword = () => {
+    setPasswordHidden(!passwordHidden)
+  }
 
   return (
     <main>
@@ -60,32 +70,80 @@ export default function Login() {
             <span className='secondarySuccessMessage'>{success}</span>
           )}
 
-          <input
-            {...register('email', {
-              required: { value: true, message: 'Tu correo es requerido' }
-            })}
-            type='email'
-            placeholder='Correo electrónico'
-          />
-          {errors.email && (
-            <span className='errorMessage'>{errors.email?.message}</span>
-          )}
+          <div className={styles.inputFields}>
+            <div>
+              <input
+                autoComplete='off'
+                {...register('username', {
+                  required: {
+                    value: true,
+                    message: 'Tu nombre de usuario o correo es requerido'
+                  },
+                  pattern: {
+                    value:
+                      /^(?:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}|[a-zA-Z0-9](?:[a-zA-Z0-9._]*[a-zA-Z0-9])?)$/,
+                    message: 'Ingresa un correo o nombre de usuario válido'
+                  }
+                })}
+                type='text'
+                placeholder='Nombre de usuario o correo'
+              />
+              {errors.username && (
+                <span className='errorMessage'>{errors.username?.message}</span>
+              )}
+            </div>
 
-          <input
-            {...register('password', {
-              required: { value: true, message: 'Tu contraseña es requerida' }
-            })}
-            type='password'
-            placeholder='Contraseña'
-          />
-          {errors.password && (
-            <span className='errorMessage'>{errors.password?.message}</span>
-          )}
+            <div>
+              <div className={styles.passwordInputContainer}>
+                <input
+                  autoComplete='off'
+                  {...register('password', {
+                    required: {
+                      value: true,
+                      message: 'Tu contraseña es requerida'
+                    }
+                  })}
+                  type={`${passwordHidden ? 'password' : 'text'}`}
+                  placeholder='Contraseña'
+                />
+                {passwordHidden && (
+                  <Icon
+                    onClick={handleShowPassword}
+                    className={styles.passwordIcon}
+                    icon='ph:eye-slash-duotone'
+                    width={34}
+                    height={34}
+                  />
+                )}
+                {!passwordHidden && (
+                  <Icon
+                    onClick={handleShowPassword}
+                    className={styles.passwordIconVisible}
+                    icon='lets-icons:eye-duotone'
+                    width={34}
+                    height={34}
+                  />
+                )}
+              </div>
+              {errors.password && (
+                <span className='errorMessage'>{errors.password?.message}</span>
+              )}
+            </div>
+          </div>
 
           <button className='primaryButton fullWidth'>Iniciar Sesión</button>
-          <span className={styles.formFooter}>
-            No tienes una cuenta? <Link href='/user/register'>Regístrate</Link>
-          </span>
+          <div className={styles.formFooterContainer}>
+            <span className={styles.formFooter}>
+              No tienes una cuenta?{' '}
+              <Link href='/user/register'>Regístrate</Link>
+            </span>
+            <span
+              className={styles.forgotPassword}
+              onClick={() => alert('Ni modo xD')}
+            >
+              Olvidaste tu contraseña?
+            </span>
+          </div>
         </form>
       </div>
     </main>

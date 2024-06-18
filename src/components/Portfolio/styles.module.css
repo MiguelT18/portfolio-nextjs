@@ -30,7 +30,7 @@
 }
 
 .portfolio__hero__projectCard div > h3 {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
   font-weight: 600;
   margin: 0;
@@ -38,7 +38,7 @@
 }
 
 .portfolio__hero__projectCard div > p {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   color: #e9e9e9;
   font-weight: 300;
   margin: 0 0 8px;

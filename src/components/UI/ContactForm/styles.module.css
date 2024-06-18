@@ -10,7 +10,7 @@
 }
 
 .contactForm p {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   margin-bottom: 20px;
 }
 
@@ -23,7 +23,7 @@
   border: 2px solid var(--color-primary);
   border-radius: 5px;
   color: var(--color-text);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   resize: none;
 }
 

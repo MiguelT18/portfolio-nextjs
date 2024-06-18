@@ -35,19 +35,19 @@
 
 .home_heroSection__article > span {
   color: var(--color-primary);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   margin-bottom: 20px;
 }
 
 .home_heroSection__article > h1 {
   color: var(--color-white);
-  font-size: var(--font-size-extra-large);
+  font-size: var(--font-size-xl);
   text-transform: uppercase;
 }
 
 .home_heroSection__article > div > h3 {
   color: var(--color-primary);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-md);
   margin-bottom: 10px;
 }
 
@@ -61,7 +61,7 @@
 
 .home_heroSection__article > div > ul li:nth-child(2n - 2) {
   display: block;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
 }
 
 .home_heroSection__article > div > div {
@@ -72,13 +72,13 @@
 }
 
 .typewriterText {
-  font-size: var(--font-size-extra-large);
+  font-size: var(--font-size-xl);
   font-weight: bold;
 }
 
 .typewriterCursor {
   color: var(--color-primary);
-  font-size: var(--font-size-extra-large);
+  font-size: var(--font-size-xl);
   font-weight: bold;
   animation: blink 1s infinite;
 }

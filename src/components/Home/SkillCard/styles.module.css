@@ -3,7 +3,7 @@
   padding: 8px 16px;
   border-radius: 8px;
   background-color: var(--color-quaternary);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   font-weight: bold;
   display: flex;
   align-items: center;

@@ -6,11 +6,16 @@ import Logo from '@/images/logo.png'
 import styles from './styles.module.css'
 import { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
+// import { useSession } from 'next-auth/react'
 
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPost] = useState(0)
   const [isNavbarHidden, setIsNavbarHidden] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  // const { data: session, status } = useSession()
+
+  console.log(status)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,10 +72,10 @@ export default function Navbar() {
             <Link href='/portfolio'>Portafolio</Link>
           </li>
           <li onClick={closeMobileMenu}>
-            <Link href='/user/login'>Iniciar Sesión</Link>
+            <Link href='/user/register'>Crear cuenta</Link>
           </li>
           <li onClick={closeMobileMenu}>
-            <Link href='/user/register'>Crear cuenta</Link>
+            <Link href='/user/login'>Iniciar Sesión</Link>
           </li>
         </ul>
       </div>
