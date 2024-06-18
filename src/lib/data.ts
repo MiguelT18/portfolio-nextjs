@@ -99,7 +99,8 @@ export const skills: SkillsCategory[] = [
       { skill: 'Supabase', icon: 'skill-icons:supabase-dark' },
       { skill: 'Turso', icon: 'simple-icons:turso' },
       { skill: 'MySQL', icon: 'logos:mysql' },
-      { skill: 'Scikitlearn', icon: 'skill-icons:scikitlearn-light' }
+      { skill: 'Scikitlearn', icon: 'skill-icons:scikitlearn-light' },
+      { skill: 'Prisma', icon: 'simple-icons:prisma' }
     ]
   },
   {

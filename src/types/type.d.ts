@@ -1,17 +1,20 @@
+/*
+  FRONTEND TYPES
+*/
+export interface RegisterForm {
+  username: string
+  email: string
+  password: string
+  confirmPassword: string
+  name: string
+  lastName: string
+}
+
 interface Icon {
   id: number
   name: string
   icon: string
   url?: string
-}
-
-export interface RegisterForm {
-  name: string
-  lastName: string
-  username: string
-  email: string
-  password: string
-  confirmPassword: string
 }
 
 export interface SocialMediaIcon {
@@ -51,4 +54,12 @@ export interface SkillsCategory {
 export interface SkillCardProps {
   name: string
   icon: string
+}
+
+/*
+  BACKEND TYPES
+*/
+export interface UserData {
+  email: string
+  username: string
 }
