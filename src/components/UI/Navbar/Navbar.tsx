@@ -1,11 +1,11 @@
-"use client"
+'use client'
 
-import Link from "next/link"
-import Image from "next/image"
-import Logo from "@/images/logo.png"
-import styles from "./styles.module.css"
-import { useEffect, useState } from "react"
-import { Icon } from "@iconify/react/dist/iconify.js"
+import Link from 'next/link'
+import Image from 'next/image'
+import Logo from '@/images/logo.png'
+import styles from './styles.module.css'
+import { useEffect, useState } from 'react'
+import { Icon } from '@iconify/react/dist/iconify.js'
 
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPost] = useState(0)
@@ -20,10 +20,10 @@ export default function Navbar() {
       setPrevScrollPost(currentScrollPos)
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [prevScrollPos])
 
@@ -32,17 +32,17 @@ export default function Navbar() {
   }
 
   const navbarStyle = {
-    transform: `translateY(${isNavbarHidden ? "-120px" : "0px"})`,
-    transition: "transform 0.3s ease-in-out",
+    transform: `translateY(${isNavbarHidden ? '-120px' : '0px'})`,
+    transition: 'transform 0.3s ease-in-out'
   }
 
   return (
     <nav className={styles.navbar} style={navbarStyle}>
-      <Link href="/">
+      <Link href='/'>
         <Image
           priority={true}
           src={Logo}
-          alt={"My logo"}
+          alt={'My logo'}
           width={60}
           height={60}
         />
@@ -50,8 +50,8 @@ export default function Navbar() {
 
       <div className={styles.menuToggle}>
         <input
-          id="toggle"
-          type="checkbox"
+          id='toggle'
+          type='checkbox'
           checked={isMobileMenuOpen}
           onChange={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         />
@@ -61,16 +61,16 @@ export default function Navbar() {
 
         <ul className={styles.menu__mobileItems}>
           <li onClick={closeMobileMenu}>
-            <Link href="/">Inicio</Link>
+            <Link href='/'>Inicio</Link>
           </li>
           <li onClick={closeMobileMenu}>
-            <Link href="/portfolio">Portafolio</Link>
+            <Link href='/portfolio'>Portafolio</Link>
           </li>
           <li onClick={closeMobileMenu}>
-            <Link href="/login">Iniciar Sesión</Link>
+            <Link href='/user/login'>Iniciar Sesión</Link>
           </li>
           <li onClick={closeMobileMenu}>
-            <Link href="/register">Crear cuenta</Link>
+            <Link href='/user/register'>Crear cuenta</Link>
           </li>
         </ul>
       </div>
@@ -79,27 +79,27 @@ export default function Navbar() {
         <div className={styles.menu__user}>
           <Icon
             className={styles.menu__userIcon}
-            icon="solar:user-circle-bold-duotone"
-            width="35"
-            height="35"
+            icon='solar:user-circle-bold-duotone'
+            width='35'
+            height='35'
           />
 
           <ul className={styles.menu__userItems}>
             <li>
-              <Link href="/login">Iniciar Sesión</Link>
+              <Link href='/user/login'>Iniciar Sesión</Link>
             </li>
             <li>
-              <Link href="/register">Crear cuenta</Link>
+              <Link href='/user/register'>Crear cuenta</Link>
             </li>
           </ul>
         </div>
 
         <ul className={styles.menu__deskItems}>
           <li>
-            <Link href="/">Inicio</Link>
+            <Link href='/'>Inicio</Link>
           </li>
           <li>
-            <Link href="/portfolio">Portafolio</Link>
+            <Link href='/portfolio'>Portafolio</Link>
           </li>
         </ul>
       </div>

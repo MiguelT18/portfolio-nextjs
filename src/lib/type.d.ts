@@ -5,6 +5,15 @@ interface Icon {
   url?: string
 }
 
+export interface RegisterForm {
+  name: string
+  lastName: string
+  username: string
+  email: string
+  password: string
+  confirmPassword: string
+}
+
 export interface SocialMediaIcon {
   social_media: Icon[]
 }

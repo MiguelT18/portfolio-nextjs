@@ -56,4 +56,8 @@
   .contactForm p {
     text-align: center;
   }
+  .contactForm__buttonContainer {
+    justify-content: space-around;
+    flex-direction: row-reverse;
+  }
 }
