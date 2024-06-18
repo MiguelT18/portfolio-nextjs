@@ -1,8 +1,8 @@
-import React from "react"
-import styles from "./styles.module.css"
-import { Icon } from "@iconify/react"
+import React from 'react'
+import styles from './styles.module.css'
+import { Icon } from '@iconify/react'
 
-import { SkillCardProps } from "@/lib/type"
+import { SkillCardProps } from '@/types/type'
 
 export default function SkillCard({ name, icon }: SkillCardProps) {
   return (

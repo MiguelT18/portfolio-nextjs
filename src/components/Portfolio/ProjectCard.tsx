@@ -1,16 +1,16 @@
-import Image from "next/image"
-import styles from "./styles.module.css"
-import { Project } from "@/lib/type"
+import Image from 'next/image'
+import styles from './styles.module.css'
+import { Project } from '@/types/type'
 
 export default function ProjectCard({
   title,
   description,
   url,
-  image,
+  image
 }: Project) {
   return (
     <article className={styles.portfolio__hero__projectCard}>
-      <a href={url} target="_blank" rel="noopener noreferrer">
+      <a href={url} target='_blank' rel='noopener noreferrer'>
         <Image
           className={styles.portfolio__hero__projectImage}
           src={image}
@@ -23,10 +23,10 @@ export default function ProjectCard({
         <h3>{title}</h3>
         <p>{description}</p>
         <a
-          className="primaryButton"
+          className='primaryButton'
           href={url}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
         >
           Ver proyecto
         </a>
