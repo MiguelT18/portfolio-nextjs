@@ -6,26 +6,12 @@ const authOptions = {
   providers: [
     CredentialsProvider({
       name: 'Credentials',
-      credentials: {
-        username: { label: 'Username', type: 'text', placeholder: 'jsmith' },
-        email: { label: 'Email', type: 'text', placeholder: 'jsmith@test.xyz' },
-        password: {
-          label: 'Password',
-          type: 'password',
-          placeholder: '********'
-        }
-      },
       async authorize(credentials) {
         const userFound = await db.user.findFirst({
           where: {
-            OR: [
-              { email: credentials?.email },
-              { username: credentials?.username }
-            ]
+            username: credentials?.username
           }
         })
-
-        console.log(userFound)
 
         if (!userFound) throw new Error('Usuario no encontrado')
 
@@ -36,16 +22,38 @@ const authOptions = {
 
         if (!matchPassword) throw new Error('Contraseña incorrecta')
 
+        const { password, ...user } = userFound
+
         return {
-          id: userFound.id,
-          name: userFound.username,
-          email: userFound.email
+          ...user
         }
       }
     })
   ],
   pages: {
     signIn: '/user/login'
+  },
+  jwt: {
+    secret: process.env.NEXTAUTH_SECRET
+  },
+  session: {
+    jwt: true
+  },
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id
+        token.email = user.email
+        token.name = user.name
+      }
+      return token
+    },
+    async session({ session, token }) {
+      session.user.id = token.id
+      session.user.email = token.email
+      session.user.name = token.name
+      return session
+    }
   }
 }
 

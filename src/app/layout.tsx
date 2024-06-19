@@ -3,6 +3,7 @@ import { Roboto } from 'next/font/google'
 import Navbar from '@/components/UI/Navbar/Navbar'
 import './globals.css'
 import Footer from '@/components/UI/Footer/Footer'
+import SessionProviderWrapper from '@/SessionProviderWrapper'
 
 const inter = Roboto({
   weight: ['100', '300', '400', '700', '900'],
@@ -22,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <SessionProviderWrapper>
+          <Navbar />
+          {children}
+          <Footer />
+        </SessionProviderWrapper>
       </body>
     </html>
   )

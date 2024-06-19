@@ -40,17 +40,14 @@ export default function Login() {
       redirect: false
     })
 
-    console.log(res)
-
     if (res?.error) {
-      console.log(res.error)
-
-      setError('No se encontró el usuario.')
+      setError(res.error)
       setTimeout(() => {
         setError(null)
       }, 3000)
     } else {
       router.push('/')
+      router.refresh()
     }
   })
 

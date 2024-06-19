@@ -6,16 +6,14 @@ import Logo from '@/images/logo.png'
 import styles from './styles.module.css'
 import { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
-// import { useSession } from 'next-auth/react'
+import { useSession, signOut } from 'next-auth/react'
 
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPost] = useState(0)
   const [isNavbarHidden, setIsNavbarHidden] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  // const { data: session, status } = useSession()
-
-  console.log(status)
+  const { data: session, status } = useSession()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,12 +69,32 @@ export default function Navbar() {
           <li onClick={closeMobileMenu}>
             <Link href='/portfolio'>Portafolio</Link>
           </li>
-          <li onClick={closeMobileMenu}>
-            <Link href='/user/register'>Crear cuenta</Link>
-          </li>
-          <li onClick={closeMobileMenu}>
-            <Link href='/user/login'>Iniciar Sesión</Link>
-          </li>
+          {session ? (
+            <>
+              <li onClick={closeMobileMenu}>
+                <Link href={`/user/${session.user?.name}/account`}>
+                  Mi Perfil
+                </Link>
+              </li>
+              <li onClick={closeMobileMenu}>
+                <Link href={`/user/${session.user?.name}/settings`}>
+                  Configuración
+                </Link>
+              </li>
+              <li onClick={closeMobileMenu}>
+                <a onClick={() => signOut()}>Cerrar Sesión</a>
+              </li>
+            </>
+          ) : (
+            <>
+              <li onClick={closeMobileMenu}>
+                <Link href='/user/register'>Crear cuenta</Link>
+              </li>
+              <li onClick={closeMobileMenu}>
+                <Link href='/user/login'>Iniciar Sesión</Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
 
@@ -90,12 +108,32 @@ export default function Navbar() {
           />
 
           <ul className={styles.menu__userItems}>
-            <li>
-              <Link href='/user/login'>Iniciar Sesión</Link>
-            </li>
-            <li>
-              <Link href='/user/register'>Crear cuenta</Link>
-            </li>
+            {session ? (
+              <>
+                <li onClick={closeMobileMenu}>
+                  <Link href={`/user/${session.user?.name}/account`}>
+                    Mi Perfil
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`/user/${session.user?.name}/settings`}>
+                    Configuración
+                  </Link>
+                </li>
+                <li>
+                  <a onClick={() => signOut()}>Cerrar Sesión</a>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link href='/user/login'>Iniciar Sesión</Link>
+                </li>
+                <li>
+                  <Link href='/user/register'>Crear cuenta</Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
 

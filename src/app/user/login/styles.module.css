@@ -1,10 +1,9 @@
 .formContainer {
   width: 100%;
-  min-height: 75vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 42px;
 }
 .form {
   width: 100%;

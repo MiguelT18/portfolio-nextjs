@@ -38,6 +38,10 @@ main {
   margin: 0 auto;
 }
 
+a {
+  cursor: pointer;
+}
+
 @media not all and (min-width: 768px) {
   main {
     max-width: 90%;
