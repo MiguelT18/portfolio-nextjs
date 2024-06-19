@@ -31,7 +31,13 @@ export default function Navbar() {
   }, [prevScrollPos])
 
   const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false)
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'auto'
+    } else {
+      document.body.style.overflow = 'hidden'
+    }
   }
 
   const navbarStyle = {
@@ -56,6 +62,7 @@ export default function Navbar() {
           id='toggle'
           type='checkbox'
           checked={isMobileMenuOpen}
+          onClick={closeMobileMenu}
           onChange={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         />
         <span></span>
@@ -143,6 +150,9 @@ export default function Navbar() {
           </li>
           <li>
             <Link href='/portfolio'>Portafolio</Link>
+          </li>
+          <li>
+            <Link href='/courses'>Cursos</Link>
           </li>
         </ul>
       </div>

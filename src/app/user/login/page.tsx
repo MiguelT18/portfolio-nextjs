@@ -55,6 +55,10 @@ export default function Login() {
     setPasswordHidden(!passwordHidden)
   }
 
+  const handleSignInWithGoogle = () => {
+    signIn('google', { callbackUrl: '/' })
+  }
+
   return (
     <main>
       <div className={styles.formContainer}>
@@ -140,6 +144,31 @@ export default function Login() {
             >
               Olvidaste tu contraseña?
             </span>
+          </div>
+
+          <div className={styles.signInWith__spanContainer}>
+            <span></span>
+            <span>O incia con:</span>
+            <span></span>
+          </div>
+
+          <div className={styles.signInWith__buttonContainer}>
+            <button
+              type='button'
+              className='secondaryButton'
+              onClick={handleSignInWithGoogle}
+            >
+              Google
+              <Icon icon='logos:google-icon' width={24} height={24} />
+            </button>
+            <button
+              type='button'
+              className='secondaryButton'
+              onClick={handleSignInWithGoogle}
+            >
+              Github
+              <Icon icon='bytesize:github' width={24} height={24} />
+            </button>
           </div>
         </form>
       </div>

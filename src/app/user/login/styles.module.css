@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 32px 0;
 }
 .form {
   width: 100%;
@@ -29,7 +30,7 @@
   gap: 24px;
 }
 .formFooterContainer {
-  margin-top: 32px;
+  margin-top: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,4 +94,33 @@
   flex-direction: column;
   gap: 16px;
   margin-bottom: 24px;
+}
+.signInWith__spanContainer {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+.signInWith__spanContainer span {
+  display: block;
+}
+.signInWith__spanContainer span:nth-child(2n + 1) {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-white);
+}
+.signInWith__spanContainer span:nth-child(2) {
+  width: 100%;
+  text-align: center;
+  font-size: var(--font-size-sm);
+}
+.signInWith__buttonContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.signInWith__buttonContainer button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

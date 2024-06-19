@@ -10,12 +10,7 @@ export default function Settings() {
     <section className={styles.sectionContainer}>
       <div>
         <h1>User Settings</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-          delectus asperiores ipsam laborum porro soluta architecto repellendus
-          ullam, recusandae totam quo quidem, neque unde numquam nam officiis
-          provident dolores earum.
-        </p>
+        <p>Esta página está en construcción, vuelve más tarde</p>
       </div>
     </section>
   )
