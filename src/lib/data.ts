@@ -5,7 +5,7 @@ import DrSimonsImage from '@/public/images/portfolio/drsimons_webapp.jpg'
 import BiopharmaImage from '@/public/images/portfolio/biopharma.jpg'
 import NestorImage from '@/public/images/portfolio/nestor_arce.jpg'
 
-import type { SkillsCategory, Project, SocialMediaIcon } from '@/types.d.ts'
+import type { SkillsCategory, Project, SocialMediaIcon } from '@/types/type'
 
 export const icons: SocialMediaIcon[] = [
   {

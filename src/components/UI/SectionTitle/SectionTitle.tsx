@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles.module.css'
-import type { SectionTitleProps } from '@/types'
+import type { SectionTitleProps } from '@/types/type'
 
 export default function SectionTitle({ title }: SectionTitleProps) {
   return (
