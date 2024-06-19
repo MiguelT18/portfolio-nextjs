@@ -51,21 +51,17 @@ const authOptions = {
   },
   callbacks: {
     async jwt({ token, user }) {
-      console.log('JWT Callback - User:', user)
       if (user) {
         token.id = user.id
         token.email = user.email
         token.name = user.name
       }
-      console.log('JWT Callback - Token:', token)
       return token
     },
     async session({ session, token }) {
-      console.log('Session Callback - Token:', token)
       session.user.id = token.id
       session.user.email = token.email
       session.user.name = token.name
-      console.log('Session Callback - Session:', session)
       return session
     }
   }
