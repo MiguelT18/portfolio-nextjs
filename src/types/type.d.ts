@@ -1,3 +1,10 @@
+export interface SkeletonLoaderProps {
+  unique: string
+  width: number
+  height: number
+  radius: number
+}
+
 export interface RegisterUser {
   username: string
   email: string

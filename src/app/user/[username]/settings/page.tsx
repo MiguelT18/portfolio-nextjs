@@ -1,4 +1,4 @@
-import Settings from '@/sections/User/Settings/Settings'
+import Settings from '@/sections/Profile/Settings/Settings'
 
 export default function UserSettings() {
   return (

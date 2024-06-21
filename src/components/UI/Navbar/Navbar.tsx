@@ -7,6 +7,8 @@ import styles from './styles.module.css'
 import { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { useSession, signOut } from 'next-auth/react'
+import DefaultAvatar from '@/images/user/panda.png'
+import ContentLoader from 'react-content-loader'
 
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPost] = useState(0)
@@ -76,6 +78,9 @@ export default function Navbar() {
           <li onClick={closeMobileMenu}>
             <Link href='/portfolio'>Portafolio</Link>
           </li>
+          <li onClick={closeMobileMenu}>
+            <Link href='/portfolio'>Cursos</Link>
+          </li>
           {session ? (
             <>
               <li onClick={closeMobileMenu}>
@@ -107,12 +112,35 @@ export default function Navbar() {
 
       <div className={styles.menu__desk}>
         <div className={styles.menu__user}>
-          <Icon
-            className={styles.menu__userIcon}
-            icon='solar:user-circle-bold-duotone'
-            width='35'
-            height='35'
-          />
+          {status === 'loading' ? (
+            <ContentLoader
+              uniqueKey='user-avatar-loader'
+              speed={1}
+              width={30}
+              height={30}
+              viewBox='0 0 30 30'
+              backgroundColor='#1d2939'
+              foregroundColor='#535b6b'
+            >
+              <circle cx='15' cy='15' r='15' />
+            </ContentLoader>
+          ) : session ? (
+            <Image
+              className={styles.userAvatar}
+              src={session?.user?.image || DefaultAvatar}
+              alt='User profile picture'
+              width={30}
+              height={30}
+              priority={false}
+            />
+          ) : (
+            <Icon
+              className={styles.menu__userIcon}
+              icon='solar:user-circle-bold-duotone'
+              width='35'
+              height='35'
+            />
+          )}
 
           <ul className={styles.menu__userItems}>
             {session ? (

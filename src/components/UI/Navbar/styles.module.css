@@ -217,6 +217,10 @@
   width: 100%;
 }
 
+.userAvatar {
+  border-radius: 50%;
+}
+
 @media not all and (max-width: 768px) {
   .menuToggle {
     display: none;

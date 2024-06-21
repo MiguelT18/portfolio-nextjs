@@ -1,4 +1,4 @@
-import Account from '@/sections/User/Account/Account'
+import Account from '@/sections/Profile/AccountDetails/AccountDetails'
 import React from 'react'
 
 export default function UserAccount() {

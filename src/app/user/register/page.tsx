@@ -116,28 +116,6 @@ export default function Register() {
             <div>
               <input
                 autoComplete='off'
-                {...register('username', {
-                  required: {
-                    value: true,
-                    message: 'Tu nombre de usuario es requerido'
-                  },
-                  minLength: {
-                    value: 3,
-                    message:
-                      'Tu nombre de usuario debe tener al menos 3 caracteres'
-                  }
-                })}
-                type='text'
-                placeholder='Nombre de usuario'
-              />
-              {errors.username && (
-                <span className='errorMessage'>{errors.username?.message}</span>
-              )}
-            </div>
-
-            <div>
-              <input
-                autoComplete='off'
                 {...register('email', {
                   required: {
                     value: true,
@@ -153,6 +131,32 @@ export default function Register() {
               />
               {errors.email && (
                 <span className='errorMessage'>{errors.email?.message}</span>
+              )}
+            </div>
+
+            <div>
+              <input
+                autoComplete='off'
+                {...register('username', {
+                  required: {
+                    value: true,
+                    message: 'Tu nombre de usuario es requerido'
+                  },
+                  minLength: {
+                    value: 3,
+                    message:
+                      'Tu nombre de usuario debe tener al menos 3 caracteres'
+                  },
+                  pattern: {
+                    value: /^[a-zA-Z0-9_]+$/,
+                    message: 'Solo se permiten letras, números y guiones bajos'
+                  }
+                })}
+                type='text'
+                placeholder='Nombre de usuario'
+              />
+              {errors.username && (
+                <span className='errorMessage'>{errors.username?.message}</span>
               )}
             </div>
 
