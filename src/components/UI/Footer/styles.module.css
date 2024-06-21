@@ -8,4 +8,5 @@
   border-top: 2px solid var(--color-primary);
   background-color: #0000007f;
   font-size: var(--font-size-sm);
+  margin-top: 48px;
 }

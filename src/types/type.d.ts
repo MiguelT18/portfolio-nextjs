@@ -1,8 +1,29 @@
-export interface SkeletonLoaderProps {
-  unique: string
-  width: number
-  height: number
-  radius: number
+import { StaticImageData } from 'next/image'
+import { ReactNode } from 'react'
+
+interface Course {
+  id: number
+  title: string
+  description: string
+  image: StaticImageData
+  bg_color: string
+  url?: string
+}
+interface CourseCategory {
+  [key: string]: Course[] | undefined
+}
+export type CoursesData = CourseCategory[]
+export interface CourseCardProps {
+  title: string
+  description: string
+  image: StaticImageData
+  bgColor: Properties<string | number, string & {}>
+  url?: string
+  id?: number
+}
+export interface ChildrenProp {
+  children: ReactNode
+  path?: string
 }
 
 export interface RegisterUser {

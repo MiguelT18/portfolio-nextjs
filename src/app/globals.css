@@ -55,7 +55,7 @@ a {
 .primaryButton {
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 8px 18px;
+  padding: 8px 14px;
   border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
@@ -73,10 +73,13 @@ a {
 }
 
 .secondaryButton {
+  display: flex;
+  align-items: center;
+
   border: 2px solid var(--color-primary);
   background-color: transparent;
-  color: var(--color-white);
-  padding: 8px 18px;
+  color: var(--color-primary);
+  padding: 8px 14px;
   border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
@@ -86,6 +89,7 @@ a {
 
 .secondaryButton:hover {
   border: 2px solid var(--color-white);
+  color: var(--color-white);
 }
 
 .secondaryButton:active {
@@ -94,6 +98,7 @@ a {
 
 .secondaryButton:focus {
   border: 2px solid var(--color-white);
+  color: var(--color-white);
 }
 
 .secondaryButton:focus-visible {
@@ -155,4 +160,56 @@ input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--color-white);
+}
+
+.swiper {
+  overflow: hidden !important;
+}
+
+.swiper-pagination {
+  position: inherit !important;
+  margin-top: 24px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-primary) !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--color-secondary) !important;
+}
+
+.swiper-3d .swiper-slide-shadow {
+  background: none !important;
+}
+
+.swiper-button-next {
+  color: var(--color-primary) !important;
+}
+
+.swiper-button-disabled {
+  color: var(--color-secondary) !important;
+}
+
+.swiper-button-prev {
+  color: var(--color-primary) !important;
+}
+
+@media not all and (min-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+.webFoundamentals_text {
+  font-size: var(--font-size-sm);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+@media not all and (min-width: 768px) {
+  .webFoundamentals_text {
+    text-align: center;
+  }
 }

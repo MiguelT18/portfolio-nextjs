@@ -17,6 +17,7 @@ export default function ProjectCard({
           alt="inside project's view"
           width={300}
           height={200}
+          priority={false}
         />
       </a>
       <div>

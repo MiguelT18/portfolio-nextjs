@@ -95,6 +95,7 @@
 
 @media not all and (min-width: 1080px) {
   .userInfo {
+    max-width: 100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;

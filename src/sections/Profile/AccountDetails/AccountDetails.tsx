@@ -7,7 +7,7 @@ import DefaultAvatar from '@/images/user/panda.png'
 import ContentLoader from 'react-content-loader'
 import React, { useEffect, useRef, useState } from 'react'
 
-export default function Account() {
+export default function AccountDetails() {
   const { session, status } = useRequireAuth()
 
   const [editDescription, setEditDescription] = useState(false)
@@ -55,7 +55,7 @@ export default function Account() {
             uniqueKey='avatar-loader'
             speed={2}
             width={'100%'}
-            height={'auto'}
+            height={'100%'}
             viewBox='0 0 476 124'
             backgroundColor='#1d2939'
             foregroundColor='#535b6b'
@@ -78,7 +78,7 @@ export default function Account() {
               uniqueKey='account-loader'
               speed={1}
               width={'100%'}
-              height={'auto'}
+              height={'100%'}
               viewBox='0 0 476 124'
               backgroundColor='#1d2939'
               foregroundColor='#535b6b'

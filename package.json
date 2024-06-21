@@ -20,6 +20,7 @@
     "react-content-loader": "^7.0.2",
     "react-dom": "^18",
     "react-hook-form": "^7.51.5",
+    "swiper": "^11.1.4",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {

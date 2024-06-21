@@ -1,11 +1,215 @@
-// Images
+// Project - Images
 import AltavidaImage from '@/public/images/portfolio/altavida.jpg'
 import HotmartCourseImage from '@/public/images/portfolio/hotmart_course.jpg'
 import DrSimonsImage from '@/public/images/portfolio/drsimons_webapp.jpg'
 import BiopharmaImage from '@/public/images/portfolio/biopharma.jpg'
 import NestorImage from '@/public/images/portfolio/nestor_arce.jpg'
 
-import type { SkillsCategory, Project, SocialMediaIcon } from '@/types/type'
+// Básicos de la Web - Images
+import CodingImg from '@/icons/coding.png'
+import HtmlImg from '@/icons/html-5.png'
+import VscodeImg from '@/icons/vscode.png'
+import CssImg from '@/icons/css.png'
+import MarkdownImg from '@/icons/markdown.png'
+import GitImg from '@/icons/git.png'
+import LinuxImg from '@/icons/linux.png'
+// Diseño UX/UI - Frontend - Images
+import FigmaImg from '@/icons/figma.png'
+import ResponsiveImg from '@/icons/responsive.png'
+import TailwindImg from '@/icons/tailwindcss.png'
+// Desarrollo Frontend - Images
+import JavascriptImg from '@/icons/javascript.png'
+import ReactImg from '@/icons/react.png'
+import NextImg from '@/icons/nextjs.png'
+import AstroImg from '@/icons/astro.png'
+// Desarrollo Backend - Images
+import NodejsImg from '@/icons/nodejs.png'
+import PythonImg from '@/icons/python.png'
+
+import type {
+  SkillsCategory,
+  Project,
+  SocialMediaIcon,
+  CoursesData
+} from '@/types/type'
+
+export const courses: CoursesData = [
+  {
+    web_basics: [
+      {
+        id: 1,
+        title: 'Hablemos de programación',
+        description: 'Aprende los conceptos fundamentales de la programación',
+        bg_color: '#f62f53',
+        image: CodingImg
+      },
+      {
+        id: 2,
+        title: 'Fundamentos de HTML',
+        description:
+          'Aprende los conceptos fundamentales de HTML y crea tu primera página web',
+        bg_color: '#ff4401',
+        image: HtmlImg
+      },
+      {
+        id: 3,
+        title: 'Fundamentos de CSS',
+        description:
+          'Aprende cómo darle estilos básicos a tu página web utilizando CSS',
+        bg_color: '#0277bd',
+        image: CssImg
+      },
+      {
+        id: 4,
+        title: 'Visual Studio Code & Emmet',
+        description:
+          'Aprende a utilizar Visual Studio Code y Emmet para crear páginas web más rápido',
+        bg_color: '#08c',
+        image: VscodeImg
+      },
+      {
+        id: 5,
+        title: 'Markdown',
+        description:
+          'Aprende a utilizar Markdown para crear documentos más rápido',
+        bg_color: '#242938',
+        image: MarkdownImg
+      },
+      {
+        id: 6,
+        title: 'Terminal de Linux',
+        description:
+          'Descarga wsl2 y aprende los comandos más utilizados en Linux',
+        bg_color: '#a36400',
+        image: LinuxImg
+      },
+      {
+        id: 7,
+        title: 'Git & Github',
+        description:
+          'Aprende a utilizar Git y Github para controlar versiones de tu código',
+        bg_color: '#f03c2e',
+        image: GitImg
+      }
+    ]
+  },
+  {
+    frontend_design: [
+      {
+        id: 1,
+        title: 'Figma',
+        description:
+          'Curso de diseño 100% práctico para crear prototipos de alta calidad',
+        bg_color: '#242938',
+        image: FigmaImg
+      },
+      {
+        id: 2,
+        title: 'Flexbox CSS',
+        description:
+          'Aprende a utilizar Flexbox para crear diseños más dinámicos y responsivos',
+        bg_color: '#0277bd',
+        image: CssImg
+      },
+      {
+        id: 3,
+        title: 'Grid CSS',
+        description:
+          'Aprende a utilizar Grid para crear diseños más complejos y responsivos',
+        bg_color: '#0277bd',
+        image: CssImg
+      },
+      {
+        id: 4,
+        title: 'Efectos y Movimiento en CSS',
+        description:
+          'Aprende a crear efectos y movimiento en CSS para darle vida a tu página web',
+        bg_color: '#0277bd',
+        image: CssImg
+      },
+      {
+        id: 5,
+        title: 'Responsive Design',
+        description:
+          'Aprende a crear diseños responsivos para que tu página web se vea bien en cualquier dispositivo',
+        bg_color: '#c4a2fc',
+        image: ResponsiveImg
+      },
+      {
+        id: 6,
+        title: 'TailwindCSS',
+        description:
+          'Aprende a utilizar TailwindCSS para crear diseños más rápido y eficiente',
+        bg_color: '#32b1c1',
+        image: TailwindImg
+      }
+    ]
+  },
+  {
+    frontend_development: [
+      {
+        id: 1,
+        title: 'JavaScript',
+        description:
+          'Aprende los conceptos fundamentales de JavaScript y crea interacciones en tu página web',
+        bg_color: '#f0db4f',
+        image: JavascriptImg
+      },
+      {
+        id: 2,
+        title: 'React.js',
+        description:
+          'Aprende a utilizar React.js para crear componentes reutilizables y dinámicos',
+        bg_color: '#61dbfb',
+        image: ReactImg
+      },
+      {
+        id: 3,
+        title: 'Next.js',
+        description:
+          'Aprende a utilizar Next.js para crear aplicaciones web con React y características de rendimiento y SEO',
+        bg_color: '#000',
+        image: NextImg
+      },
+      {
+        id: 4,
+        title: 'Astro.js',
+        description:
+          'Aprende a utilizar Astro.js para crear aplicaciones web estáticas y rápidas',
+        bg_color: '#7D7D7D',
+        image: AstroImg
+      }
+    ]
+  },
+  {
+    backend_development: [
+      {
+        id: 1,
+        title: 'Python',
+        description:
+          'Aprende los conceptos fundamentales de Python y crea aplicaciones del lado del servidor',
+        bg_color: '#000 ',
+        image: PythonImg
+      },
+      {
+        id: 2,
+        title: 'Node.js',
+        description:
+          'Aprende a utilizar Node.js para crear aplicaciones del lado del servidor',
+        bg_color: '#3c873a',
+        image: NodejsImg
+      },
+      {
+        id: 3,
+        title: 'Desarrollo Web con Node.js & Express.js',
+        description:
+          'Aprende a utilizar Node.js y Express.js para crear aplicaciones web del lado del servidor',
+        bg_color: '#3c873a',
+        image: NodejsImg
+      }
+    ]
+  }
+]
 
 export const icons: SocialMediaIcon[] = [
   {
