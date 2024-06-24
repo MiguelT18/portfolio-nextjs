@@ -2,7 +2,7 @@ import { StaticImageData } from 'next/image'
 import { ReactNode } from 'react'
 
 interface Course {
-  id: number
+  id: string
   title: string
   description: string
   image: StaticImageData
@@ -18,8 +18,9 @@ export interface CourseCardProps {
   description: string
   image: StaticImageData
   bgColor: Properties<string | number, string & {}>
+  path: string
   url?: string
-  id?: number
+  id?: string
 }
 export interface ChildrenProp {
   children: ReactNode

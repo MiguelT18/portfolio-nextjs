@@ -5,12 +5,11 @@ import Image from 'next/image'
 import type { CourseCardProps } from '@/types/type'
 import Link from 'next/link'
 
-export default function CourseCard({
-  title,
-  description,
-  image,
-  bgColor
-}: CourseCardProps) {
+export default function CourseCard(props: CourseCardProps) {
+  const { title, description, image, bgColor, path, url } = props
+
+  console.log(url)
+
   return (
     <div className={styles.courseCard__container}>
       <div
@@ -31,7 +30,7 @@ export default function CourseCard({
         <p>{description}</p>
       </div>
 
-      <Link href='#' className='secondaryButton'>
+      <Link href={`/courses/${path}`} className='secondaryButton'>
         <span className={styles.courseCard__span}>Ver más</span>
         <Icon
           icon='ic:round-navigate-next'

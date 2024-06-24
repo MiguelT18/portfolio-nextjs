@@ -37,14 +37,16 @@ export const courses: CoursesData = [
   {
     web_basics: [
       {
-        id: 1,
+        url: '/web_basics',
+        id: '1',
         title: 'Hablemos de programación',
         description: 'Aprende los conceptos fundamentales de la programación',
         bg_color: '#f62f53',
         image: CodingImg
       },
       {
-        id: 2,
+        url: '/web_basics',
+        id: '2',
         title: 'Fundamentos de HTML',
         description:
           'Aprende los conceptos fundamentales de HTML y crea tu primera página web',
@@ -52,7 +54,8 @@ export const courses: CoursesData = [
         image: HtmlImg
       },
       {
-        id: 3,
+        url: '/web_basics',
+        id: '3',
         title: 'Fundamentos de CSS',
         description:
           'Aprende cómo darle estilos básicos a tu página web utilizando CSS',
@@ -60,7 +63,8 @@ export const courses: CoursesData = [
         image: CssImg
       },
       {
-        id: 4,
+        url: '/web_basics',
+        id: '4',
         title: 'Visual Studio Code & Emmet',
         description:
           'Aprende a utilizar Visual Studio Code y Emmet para crear páginas web más rápido',
@@ -68,7 +72,8 @@ export const courses: CoursesData = [
         image: VscodeImg
       },
       {
-        id: 5,
+        url: '/web_basics',
+        id: '5',
         title: 'Markdown',
         description:
           'Aprende a utilizar Markdown para crear documentos más rápido',
@@ -76,7 +81,8 @@ export const courses: CoursesData = [
         image: MarkdownImg
       },
       {
-        id: 6,
+        url: '/web_basics',
+        id: '6',
         title: 'Terminal de Linux',
         description:
           'Descarga wsl2 y aprende los comandos más utilizados en Linux',
@@ -84,7 +90,8 @@ export const courses: CoursesData = [
         image: LinuxImg
       },
       {
-        id: 7,
+        url: '/web_basics',
+        id: '7',
         title: 'Git & Github',
         description:
           'Aprende a utilizar Git y Github para controlar versiones de tu código',
@@ -96,7 +103,8 @@ export const courses: CoursesData = [
   {
     frontend_design: [
       {
-        id: 1,
+        url: '/frontend_design',
+        id: '1',
         title: 'Figma',
         description:
           'Curso de diseño 100% práctico para crear prototipos de alta calidad',
@@ -104,7 +112,8 @@ export const courses: CoursesData = [
         image: FigmaImg
       },
       {
-        id: 2,
+        url: '/frontend_design',
+        id: '2',
         title: 'Flexbox CSS',
         description:
           'Aprende a utilizar Flexbox para crear diseños más dinámicos y responsivos',
@@ -112,7 +121,8 @@ export const courses: CoursesData = [
         image: CssImg
       },
       {
-        id: 3,
+        url: '/frontend_design',
+        id: '3',
         title: 'Grid CSS',
         description:
           'Aprende a utilizar Grid para crear diseños más complejos y responsivos',
@@ -120,7 +130,8 @@ export const courses: CoursesData = [
         image: CssImg
       },
       {
-        id: 4,
+        url: '/frontend_design',
+        id: '4',
         title: 'Efectos y Movimiento en CSS',
         description:
           'Aprende a crear efectos y movimiento en CSS para darle vida a tu página web',
@@ -128,7 +139,8 @@ export const courses: CoursesData = [
         image: CssImg
       },
       {
-        id: 5,
+        url: '/frontend_design',
+        id: '5',
         title: 'Responsive Design',
         description:
           'Aprende a crear diseños responsivos para que tu página web se vea bien en cualquier dispositivo',
@@ -136,7 +148,8 @@ export const courses: CoursesData = [
         image: ResponsiveImg
       },
       {
-        id: 6,
+        url: '/frontend_design',
+        id: '6',
         title: 'TailwindCSS',
         description:
           'Aprende a utilizar TailwindCSS para crear diseños más rápido y eficiente',
@@ -148,7 +161,8 @@ export const courses: CoursesData = [
   {
     frontend_development: [
       {
-        id: 1,
+        url: '/frontend_development',
+        id: '1',
         title: 'JavaScript',
         description:
           'Aprende los conceptos fundamentales de JavaScript y crea interacciones en tu página web',
@@ -156,7 +170,8 @@ export const courses: CoursesData = [
         image: JavascriptImg
       },
       {
-        id: 2,
+        url: '/frontend_development',
+        id: '2',
         title: 'React.js',
         description:
           'Aprende a utilizar React.js para crear componentes reutilizables y dinámicos',
@@ -164,7 +179,8 @@ export const courses: CoursesData = [
         image: ReactImg
       },
       {
-        id: 3,
+        url: '/frontend_development',
+        id: '3',
         title: 'Next.js',
         description:
           'Aprende a utilizar Next.js para crear aplicaciones web con React y características de rendimiento y SEO',
@@ -172,7 +188,8 @@ export const courses: CoursesData = [
         image: NextImg
       },
       {
-        id: 4,
+        url: '/frontend_development',
+        id: '4',
         title: 'Astro.js',
         description:
           'Aprende a utilizar Astro.js para crear aplicaciones web estáticas y rápidas',
@@ -184,7 +201,8 @@ export const courses: CoursesData = [
   {
     backend_development: [
       {
-        id: 1,
+        url: '/backend_development',
+        id: '1',
         title: 'Python',
         description:
           'Aprende los conceptos fundamentales de Python y crea aplicaciones del lado del servidor',
@@ -192,7 +210,8 @@ export const courses: CoursesData = [
         image: PythonImg
       },
       {
-        id: 2,
+        url: '/backend_development',
+        id: '2',
         title: 'Node.js',
         description:
           'Aprende a utilizar Node.js para crear aplicaciones del lado del servidor',
@@ -200,7 +219,8 @@ export const courses: CoursesData = [
         image: NodejsImg
       },
       {
-        id: 3,
+        url: '/backend_development',
+        id: '3',
         title: 'Desarrollo Web con Node.js & Express.js',
         description:
           'Aprende a utilizar Node.js y Express.js para crear aplicaciones web del lado del servidor',

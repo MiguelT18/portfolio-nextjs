@@ -11,8 +11,15 @@ import 'swiper/css/effect-cards'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
+type BackendDevProps = {
+  id: string
+}
+
 export default function BackendDev() {
   const backendDevelopmentCourses = courses[3].backend_development
+
+  console.log(backendDevelopmentCourses?.map((course) => course.url))
+  console.log(backendDevelopmentCourses?.map((course) => course.id))
 
   return (
     <LearningPath path='Desarrollo Backend'>
@@ -49,6 +56,7 @@ export default function BackendDev() {
               title={course.title}
               description={course.description}
               image={course.image}
+              path={`${course.id}`}
             />
           </SwiperSlide>
         ))}
