@@ -1,13 +1,15 @@
-'use client'
-
 import SectionTitle from '@/components/UI/SectionTitle/SectionTitle'
 import styles from './styles.module.css'
-import { icons } from '@/lib/data'
+import { getIconsData } from '@/lib/loadData'
 import Link from 'next/link'
 import { Icon } from '@iconify/react/dist/iconify.js'
-import CustomTypeWriter from '@/components/UI/CustomTypeWriter'
+import TypewriterWrapper from './TypewriterWrapper'
+import type { SocialMediaIcon } from '@/types/type'
 
-export default function Hero() {
+export default async function Hero() {
+  const resJSON = await getIconsData()
+  const icons: SocialMediaIcon[] = await JSON.parse(resJSON)
+
   return (
     <section className={styles.home_heroSection}>
       <div>
@@ -30,10 +32,7 @@ export default function Hero() {
 
       <article className={styles.home_heroSection__article}>
         <span>Hola usuario, soy...</span>
-        <CustomTypeWriter
-          cursorClassName={styles.typewriterCursor}
-          textClassName={styles.typewriterText}
-        />
+        <TypewriterWrapper />
 
         <div>
           <h3>FullStack Developer</h3>

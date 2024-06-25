@@ -19,6 +19,11 @@
   gap: 12px;
 }
 
+.focused {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+}
+
 @media not all and (min-width: 1024px) {
   .home_sectionSkills {
     flex-direction: column;

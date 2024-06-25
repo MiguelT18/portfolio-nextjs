@@ -3,7 +3,8 @@ import Typewriter from 'typewriter-effect'
 
 export default function CustomTypeWriter({
   cursorClassName,
-  textClassName
+  textClassName,
+  contain
 }: any | null) {
   return (
     <Typewriter
@@ -14,7 +15,7 @@ export default function CustomTypeWriter({
       }}
       onInit={(typewriter) => {
         typewriter
-          .typeString(`<span class="${textClassName}">Miguel Terán</span>`)
+          .typeString(`<span class="${textClassName}">${contain}</span>`)
           .pauseFor(2000)
           .deleteAll()
           .start()
