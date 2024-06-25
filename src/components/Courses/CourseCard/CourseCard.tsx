@@ -8,8 +8,6 @@ import Link from 'next/link'
 export default function CourseCard(props: CourseCardProps) {
   const { title, description, image, bgColor, path, url } = props
 
-  console.log(url)
-
   return (
     <div className={styles.courseCard__container}>
       <div

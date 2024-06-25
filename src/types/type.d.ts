@@ -12,7 +12,9 @@ interface Course {
 interface CourseCategory {
   [key: string]: Course[] | undefined
 }
-export type CoursesData = CourseCategory[]
+export type CoursesData = {
+  [index: number]: CourseCategory[]
+}
 export interface CourseCardProps {
   title: string
   description: string

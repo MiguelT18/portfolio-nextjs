@@ -1,12 +1,16 @@
 'use client'
 
 import { SessionProvider } from 'next-auth/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function SessionProviderWrapper({
   children
 }: {
   children: React.ReactNode
 }) {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return <SessionProvider>{children}</SessionProvider>
 }

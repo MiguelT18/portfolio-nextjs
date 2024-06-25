@@ -1,0 +1,178 @@
+[
+  {
+    "web_basics": [
+      {
+        "url": "/web_basics",
+        "id": "1",
+        "title": "Hablemos de programación",
+        "description": "Aprende los conceptos fundamentales de la programación",
+        "bg_color": "#f62f53",
+        "image": "/icons/coding.png"
+      },
+      {
+        "url": "/web_basics",
+        "id": "2",
+        "title": "Fundamentos de HTML",
+        "description": "Aprende los conceptos fundamentales de HTML y crea tu primera página web",
+        "bg_color": "#ff4401",
+        "image": "/icons/html-5.png"
+      },
+      {
+        "url": "/web_basics",
+        "id": "3",
+        "title": "Fundamentos de CSS",
+        "description": "Aprende cómo darle estilos básicos a tu página web utilizando CSS",
+        "bg_color": "#0277bd",
+        "image": "/icons/css.png"
+      },
+      {
+        "url": "/web_basics",
+        "id": "4",
+        "title": "Visual Studio Code & Emmet",
+        "description": "Aprende a utilizar Visual Studio Code y Emmet para crear páginas web más rápido",
+        "bg_color": "#08c",
+        "image": "/icons/vscode.png"
+      },
+      {
+        "url": "/web_basics",
+        "id": "5",
+        "title": "Markdown",
+        "description": "Aprende a utilizar Markdown para crear documentos más rápido",
+        "bg_color": "#242938",
+        "image": "/icons/markdown.png"
+      },
+      {
+        "url": "/web_basics",
+        "id": "6",
+        "title": "Terminal de Linux",
+        "description": "Descarga wsl2 y aprende los comandos más utilizados en Linux",
+        "bg_color": "#a36400",
+        "image": "/icons/linux.png"
+      },
+      {
+        "url": "/web_basics",
+        "id": "7",
+        "title": "Git & Github",
+        "description": "Aprende a utilizar Git y Github para controlar versiones de tu código",
+        "bg_color": "#f03c2e",
+        "image": "/icons/git.png"
+      }
+    ]
+  },
+  {
+    "frontend_design": [
+      {
+        "url": "/frontend_design",
+        "id": "1",
+        "title": "Figma",
+        "description": "Curso de diseño 100% práctico para crear prototipos de alta calidad",
+        "bg_color": "#242938",
+        "image": "/icons/figma.png"
+      },
+      {
+        "url": "/frontend_design",
+        "id": "2",
+        "title": "Flexbox CSS",
+        "description": "Aprende a utilizar Flexbox para crear diseños más dinámicos y responsivos",
+        "bg_color": "#0277bd",
+        "image": "/icons/css.png"
+      },
+      {
+        "url": "/frontend_design",
+        "id": "3",
+        "title": "Grid CSS",
+        "description": "Aprende a utilizar Grid para crear diseños más complejos y responsivos",
+        "bg_color": "#0277bd",
+        "image": "/icons/css.png"
+      },
+      {
+        "url": "/frontend_design",
+        "id": "4",
+        "title": "Efectos y Movimiento en CSS",
+        "description": "Aprende a crear efectos y movimiento en CSS para darle vida a tu página web",
+        "bg_color": "#0277bd",
+        "image": "/icons/css.png"
+      },
+      {
+        "url": "/frontend_design",
+        "id": "5",
+        "title": "Responsive Design",
+        "description": "Aprende a crear diseños responsivos para que tu página web se vea bien en cualquier dispositivo",
+        "bg_color": "#c4a2fc",
+        "image": "/icons/responsive.png"
+      },
+      {
+        "url": "/frontend_design",
+        "id": "6",
+        "title": "TailwindCSS",
+        "description": "Aprende a utilizar TailwindCSS para crear diseños más rápido y eficiente",
+        "bg_color": "#32b1c1",
+        "image": "/icons/tailwindcss.png"
+      }
+    ]
+  },
+  {
+    "frontend_development": [
+      {
+        "url": "/frontend_development",
+        "id": "1",
+        "title": "JavaScript",
+        "description": "Aprende los conceptos fundamentales de JavaScript y crea interacciones en tu página web",
+        "bg_color": "#f0db4f",
+        "image": "/icons/javascript.png"
+      },
+      {
+        "url": "/frontend_development",
+        "id": "2",
+        "title": "React.js",
+        "description": "Aprende a utilizar React.js para crear componentes reutilizables y dinámicos",
+        "bg_color": "#61dbfb",
+        "image": "/icons/react.png"
+      },
+      {
+        "url": "/frontend_development",
+        "id": "3",
+        "title": "Next.js",
+        "description": "Aprende a utilizar Next.js para crear aplicaciones web con React y características de rendimiento y SEO",
+        "bg_color": "#000",
+        "image": "/icons/nextjs.png"
+      },
+      {
+        "url": "/frontend_development",
+        "id": "4",
+        "title": "Astro.js",
+        "description": "Aprende a utilizar Astro.js para crear aplicaciones web estáticas y rápidas",
+        "bg_color": "#7D7D7D",
+        "image": "/icons/astro.png"
+      }
+    ]
+  },
+  {
+    "backend_development": [
+      {
+        "url": "/backend_development",
+        "id": "1",
+        "title": "Python",
+        "description": "Aprende los conceptos fundamentales de Python y crea aplicaciones del lado del servidor",
+        "bg_color": "#000 ",
+        "image": "/icons/python.png"
+      },
+      {
+        "url": "/backend_development",
+        "id": "2",
+        "title": "Node.js",
+        "description": "Aprende a utilizar Node.js para crear aplicaciones del lado del servidor",
+        "bg_color": "#3c873a",
+        "image": "/icons/nodejs.png"
+      },
+      {
+        "url": "/backend_development",
+        "id": "3",
+        "title": "Desarrollo Web con Node.js & Express.js",
+        "description": "Aprende a utilizar Node.js y Express.js para crear aplicaciones web del lado del servidor",
+        "bg_color": "#3c873a",
+        "image": "/icons/nodejs.png"
+      }
+    ]
+  }
+]

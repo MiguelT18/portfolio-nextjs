@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Alta Vida",
+    "description": "Aplicación web desarrollada para una empresa que se dedica al desarrollo inmobiliario.",
+    "image": "/images/portfolio/drsimons_webapp.jpg",
+    "url": "https://altavidasrl.vercel.app/"
+  },
+  {
+    "id": 2,
+    "title": "Curso Programación",
+    "description": "Landing page desarrollada para un proyecto personal dedicado a la venta de un curso digital de programación.",
+    "image": "/images/portfolio/hotmart_course.jpg",
+    "url": "https://hotmart-course.vercel.app/"
+  },
+  {
+    "id": 3,
+    "title": "Dr. Cristian Simons",
+    "description": "Aplicación web desarrollada para las consultas y la newsletter del Dr.Simons.",
+    "image": "/images/portfolio/drsimons_webapp.jpg",
+    "url": "https://drsimons-app-miguelt18s-projects.vercel.app/"
+  },
+  {
+    "id": 4,
+    "title": "BIO Pharma",
+    "description": "Landing page desarrollada para una empresa que se dedica a la elaboración de productos naturales para la diabetes, rendimiento deportivo, intimidad, etc.",
+    "image": "/images/portfolio/biopharma.jpg",
+    "url": "https://biopharma-landing.vercel.app/"
+  },
+  {
+    "id": 5,
+    "title": "Néstor Árce",
+    "description": "Landing page desarrollada para un entrenador personal con experiencia en la nutrición y biomecánica de los ejercicios.",
+    "image": "/images/portfolio/nestor_arce.jpg",
+    "url": "https://nestorarce.vercel.app/"
+  }
+]

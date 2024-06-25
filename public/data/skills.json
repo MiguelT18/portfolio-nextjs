@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "category": "Frontend",
+    "list_skill": [
+      { "skill": "HTML", "icon": "devicon:html5" },
+      { "skill": "CSS", "icon": "devicon:css3" },
+      { "skill": "JavaScript", "icon": "logos:javascript" },
+      { "skill": "NextJS", "icon": "logos:nextjs-icon" },
+      { "skill": "AstroJS", "icon": "logos:astro-icon" },
+      { "skill": "React", "icon": "logos:react" },
+      { "skill": "Vite", "icon": "skill-icons:vite-dark" }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Backend",
+    "list_skill": [
+      { "skill": "Python", "icon": "skill-icons:python-dark" },
+      { "skill": "NodeJS", "icon": "skill-icons:nodejs-dark" },
+      { "skill": "MongoDB", "icon": "devicon:mongodb-wordmark" },
+      { "skill": "Supabase", "icon": "skill-icons:supabase-dark" },
+      { "skill": "Turso", "icon": "simple-icons:turso" },
+      { "skill": "MySQL", "icon": "logos:mysql" },
+      { "skill": "Scikitlearn", "icon": "skill-icons:scikitlearn-light" },
+      { "skill": "Prisma", "icon": "simple-icons:prisma" }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Herramientas",
+    "list_skill": [
+      { "skill": "Figma", "icon": "skill-icons:figma-dark" },
+      { "skill": "WordPress", "icon": "skill-icons:wordpress" }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Otros...",
+    "list_skill": [
+      { "skill": "Arduino", "icon": "vscode-icons:file-type-arduino" },
+      { "skill": "C++", "icon": "logos:c-plusplus" },
+      { "skill": "Raspberry Pi", "icon": "logos:raspberry-pi" }
+    ]
+  }
+]

@@ -1,18 +1,13 @@
-'use client'
-
-import React from 'react'
-import { courses } from '@/lib/data'
+import { getCoursesData } from '@/lib/loadData'
 import LearningPath from '@/components/Courses/LearningPath/LearningPath'
 import CourseCard from '@/components/Courses/CourseCard/CourseCard'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectCards, Pagination, Navigation, Autoplay } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/effect-cards'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
+import SwiperCarousel from '@/components/UI/SwiperCarousel'
+import { Course } from '@/types/type'
 
-export default function FrontendDev() {
-  const frontendDevelopmentCourses = courses[2].frontend_development
+export default async function FrontendDev() {
+  const resJSON = await getCoursesData()
+  const courses = await JSON.parse(resJSON)
+  const currentCourse = courses[2]?.frontend_development
 
   return (
     <LearningPath path='Desarrollo Frontend'>
@@ -23,30 +18,18 @@ export default function FrontendDev() {
         dominan el mercado laboral. 👇
       </p>
 
-      <Swiper
-        effect={'cards'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false
-        }}
-        navigation={true}
-        pagination={true}
-        modules={[EffectCards, Pagination, Navigation, Autoplay]}
-      >
-        {frontendDevelopmentCourses?.map((course) => (
-          <SwiperSlide key={course.id}>
-            <CourseCard
-              bgColor={course.bg_color}
-              title={course.title}
-              description={course.description}
-              image={course.image}
-            />
-          </SwiperSlide>
+      <SwiperCarousel>
+        {currentCourse?.map((course: Course) => (
+          <CourseCard
+            key={course.id}
+            bgColor={course.bg_color}
+            title={course.title}
+            description={course.description}
+            image={course.image}
+            path={`${course.id}`}
+          />
         ))}
-      </Swiper>
+      </SwiperCarousel>
     </LearningPath>
   )
 }

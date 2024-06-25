@@ -1,25 +1,13 @@
-'use client'
-
-import React from 'react'
-import { courses } from '@/lib/data'
+import { getCoursesData } from '@/lib/loadData'
 import LearningPath from '@/components/Courses/LearningPath/LearningPath'
+import SwiperCarousel from '@/components/UI/SwiperCarousel'
 import CourseCard from '@/components/Courses/CourseCard/CourseCard'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectCards, Pagination, Navigation, Autoplay } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/effect-cards'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
+import { Course } from '@/types/type'
 
-type BackendDevProps = {
-  id: string
-}
-
-export default function BackendDev() {
-  const backendDevelopmentCourses = courses[3].backend_development
-
-  console.log(backendDevelopmentCourses?.map((course) => course.url))
-  console.log(backendDevelopmentCourses?.map((course) => course.id))
+export default async function BackendDev() {
+  const resJSON = await getCoursesData()
+  const courses = await JSON.parse(resJSON)
+  const currentCourse = courses[3]?.backend_development
 
   return (
     <LearningPath path='Desarrollo Backend'>
@@ -36,31 +24,18 @@ export default function BackendDev() {
         Artificial.
       </p>
 
-      <Swiper
-        effect={'cards'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false
-        }}
-        navigation={true}
-        pagination={true}
-        modules={[EffectCards, Pagination, Navigation, Autoplay]}
-      >
-        {backendDevelopmentCourses?.map((course) => (
-          <SwiperSlide key={course.id}>
-            <CourseCard
-              bgColor={course.bg_color}
-              title={course.title}
-              description={course.description}
-              image={course.image}
-              path={`${course.id}`}
-            />
-          </SwiperSlide>
+      <SwiperCarousel>
+        {currentCourse?.map((course: Course) => (
+          <CourseCard
+            key={course.id}
+            bgColor={course.bg_color}
+            title={course.title}
+            description={course.description}
+            image={course.image}
+            path={`${course.id}`}
+          />
         ))}
-      </Swiper>
+      </SwiperCarousel>
     </LearningPath>
   )
 }
