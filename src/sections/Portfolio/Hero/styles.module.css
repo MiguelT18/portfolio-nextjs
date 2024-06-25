@@ -4,6 +4,11 @@
   padding: 20px 0 6rem;
 }
 
+.portfolio__hero__header {
+  display: flex;
+  align-items: center;
+}
+
 .portfolio__hero__section > div {
   display: flex;
   align-items: center;
