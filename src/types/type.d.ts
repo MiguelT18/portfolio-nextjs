@@ -10,7 +10,10 @@ interface Course {
   url?: string
 }
 interface CourseCategory {
-  [key: string]: Course[] | undefined
+  web_basics: Course[]
+  frontend_design: Course[]
+  frontend_development: Course[]
+  backend_development: Course[]
 }
 export type CoursesData = {
   [index: number]: CourseCategory[]

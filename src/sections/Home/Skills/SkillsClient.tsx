@@ -25,9 +25,7 @@ export default function SkillsClient({ skills }: { skills: SkillsCategory[] }) {
               key={skill.id}
               onClick={() => setActiveCategory(skill.category)}
               className={`secondaryButton ${
-                !activeSkills
-                  ? styles.focused
-                  : document.body.classList.remove(styles.focused)
+                !activeSkills ? styles.focused : ''
               }`}
               autoFocus={skill.id === 1}
             >

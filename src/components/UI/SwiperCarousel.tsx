@@ -17,7 +17,7 @@ export default function SwiperCarousel({ children }: any) {
       slidesPerView={'auto'}
       autoplay={{
         delay: 2500,
-        disableOnInteraction: false
+        disableOnInteraction: true
       }}
       navigation={true}
       pagination={true}

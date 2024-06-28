@@ -8,6 +8,7 @@ import { Course } from '@/types/type'
 export default async function WebBasics() {
   const resJSON = await getCoursesData()
   const courses = await JSON.parse(resJSON)
+
   const currentCourse = courses[0]?.web_basics
 
   return (
@@ -29,7 +30,7 @@ export default async function WebBasics() {
             title={course.title}
             description={course.description}
             image={course.image}
-            path={`${course.id}`}
+            path={`${course.url}/${course.id}`}
           />
         ))}
       </SwiperCarousel>

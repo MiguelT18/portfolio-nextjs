@@ -30,12 +30,7 @@ export default function CourseCard(props: CourseCardProps) {
 
       <Link href={`/courses/${path}`} className='secondaryButton'>
         <span className={styles.courseCard__span}>Ver más</span>
-        <Icon
-          icon='ic:round-navigate-next'
-          color='#02cf5f'
-          width={30}
-          height={30}
-        />
+        <Icon icon='ic:round-navigate-next' width={30} height={30} />
       </Link>
     </div>
   )

@@ -26,7 +26,7 @@ export default async function FrontendDesign() {
             title={course.title}
             description={course.description}
             image={course.image}
-            path={`${course.id}`}
+            path={`${course.url}/${course.id}`}
           />
         ))}
       </SwiperCarousel>
