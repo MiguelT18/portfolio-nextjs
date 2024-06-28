@@ -1,0 +1,79 @@
+.CoursesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 48px;
+  margin-top: 32px;
+}
+
+.CoursesForm {
+  margin-top: 32px;
+}
+
+.CoursesForm h1 {
+  display: block;
+  text-align: center;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  margin: 24px 0 48px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.CoursesForm h1::after {
+  content: '';
+  display: block;
+  width: 15%;
+  height: 4px;
+  border-radius: 14px;
+  margin: 0 auto;
+  background-color: var(--color-primary);
+}
+
+.FilterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.FilterTitle {
+  margin: 16px 0;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.FilterTitle h2 {
+  font-size: var(--font-size-md);
+  color: var(--color-white);
+}
+
+.learningPathFilter h3,
+.difficultContainer h3 {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+}
+
+.learningPathFilter div,
+.difficultContainer div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+}
+
+.learningPathFilter div label,
+.difficultContainer div label {
+  display: block;
+  width: fit-content;
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+@media not all and (min-width: 768px) {
+  .FilterContainer {
+    gap: 12px;
+  }
+}

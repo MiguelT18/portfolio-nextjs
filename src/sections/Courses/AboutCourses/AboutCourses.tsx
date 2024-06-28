@@ -1,5 +1,6 @@
 import SectionTitle from '@/components/UI/SectionTitle/SectionTitle'
 import styles from './styles.module.css'
+import Link from 'next/link'
 
 export default function AboutCourses() {
   return (
@@ -7,21 +8,19 @@ export default function AboutCourses() {
       <SectionTitle title='Cursos' />
 
       <p>
-        Aquí te comparto mi contenido clasificado cómo lo deberías consumir en
-        rutas de aprendizaje de acuerdo al perfil profesional que te menciono a
-        continuación.
+        Aquí te comparto mi contenido clasificado, aquí podrás filtrar los
+        cursos tanto por rutas de aprendizaje de acuerdo a tu nivel de
+        conocimiento, como por temática.
         <br />
         <br />
-        Todos estos perfiles que propongo incluyen como prerequisito la ruta de
-        aprendizaje: <strong>&ldquo;Básicos de la Web&ldquo;.</strong> Así que
-        si eres nuevo, comienza por <a href='#'>aquí</a>.
+        Adicional a esto si buscas algún curso en particular puedes buscarlo en
+        la barra de búsqueda. Sin nada más que decir te deseo suerte
+        programador. 👋😉
         <br />
         <br />
-        Si ya tienes experiencia en este maravilloso mundo de la web, consume
-        los cursos que te sirvan, de acuerdo a tu interés o perfil.
-        <br />
-        <br />
-        Buena suerte. 👋😉
+        Recuerda que para poder consumir los cursos deberás tener una
+        suscripción activa en la plataforma la cual la puedes adquirir desde{' '}
+        <Link href='/pricing'>Aquí</Link>
       </p>
     </section>
   )
