@@ -7,6 +7,8 @@ import { useForm } from 'react-hook-form'
 import type { FormData } from '@/types/type'
 import { useRef, useState } from 'react'
 import useEmailJS from '@/hooks/useEmailJS'
+import PrimaryButton from '../Buttons/PrimaryButton'
+import SecondaryAnchor from '../Buttons/SecondaryAnchor'
 
 export default function ContactForm() {
   const [isMessageSent, setIsMessageSent] = useState(false)
@@ -94,10 +96,12 @@ export default function ContactForm() {
         )}
 
         <div className={styles.contactForm__buttonContainer}>
-          <button className='primaryButton' type='submit'>
-            Enviar
-          </button>
-          <a className='secondaryButton' href='https://wa.link/fknvmv'>
+          <PrimaryButton>Enviar</PrimaryButton>
+          <SecondaryAnchor
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://wa.link/fknvmv'
+          >
             <span>WhatsApp</span>
             <Icon
               className='w-fit rounded-full'
@@ -105,7 +109,7 @@ export default function ContactForm() {
               width={25}
               height={25}
             />
-          </a>
+          </SecondaryAnchor>
         </div>
       </form>
     </section>

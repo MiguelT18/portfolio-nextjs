@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from './styles.module.css'
 import { Project } from '@/types/type'
+import PrimaryAnchor from '../UI/Buttons/PrimaryAnchor'
 
 export default function ProjectCard({
   title,
@@ -23,14 +24,9 @@ export default function ProjectCard({
       <div>
         <h3>{title}</h3>
         <p>{description}</p>
-        <a
-          className='primaryButton'
-          href={url}
-          target='_blank'
-          rel='noopener noreferrer'
-        >
+        <PrimaryAnchor href={url} target='_blank' rel='noopener noreferrer'>
           Ver proyecto
-        </a>
+        </PrimaryAnchor>
       </div>
     </article>
   )

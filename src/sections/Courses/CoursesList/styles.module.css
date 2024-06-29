@@ -72,6 +72,25 @@
   gap: 14px;
 }
 
+.SearchInput {
+  display: block;
+  position: relative;
+}
+
+.SearchInput span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
 @media not all and (min-width: 768px) {
   .FilterContainer {
     gap: 12px;

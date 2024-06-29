@@ -1,6 +1,21 @@
 import { StaticImageData } from 'next/image'
 import { ReactNode } from 'react'
 
+export interface UIButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode
+  fullWidth?: boolean
+  color?: string
+}
+
+export interface UIAnchorProps
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  children: React.ReactNode
+  fullWidth?: boolean
+  href?: string
+  color?: string
+}
+
 interface Course {
   id: string
   title: string

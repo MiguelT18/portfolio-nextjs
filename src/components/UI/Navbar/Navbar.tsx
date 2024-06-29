@@ -81,6 +81,9 @@ export default function Navbar() {
           <li onClick={closeMobileMenu}>
             <Link href='/portfolio'>Cursos</Link>
           </li>
+          <li onClick={closeMobileMenu}>
+            <Link href='/pricing'>Planes</Link>
+          </li>
           {session ? (
             <>
               <li onClick={closeMobileMenu}>
@@ -181,6 +184,9 @@ export default function Navbar() {
           </li>
           <li>
             <Link href='/courses'>Cursos</Link>
+          </li>
+          <li>
+            <Link href='/pricing'>Planes</Link>
           </li>
         </ul>
       </div>

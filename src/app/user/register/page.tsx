@@ -7,6 +7,7 @@ import { RegisterUser } from '@/types/type'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import PrimaryButton from '@/components/UI/Buttons/PrimaryButton'
 
 export default function Register() {
   const {
@@ -240,7 +241,7 @@ export default function Register() {
             </div>
           </div>
 
-          <button className='primaryButton fullWidth'>Registrarse</button>
+          <PrimaryButton fullWidth={true}>Registrarse</PrimaryButton>
           <span className={styles.formFooter}>
             Ya tienes una cuenta? <Link href='/user/login'>Inicia sesión</Link>
           </span>

@@ -5,6 +5,7 @@ import styles from './styles.module.css'
 import SkillCard from '@/components/Home/SkillCard/SkillCard'
 import { useState } from 'react'
 import type { SkillsCategory } from '@/types/type'
+import SecondaryButton from '@/components/UI/Buttons/SecondaryButton'
 
 export default function SkillsClient({ skills }: { skills: SkillsCategory[] }) {
   const [activeCategory, setActiveCategory] = useState<string>(
@@ -21,16 +22,13 @@ export default function SkillsClient({ skills }: { skills: SkillsCategory[] }) {
       <div className={styles.home_skillsContainer}>
         <div className={styles.home_skillsButtons}>
           {skills.map((skill) => (
-            <button
+            <SecondaryButton
               key={skill.id}
               onClick={() => setActiveCategory(skill.category)}
-              className={`secondaryButton ${
-                !activeSkills ? styles.focused : ''
-              }`}
               autoFocus={skill.id === 1}
             >
               {skill.category}
-            </button>
+            </SecondaryButton>
           ))}
         </div>
         <div className={styles.home_skills}>

@@ -8,7 +8,7 @@ import { useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
 export default function CoursesListClient({ courses }: CourseCategory) {
-  const { register, watch } = useForm()
+  const { register, watch, setValue } = useForm()
 
   const [activeLearningPathFilter, setActiveLearningPathFilter] =
     useState<string>('')
@@ -17,6 +17,10 @@ export default function CoursesListClient({ courses }: CourseCategory) {
   >([])
 
   const searchValue = watch('search')?.toLowerCase() || ''
+
+  const resetSearchValue = () => {
+    setValue('search', '')
+  }
 
   const handleCheckboxChange = (filterType: string, id: string) => {
     if (filterType === 'learningPath') {
@@ -57,11 +61,24 @@ export default function CoursesListClient({ courses }: CourseCategory) {
       <form className={styles.CoursesForm}>
         <h1>Biblioteca de Cursos</h1>
 
-        <input
-          {...register('search')}
-          type='text'
-          placeholder='Buscar curso...'
-        />
+        <div className={styles.SearchInput}>
+          <input
+            {...register('search')}
+            type='text'
+            placeholder='Buscar curso...'
+          />
+          <span
+            onClick={resetSearchValue}
+            style={{ display: searchValue !== '' ? '' : 'none' }}
+          >
+            <Icon
+              icon='line-md:remove'
+              color='#991A1A'
+              width={35}
+              height={35}
+            />
+          </span>
+        </div>
 
         <div className={styles.FilterTitle}>
           <Icon icon='line-md:filter-twotone' width={35} height={35} />

@@ -1,7 +1,8 @@
 .portfolio__hero__projectCard {
-  background-color: var(--color-quaternary);
+  background: linear-gradient(135deg, #010d1d, #192441);
+  box-shadow: 0 0 25px 0 #000;
+  border: 2px solid var(--color-white);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 8px;

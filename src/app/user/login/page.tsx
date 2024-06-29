@@ -8,6 +8,8 @@ import { signIn } from 'next-auth/react'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import PrimaryButton from '@/components/UI/Buttons/PrimaryButton'
+import SecondaryButton from '@/components/UI/Buttons/SecondaryButton'
 
 export default function Login() {
   const {
@@ -132,7 +134,7 @@ export default function Login() {
             </div>
           </div>
 
-          <button className='primaryButton fullWidth'>Iniciar Sesión</button>
+          <PrimaryButton fullWidth={true}>Iniciar Sesión</PrimaryButton>
           <div className={styles.formFooterContainer}>
             <span className={styles.formFooter}>
               No tienes una cuenta?{' '}
@@ -153,22 +155,14 @@ export default function Login() {
           </div>
 
           <div className={styles.signInWith__buttonContainer}>
-            <button
-              type='button'
-              className='secondaryButton'
-              onClick={handleSignInWithGoogle}
-            >
+            <SecondaryButton onClick={handleSignInWithGoogle}>
               Google
               <Icon icon='logos:google-icon' width={24} height={24} />
-            </button>
-            <button
-              type='button'
-              className='secondaryButton'
-              onClick={handleSignInWithGoogle}
-            >
+            </SecondaryButton>
+            <SecondaryButton onClick={handleSignInWithGoogle}>
               Github
               <Icon icon='bytesize:github' width={24} height={24} />
-            </button>
+            </SecondaryButton>
           </div>
         </form>
       </div>

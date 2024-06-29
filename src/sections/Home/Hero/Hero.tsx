@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import TypewriterWrapper from './TypewriterWrapper'
 import type { SocialMediaIcon } from '@/types/type'
+import PrimaryAnchor from '@/components/UI/Buttons/PrimaryAnchor'
+import SecondaryAnchor from '@/components/UI/Buttons/SecondaryAnchor'
 
 export default async function Hero() {
   const resJSON = await getIconsData()
@@ -46,17 +48,14 @@ export default async function Hero() {
           </ul>
 
           <div>
-            <a
+            <PrimaryAnchor
               href='https://wa.link/fknvmv'
               target='_blank'
-              rel='noopener'
-              className='primaryButton'
+              rel='noopener noreferrer'
             >
               Contáctame
-            </a>
-            <Link href='/portfolio' className='secondaryButton'>
-              Portafolio
-            </Link>
+            </PrimaryAnchor>
+            <SecondaryAnchor href='/portfolio'>Portafolio</SecondaryAnchor>
           </div>
         </div>
       </article>
