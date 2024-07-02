@@ -9,12 +9,17 @@
   margin-top: 32px;
 }
 
+.CoursesFormText {
+  font-size: var(--font-size-sm);
+  margin-bottom: 18px;
+}
+
 .CoursesForm h1 {
   display: block;
   text-align: center;
   font-size: var(--font-size-xl);
   color: var(--color-white);
-  margin: 24px 0 48px;
+  margin: 24px 0 28px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -72,6 +77,18 @@
   gap: 14px;
 }
 
+.SearchInput input:hover {
+  transform: scale(0.99);
+}
+
+.SearchInput input {
+  transition: transform 0.3s ease;
+}
+
+.SearchInput input:focus {
+  transform: scale(1);
+}
+
 .SearchInput {
   display: block;
   position: relative;
@@ -94,5 +111,13 @@
 @media not all and (min-width: 768px) {
   .FilterContainer {
     gap: 12px;
+  }
+
+  .CoursesFormText {
+    text-align: center;
+  }
+
+  .CoursesForm h1 {
+    margin: 0 0 16px;
   }
 }

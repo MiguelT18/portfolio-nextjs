@@ -7,11 +7,14 @@
 .sectionTitle {
   width: 100%;
   display: block;
-  background-color: var(--color-quaternary);
+  background: var(--gradient-color-primary);
+  box-shadow: 0 0 15px 0 #000;
+
   text-transform: uppercase;
   text-align: center;
   padding: 8px 18px;
   font-size: var(--font-size-md);
+  font-weight: 600;
 }
 
 .sectionTitle::after {

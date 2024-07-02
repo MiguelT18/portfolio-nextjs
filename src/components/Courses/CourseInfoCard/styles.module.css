@@ -1,0 +1,7 @@
+.courseInfoCard {
+  width: 100%;
+  max-width: 280px;
+  background-color: #02cf5e1d;
+  padding: 14px;
+  border-radius: 8px;
+}

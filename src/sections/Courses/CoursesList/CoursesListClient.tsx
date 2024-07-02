@@ -61,6 +61,18 @@ export default function CoursesListClient({ courses }: CourseCategory) {
       <form className={styles.CoursesForm}>
         <h1>Biblioteca de Cursos</h1>
 
+        <p className={styles.CoursesFormText}>
+          Añade cursos a tu lista de aprendizaje en tu perfil para que tengas la
+          posibilidad de crear tu propia ruta de aprendizaje mientras ves tu
+          progreso completando logros y muchas otras cosas. 🤩
+          <br />
+          <br />
+          Recuerda que el verdadero progreso está en cómo aplicas todo el
+          conocimiento que vayas adquiriendo durante los cursos que elijas,
+          aprovecha de todas las herramientas que la Web nos tiene para ofrecer
+          y no te rindas. 💪
+        </p>
+
         <div className={styles.SearchInput}>
           <input
             {...register('search')}

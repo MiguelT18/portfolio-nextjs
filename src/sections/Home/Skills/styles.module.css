@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
 }
 
 .home_skills {
@@ -32,7 +32,7 @@
   }
   .home_skillsContainer {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 20px;
   }
   .home_skillsButtons {

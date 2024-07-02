@@ -2,7 +2,7 @@
   max-width: 320px;
   margin: 0 auto;
   height: fit-content;
-  background: linear-gradient(135deg, #010d1d, #192441);
+  background: var(--gradient-color-primary);
   display: flex;
   flex-direction: column;
   border-radius: 14px;

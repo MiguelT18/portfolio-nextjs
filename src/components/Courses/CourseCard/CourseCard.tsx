@@ -3,7 +3,6 @@ import { Icon } from '@iconify/react'
 import styles from './styles.module.css'
 import Image from 'next/image'
 import type { CourseCardProps } from '@/types/type'
-import Link from 'next/link'
 import SecondaryButton from '@/components/UI/Buttons/SecondaryButton'
 import PrimarAnchor from '@/components/UI/Buttons/PrimaryAnchor'
 

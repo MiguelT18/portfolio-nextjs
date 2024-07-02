@@ -98,7 +98,7 @@
       {
         "url": "/frontend_design",
         "id": "4",
-        "title": "Efectos y Movimiento en CSS",
+        "title": "Efectos, Animaciones y Movimiento en CSS",
         "description": "Aprende a crear efectos y movimiento en CSS para darle vida a tu página web.",
         "bg_color": "#0277bd",
         "image": "/icons/css.png",

@@ -32,6 +32,10 @@ export default function Navbar() {
     }
   }, [prevScrollPos])
 
+  const handleToggleItemsProfile = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
 
@@ -79,27 +83,37 @@ export default function Navbar() {
             <Link href='/portfolio'>Portafolio</Link>
           </li>
           <li onClick={closeMobileMenu}>
-            <Link href='/portfolio'>Cursos</Link>
+            <Link href='/courses'>Cursos</Link>
           </li>
           <li onClick={closeMobileMenu}>
             <Link href='/pricing'>Planes</Link>
           </li>
           {session ? (
-            <>
-              <li onClick={closeMobileMenu}>
-                <Link href={`/user/${session.user?.name}/account`}>
-                  Mi Perfil
-                </Link>
-              </li>
-              <li onClick={closeMobileMenu}>
-                <Link href={`/user/${session.user?.name}/settings`}>
-                  Configuración
-                </Link>
-              </li>
-              <li onClick={closeMobileMenu}>
-                <a onClick={() => signOut()}>Cerrar Sesión</a>
-              </li>
-            </>
+            <ul onClick={handleToggleItemsProfile}>
+              <div className={styles.profileToggleMobile}>
+                {session.user?.name}
+                <Icon
+                  icon='line-md:arrow-down-circle-twotone'
+                  width={28}
+                  height={28}
+                />
+              </div>
+              <div className={styles.profileItemsMobile}>
+                <li onClick={closeMobileMenu}>
+                  <Link href={`/user/${session.user?.name}/account`}>
+                    Mi Perfil
+                  </Link>
+                </li>
+                <li onClick={closeMobileMenu}>
+                  <Link href={`/user/${session.user?.name}/settings`}>
+                    Configuración
+                  </Link>
+                </li>
+                <li onClick={closeMobileMenu}>
+                  <a onClick={() => signOut()}>Cerrar Sesión</a>
+                </li>
+              </div>
+            </ul>
           ) : (
             <>
               <li onClick={closeMobileMenu}>

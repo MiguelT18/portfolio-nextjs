@@ -14,11 +14,13 @@
 
 #### Accessibility (for UX improvement)
 
-1. ❌ **Search Input**: Add a search input for the courses section.
+1. ✅ **Search Input**: Add a search input for the courses section.
+2. ❌ **Course Route Component**: Make sure 404 page is displayed when the user tries to access a non-existing course route.
 
 #### Interface (for UI improvement)
 
 1. ❌ **Loading**: Add skeleton loading in a Suspense component.
+1. ❌ **Course Card**: Modify styles from course card from courses.
 
 #### Business Logic (General Improvements)
 

@@ -221,6 +221,27 @@
   border-radius: 50%;
 }
 
+.profileItemsMobile {
+  display: none;
+  width: fit-content;
+  margin: 0 auto;
+  border: 2px solid red;
+}
+
+.profileToggleMobile {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 4px 24px;
+  margin-top: 24px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  font-size: var(--font-size-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 @media not all and (max-width: 768px) {
   .menuToggle {
     display: none;

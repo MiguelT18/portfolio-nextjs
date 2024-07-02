@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   /* color palette */
   --color-primary: #02cf5f;
@@ -7,12 +11,15 @@
   --color-quinary: #535b6b;
   --color-white: #ffffff;
 
+  --gradient-color-primary: linear-gradient(135deg, #010d1d, #192441);
+
   /* font sizes */
   --font-size-xs: clamp(0.8rem, 4vw, 1rem);
   --font-size-sm: clamp(1.1rem, 4vw, 1.2rem);
   --font-size-md: clamp(1.3rem, 4.5vw, 1.5rem);
   --font-size-lg: clamp(1.4rem, 4vw, 1.6rem);
   --font-size-xl: clamp(1.8rem, 6.5vw, 2.5rem);
+  --font-size-2xl: clamp(2.2rem, 7vw, 2.8rem);
 
   /* responsive design */
   --max-md: 768px;

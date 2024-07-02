@@ -1,7 +1,7 @@
 .portfolio__hero__projectCard {
-  background: linear-gradient(135deg, #010d1d, #192441);
+  background: var(--gradient-color-primary);
   box-shadow: 0 0 25px 0 #000;
-  border: 2px solid var(--color-white);
+  border: 1px solid var(--color-white);
   border-radius: 10px;
   display: flex;
   flex-direction: column;

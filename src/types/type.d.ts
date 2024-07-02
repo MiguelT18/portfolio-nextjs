@@ -69,7 +69,7 @@ interface Icon {
   id: number
   name: string
   icon: string
-  url?: string
+  url?: string | undefined
 }
 
 export interface SocialMediaIcon {

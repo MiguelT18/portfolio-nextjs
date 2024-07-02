@@ -1,7 +1,7 @@
 .primaryButtonStyles {
   display: flex;
   align-items: center;
-  background-color: var(--color-primary);
+  background-color: #20b362;
   color: var(--color-white);
   padding: 8px 14px;
   border-radius: 6px;
@@ -14,6 +14,7 @@
 
 .primaryButtonStyles:hover {
   background-color: var(--color-secondary);
+  box-shadow: 0 0 2px 2px #09e76d;
 }
 
 .primaryButtonStyles:active {
@@ -47,6 +48,7 @@
 .secondaryButtonStyles:hover {
   border: 2px solid var(--color-white);
   color: var(--color-white) !important;
+  box-shadow: 0 0 5px 0 #fff;
 }
 
 .secondaryButtonStyles:active {

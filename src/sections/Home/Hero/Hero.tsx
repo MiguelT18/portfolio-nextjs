@@ -1,7 +1,6 @@
 import SectionTitle from '@/components/UI/SectionTitle/SectionTitle'
 import styles from './styles.module.css'
 import { getIconsData } from '@/lib/loadData'
-import Link from 'next/link'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import TypewriterWrapper from './TypewriterWrapper'
 import type { SocialMediaIcon } from '@/types/type'
