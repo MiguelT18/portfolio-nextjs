@@ -12,8 +12,15 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import ContactForm from '@/components/UI/ContactForm/ContactForm'
 
-export default function Course() {
-  const { slug } = useParams()
+export default function CourseContent() {
+  const { category, courseId } = useParams() as {
+    category: string | string[]
+    courseId: string | string[]
+  }
+
+  const categoryStr = Array.isArray(category) ? category[0] : category
+  const courseIdStr = Array.isArray(courseId) ? courseId[0] : courseId
+
   const [courseData, setCourseData] = useState<Course | null>(null)
 
   useEffect(() => {
@@ -22,24 +29,18 @@ export default function Course() {
         const resJSON = await getCoursesData()
         const courses: CourseCategory[] = JSON.parse(resJSON)
 
-        if (Array.isArray(slug) && slug.length >= 2) {
-          const categoryUrl = slug[0]
-          const courseId = slug[1]
+        const categoryData = courses.find((cat: CourseCategory) =>
+          Object.keys(cat).includes(categoryStr)
+        )
 
-          for (const category of courses) {
-            const categoryUrlFromData = Object.keys(category)[0]
+        if (categoryData && categoryData[categoryStr]) {
+          const course = categoryData[categoryStr].find(
+            (course) => course.id === courseIdStr
+          )
 
-            if (categoryUrlFromData === categoryUrl) {
-              const coursesInCategory = Object.values(category)[0] as Course[]
-              const course = coursesInCategory.find(
-                (course) => course.id === courseId
-              )
-
-              if (course) {
-                setCourseData(course)
-                return
-              }
-            }
+          if (course) {
+            setCourseData(course)
+            return
           }
         }
       } catch (error) {
@@ -47,10 +48,10 @@ export default function Course() {
       }
     }
 
-    if (slug) {
+    if (categoryStr && courseIdStr) {
       loadCourseData()
     }
-  }, [slug])
+  }, [categoryStr, courseIdStr])
 
   if (!courseData) {
     return (
@@ -116,7 +117,11 @@ export default function Course() {
             </span>
 
             <div className={styles.courseSection__headerDescriptionButtons}>
-              <PrimaryAnchor href={'#'}>Ver completo</PrimaryAnchor>
+              <PrimaryAnchor
+                href={`/courses/${categoryStr}/${courseId}/content`}
+              >
+                Ver completo
+              </PrimaryAnchor>
               <SecondaryButton>
                 <Icon
                   icon='line-md:plus-circle-twotone'
