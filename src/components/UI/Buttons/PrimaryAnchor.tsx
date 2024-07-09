@@ -6,7 +6,7 @@ import type { UIAnchorProps } from '@/types/type'
 export default function PrimarAnchor({
   children,
   fullWidth = false,
-  href = '#',
+  href,
   color = '#fff',
   ...rest
 }: UIAnchorProps) {

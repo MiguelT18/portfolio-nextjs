@@ -1,3 +1,4 @@
+import Custom404 from '@/app/not-found'
 import { getCoursesData } from '@/lib/loadData'
 import Course from '@/sections/Courses/Course/Course'
 import type { CourseCategory } from '@/types/type'
@@ -31,28 +32,8 @@ export default async function CoursePage({ params }: ParamsProps) {
       }
     }
 
-    // Si no se encuentra el curso, mostrar un mensaje de error o redirigir a una página de error.
-    return (
-      <main>
-        <section>
-          <h1>Curso no encontrado</h1>
-          <p>La categoría o el curso especificado no existe.</p>
-          <p>Mostrar una página 404.</p>
-        </section>
-      </main>
-    )
+    return <Custom404 />
   }
 
-  return (
-    <main>
-      <section>
-        <h1>Curso no encontrado</h1>
-        <p>
-          Este componente se mostrará sólamente cuando existan más de 2
-          parámetros en la URL.
-        </p>
-        <p>Mostrar una página 404.</p>
-      </section>
-    </main>
-  )
+  return <Custom404 />
 }

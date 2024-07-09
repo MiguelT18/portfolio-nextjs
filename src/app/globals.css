@@ -41,9 +41,11 @@ html * {
 
 main {
   width: 100%;
-  min-height: 100vh;
+  min-height: 78vh;
   max-width: 70%;
   margin: 0 auto;
+  display: grid;
+  place-content: center;
 }
 
 a {
@@ -110,6 +112,33 @@ input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--color-white);
+}
+
+.notFound-icon {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.notFound-text-container {
+  text-align: center;
+}
+
+.notFound-text-container > h1 {
+  font-size: var(--font-size-xl);
+}
+
+.notFound-text-container > p {
+  margin-bottom: 15px;
+  font-size: var(--font-size-sm);
+}
+
+.notFound-text-container > p > a {
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.notFound-text-container > p > a:hover {
+  color: var(--color-secondary);
 }
 
 .swiper {

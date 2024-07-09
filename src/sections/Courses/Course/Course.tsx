@@ -1,14 +1,92 @@
+'use client'
+
 import { Icon } from '@iconify/react/dist/iconify.js'
 import ContentLoader from 'react-content-loader'
 import styles from './styles.module.css'
-import PrimaryButton from '@/components/UI/Buttons/PrimaryButton'
+import PrimaryAnchor from '@/components/UI/Buttons/PrimaryAnchor'
 import CourseInfoCard from '@/components/Courses/CourseInfoCard/CourseInfoCard'
 import SecondaryButton from '@/components/UI/Buttons/SecondaryButton'
+import { getCoursesData } from '@/lib/loadData'
+import type { Course, CourseCategory } from '@/types/type'
+import { useEffect, useState } from 'react'
+import { useParams } from 'next/navigation'
+import ContactForm from '@/components/UI/ContactForm/ContactForm'
 
 export default function Course() {
+  const { slug } = useParams()
+  const [courseData, setCourseData] = useState<Course | null>(null)
+
+  useEffect(() => {
+    async function loadCourseData() {
+      try {
+        const resJSON = await getCoursesData()
+        const courses: CourseCategory[] = JSON.parse(resJSON)
+
+        if (Array.isArray(slug) && slug.length >= 2) {
+          const categoryUrl = slug[0]
+          const courseId = slug[1]
+
+          for (const category of courses) {
+            const categoryUrlFromData = Object.keys(category)[0]
+
+            if (categoryUrlFromData === categoryUrl) {
+              const coursesInCategory = Object.values(category)[0] as Course[]
+              const course = coursesInCategory.find(
+                (course) => course.id === courseId
+              )
+
+              if (course) {
+                setCourseData(course)
+                return
+              }
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching course data:', error)
+      }
+    }
+
+    if (slug) {
+      loadCourseData()
+    }
+  }, [slug])
+
+  if (!courseData) {
+    return (
+      <section className={styles.courseSection}>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='60px'
+          height='60px'
+          viewBox='0 0 24 24'
+        >
+          <path
+            fill='currentColor'
+            d='M12 2A10 10 0 1 0 22 12A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8A8 8 0 0 1 12 20Z'
+            opacity='0.5'
+          />
+          <path
+            fill='currentColor'
+            d='M20 12h2A10 10 0 0 0 12 2V4A8 8 0 0 1 20 12Z'
+          >
+            <animateTransform
+              attributeName='transform'
+              dur='1s'
+              from='0 12 12'
+              repeatCount='indefinite'
+              to='360 12 12'
+              type='rotate'
+            />
+          </path>
+        </svg>
+      </section>
+    )
+  }
+
   return (
     <section className={styles.courseSection}>
-      <h1>Curso de HTML</h1>
+      <h1 className={styles.courseSection__title}>{courseData.title}</h1>
 
       <div className={styles.courseSection__header}>
         <ContentLoader
@@ -18,52 +96,56 @@ export default function Course() {
           viewBox='0 0 400 225'
           backgroundColor='#1d2939'
           foregroundColor='#535b6b'
+          uniqueKey='course-loader'
         >
           <rect x='0' y='0' rx='2' ry='2' width='100%' height='100%' />
         </ContentLoader>
 
         <article className={styles.courseSection__headerDescription}>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi
-            eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt
-            reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam
-            atque sunt, earum veritatis sapiente voluptates modi cumque at aut
-            nulla unde nihil autem illum aperiam distinctio labore architecto
-            beatae rerum eos ipsa. Totam, et.
-          </p>
+          <p>{courseData.content.introduction}</p>
 
-          <span>
-            <Icon
-              icon='icon-park-twotone:time'
-              color='#02cf5f'
-              width={20}
-              height={20}
-            />
-            Duración 1h 30m.
-          </span>
-
-          <div className={styles.courseSection__headerDescriptionButtons}>
-            <PrimaryButton>Ver completo</PrimaryButton>
-            <SecondaryButton>
+          <div>
+            <span>
               <Icon
-                icon='line-md:plus-circle-twotone'
-                color='#fff'
-                width={25}
-                height={25}
+                icon='icon-park-twotone:time'
+                color='#02cf5f'
+                width={20}
+                height={20}
               />
-              Añadir
-            </SecondaryButton>
+              Duración {courseData.content.duration}.
+            </span>
+
+            <div className={styles.courseSection__headerDescriptionButtons}>
+              <PrimaryAnchor href={'#'}>Ver completo</PrimaryAnchor>
+              <SecondaryButton>
+                <Icon
+                  icon='line-md:plus-circle-twotone'
+                  color='#fff'
+                  width={25}
+                  height={25}
+                />
+                Añadir
+              </SecondaryButton>
+            </div>
           </div>
         </article>
       </div>
 
-      <h1>¿Qué verás en este curso?</h1>
+      <h1 className={styles.courseSection__title}>
+        ¿Qué aprenderás con este curso?
+      </h1>
       <div className={styles.CourseInfoContainer}>
-        <CourseInfoCard />
-        <CourseInfoCard />
-        <CourseInfoCard />
+        {courseData.content.courseInfo.map((info, index) => (
+          <CourseInfoCard
+            icon={info.icon}
+            key={index}
+            title={info.title}
+            description={info.description}
+          />
+        ))}
       </div>
+
+      <ContactForm />
     </section>
   )
 }

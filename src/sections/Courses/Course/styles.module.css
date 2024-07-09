@@ -1,4 +1,4 @@
-.courseSection h1 {
+.courseSection__title {
   display: block;
   text-align: center;
   font-size: var(--font-size-xl);
@@ -8,7 +8,7 @@
   text-transform: uppercase;
 }
 
-.courseSection h1::after {
+.courseSection__title::after {
   content: '';
   display: block;
   width: 15%;
@@ -23,19 +23,29 @@
   justify-content: flex-start;
   gap: 24px;
   padding-bottom: 18px;
+  align-items: center;
+}
+
+.courseSection__headerDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .courseSection__headerDescription span {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin: 14px 0;
+  margin: 28px 0 14px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
 }
 
 .courseSection__headerDescription p {
   display: block;
   width: 100%;
   max-width: 600px;
+  font-size: var(--font-size-sm);
 }
 
 .CourseInfoContainer {

@@ -13,7 +13,8 @@ import ContentLoader from 'react-content-loader'
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPost] = useState(0)
   const [isNavbarHidden, setIsNavbarHidden] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true)
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false)
 
   const { data: session, status } = useSession()
 
@@ -33,7 +34,7 @@ export default function Navbar() {
   }, [prevScrollPos])
 
   const handleToggleItemsProfile = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
+    setIsProfileMenuOpen(!isProfileMenuOpen)
   }
 
   const closeMobileMenu = () => {
@@ -89,16 +90,22 @@ export default function Navbar() {
             <Link href='/pricing'>Planes</Link>
           </li>
           {session ? (
-            <ul onClick={handleToggleItemsProfile}>
+            <ul
+              onClick={handleToggleItemsProfile}
+              className={styles.profileItemsMobile__container}
+            >
               <div className={styles.profileToggleMobile}>
                 {session.user?.name}
                 <Icon
                   icon='line-md:arrow-down-circle-twotone'
-                  width={28}
-                  height={28}
+                  width={25}
+                  height={25}
                 />
               </div>
-              <div className={styles.profileItemsMobile}>
+              <div
+                style={{ display: isProfileMenuOpen ? 'block' : 'none' }}
+                className={styles.profileItemsMobile}
+              >
                 <li onClick={closeMobileMenu}>
                   <Link href={`/user/${session.user?.name}/account`}>
                     Mi Perfil
@@ -133,8 +140,8 @@ export default function Navbar() {
             <ContentLoader
               uniqueKey='user-avatar-loader'
               speed={1}
-              width={30}
-              height={30}
+              width={28}
+              height={28}
               viewBox='0 0 30 30'
               backgroundColor='#1d2939'
               foregroundColor='#535b6b'
@@ -146,8 +153,8 @@ export default function Navbar() {
               className={styles.userAvatar}
               src={session?.user?.image || DefaultAvatar}
               alt='User profile picture'
-              width={30}
-              height={30}
+              width={28}
+              height={28}
               priority={false}
             />
           ) : (

@@ -1,5 +1,6 @@
 import { StaticImageData } from 'next/image'
 import { ReactNode } from 'react'
+import { Url } from 'url'
 
 export interface UIButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,7 +13,7 @@ export interface UIAnchorProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: React.ReactNode
   fullWidth?: boolean
-  href?: string
+  href: string | Url
   color?: string
 }
 
@@ -24,6 +25,15 @@ interface Course {
   bg_color: string
   url: string
   difficult: string
+  content: {
+    introduction: string
+    duration: string
+    courseInfo: {
+      icon?: string
+      title: string
+      description: string
+    }[]
+  }
 }
 interface CourseCategory {
   [key: string]: Course[]
