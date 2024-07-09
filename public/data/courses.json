@@ -8,9 +8,9 @@
         "description": "Aprende los conceptos fundamentales de la programación en general.",
         "bg_color": "#f62f53",
         "image": "/icons/coding.png",
-        "difficult": "fácil",
+        "difficult": "intermedio",
         "content": {
-          "introduction": "Bienvenido al curso de Programación Básica. En este curso, aprenderás los conceptos fundamentales de la programación en general, así como la lógica de programación, variables y tipos de datos, estructuras de control y muchos otros conceptos más... ¿Estás listo para emprender tu camino como programador? ¡Empecemos!",
+          "introduction": "Bienvenido al curso de Programación Básica. En este curso, aprenderás los conceptos fundamentales de la programación en general, así como la lógica de programación, variables y tipos de datos, estructuras de control y muchos otros conceptos más... ¿Estás listo para emprender tu camino como programador?",
           "duration": "1h 30m",
           "courseInfo": [
             {
@@ -27,6 +27,11 @@
               "icon": "streamline:industry-innovation-and-infrastructure-solid",
               "title": "Estructuras de control",
               "description": "Conocerás las estructuras de control más comunes en la programación, como los condicionales y los bucles."
+            },
+            {
+              "icon": "gravity-ui:curly-brackets-function",
+              "title": "Funciones",
+              "description": "Descubrirás cómo crear y utilizar funciones para organizar y reutilizar tu código de manera eficiente."
             }
           ]
         }
@@ -40,20 +45,38 @@
         "image": "/icons/html-5.png",
         "difficult": "fácil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Fundamentos de HTML. En este curso, descubrirás los principios básicos del Lenguaje de Marcado de Hipertexto (HTML), la columna vertebral de cualquier página web. Aprenderás a crear y estructurar contenido web, a utilizar etiquetas y atributos fundamentales, y a diseñar documentos con una base sólida. ¿Estás listo para comenzar tu viaje en el mundo del desarrollo web?",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "fluent:tag-24-regular",
+              "title": "Etiquetas y Estructura",
+              "description": "Aprenderás a utilizar las etiquetas básicas de HTML y a estructurar adecuadamente el contenido de una página web."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:form-textbox",
+              "title": "Atributos y Elementos",
+              "description": "Descubrirás cómo los atributos afectan los elementos HTML y cómo utilizarlos para añadir propiedades adicionales a tus etiquetas."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "ion:images-outline",
+              "title": "Multimedia en HTML",
+              "description": "Sabrás cómo insertar imágenes, videos y otros tipos de contenido multimedia en tus páginas web."
+            },
+            {
+              "icon": "material-symbols:table-rows-outline",
+              "title": "Tablas y Listas",
+              "description": "Conocerás cómo crear tablas y listas, organizando la información de manera clara y ordenada en tus documentos HTML."
+            },
+            {
+              "icon": "heroicons-outline:device-tablet",
+              "title": "Enlaces y Navegación",
+              "description": "Aprenderás a crear enlaces y a estructurar la navegación dentro de tu sitio web para mejorar la experiencia del usuario."
+            },
+            {
+              "icon": "mdi:form-textarea",
+              "title": "Formularios",
+              "description": "Descubrirás cómo crear formularios interactivos y recolectar datos de los usuarios de manera eficiente."
             }
           ]
         }
@@ -67,20 +90,28 @@
         "image": "/icons/css.png",
         "difficult": "fácil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Fundamentos de CSS. En este curso, aprenderás los conceptos esenciales del CSS, la hoja de estilos en cascada que da vida y diseño a tus páginas web. Desde la sintaxis básica hasta la creación de layouts complejos, este curso te proporcionará las habilidades necesarias para estilizar tu sitio web profesionalmente. ¡Prepárate para transformar el aspecto de tus proyectos web!",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "carbon:code",
+              "title": "Sintaxis y Selectores",
+              "description": "Aprenderás la sintaxis básica de CSS y cómo utilizar selectores para aplicar estilos a los elementos HTML."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "material-symbols:palette",
+              "title": "Propiedades de Estilo",
+              "description": "Explorarás las propiedades de estilo más comunes, como color, fuente, y fondo, para dar forma a tus páginas web."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:grid",
+              "title": "Diseño de Layouts",
+              "description": "Descubrirás cómo crear layouts utilizando CSS Grid y Flexbox, herramientas poderosas para diseñar estructuras responsivas."
+            },
+            {
+              "icon": "fluent:align-left-20-regular",
+              "title": "Posicionamiento y Espaciado",
+              "description": "Aprenderás técnicas de posicionamiento de elementos y cómo gestionar el espaciado y las márgenes en CSS."
             }
           ]
         }
@@ -94,20 +125,33 @@
         "image": "/icons/vscode.png",
         "difficult": "fácil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Visual Studio Code & Emmet. En este curso, aprenderás a utilizar Visual Studio Code, uno de los editores de código más populares y potentes disponibles en la actualidad, junto con Emmet, una herramienta que agiliza tu flujo de trabajo con abreviaciones de código. Desde la configuración inicial hasta el uso avanzado de atajos y extensiones, este curso te proporcionará todo lo necesario para optimizar tu productividad como desarrollador.",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:code-braces-box",
+              "title": "Configuración Inicial",
+              "description": "Aprenderás a instalar y configurar Visual Studio Code para adaptarlo a tus necesidades como desarrollador."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "bx:extension",
+              "title": "Extensiones Esenciales",
+              "description": "Descubrirás las extensiones más útiles y cómo instalarlas para mejorar tu experiencia de codificación."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:keyboard-outline",
+              "title": "Atajos de Teclado",
+              "description": "Conocerás los atajos de teclado más importantes que te permitirán trabajar de manera más rápida y eficiente."
+            },
+            {
+              "icon": "mdi:lightning-bolt-outline",
+              "title": "Introducción a Emmet",
+              "description": "Explorarás las funcionalidades básicas de Emmet y cómo usar sus abreviaciones para escribir código HTML y CSS más rápido."
+            },
+            {
+              "icon": "mdi:rocket-launch-outline",
+              "title": "Uso Avanzado de Emmet",
+              "description": "Aprenderás técnicas avanzadas de Emmet para maximizar tu productividad al escribir código repetitivo."
             }
           ]
         }
@@ -121,20 +165,33 @@
         "image": "/icons/markdown.png",
         "difficult": "fácil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Markdown. En este curso, aprenderás a utilizar Markdown, un lenguaje de marcado ligero y fácil de aprender que te permitirá formatear texto de manera sencilla y eficiente. Desde la creación de encabezados y listas hasta la inclusión de enlaces e imágenes, este curso te guiará paso a paso para que domines todas las capacidades de Markdown y puedas aplicarlas en tus proyectos y documentación. ¡Prepárate para mejorar la legibilidad y presentación de tus textos!",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:format-header-pound",
+              "title": "Encabezados y Texto Básico",
+              "description": "Aprenderás a crear y formatear encabezados y texto básico para estructurar tus documentos."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:format-list-bulleted",
+              "title": "Listas y Listas Anidadas",
+              "description": "Descubrirás cómo crear listas ordenadas y desordenadas, así como listas anidadas para organizar mejor la información."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:link-variant",
+              "title": "Enlaces e Imágenes",
+              "description": "Aprenderás a incluir enlaces e imágenes en tus documentos para hacerlos más dinámicos y atractivos."
+            },
+            {
+              "icon": "mdi:format-quote-close",
+              "title": "Citas y Bloques de Código",
+              "description": "Explorarás cómo utilizar citas y bloques de código para resaltar información importante y ejemplos de código."
+            },
+            {
+              "icon": "mdi:table",
+              "title": "Tablas",
+              "description": "Aprenderás a crear tablas en Markdown para organizar datos de manera clara y ordenada."
             }
           ]
         }
@@ -148,20 +205,33 @@
         "image": "/icons/linux.png",
         "difficult": "fácil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Terminal de Linux. En este curso, aprenderás a instalar y configurar WSL2 (Windows Subsystem for Linux 2) en tu sistema Windows. Además, te familiarizarás con los comandos más utilizados en Linux, lo que te permitirá navegar y gestionar tu entorno de desarrollo de manera eficiente. Desde los comandos básicos hasta los más avanzados, este curso te proporcionará las habilidades necesarias para aprovechar al máximo la potencia de la terminal de Linux. ¡Prepárate para dominar el entorno de línea de comandos!",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:terminal",
+              "title": "Instalación y Configuración de WSL2",
+              "description": "Aprenderás a instalar y configurar WSL2 en tu sistema Windows, habilitando un entorno de desarrollo Linux completo."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:folder-open",
+              "title": "Navegación de Sistema de Archivos",
+              "description": "Descubrirás cómo navegar por el sistema de archivos, listar directorios y gestionar archivos y carpetas."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:console-line",
+              "title": "Comandos Básicos de Linux",
+              "description": "Aprenderás los comandos básicos para trabajar en la terminal de Linux, incluyendo la creación, copia, y eliminación de archivos."
+            },
+            {
+              "icon": "mdi:progress-download",
+              "title": "Gestión de Paquetes",
+              "description": "Explorarás cómo instalar, actualizar y gestionar paquetes y software utilizando gestores de paquetes como apt."
+            },
+            {
+              "icon": "mdi:network",
+              "title": "Comandos de Red",
+              "description": "Conocerás los comandos esenciales para gestionar redes, comprobar conexiones y solucionar problemas de red en Linux."
             }
           ]
         }
@@ -175,20 +245,33 @@
         "image": "/icons/git.png",
         "difficult": "intermedio",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Git & GitHub. En este curso, aprenderás a utilizar Git, el sistema de control de versiones más popular, y GitHub, la plataforma de colaboración y gestión de proyectos. Desde los conceptos básicos hasta las prácticas avanzadas, este curso te proporcionará las habilidades necesarias para gestionar eficientemente el código fuente, colaborar con otros desarrolladores y mantener un historial de cambios claro y organizado. ¡Empecemos a dominar Git y GitHub!",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:git",
+              "title": "Fundamentos de Git",
+              "description": "Aprenderás los conceptos básicos de Git, incluyendo la inicialización de repositorios, el seguimiento de cambios y la creación de commits."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:source-branch",
+              "title": "Ramas y Fusión",
+              "description": "Descubrirás cómo trabajar con ramas en Git para desarrollar nuevas funcionalidades de forma aislada y cómo fusionarlas de vuelta al proyecto principal."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:github",
+              "title": "Trabajando con GitHub",
+              "description": "Explorarás cómo usar GitHub para alojar tus repositorios, colaborar con otros desarrolladores y gestionar proyectos mediante issues y pull requests."
+            },
+            {
+              "icon": "mdi:history",
+              "title": "Historial y Reversiones",
+              "description": "Aprenderás a revisar el historial de cambios, comparar versiones anteriores y revertir cambios si es necesario."
+            },
+            {
+              "icon": "mdi:cloud-upload",
+              "title": "Git y GitHub Avanzado",
+              "description": "Conocerás prácticas avanzadas para la gestión de repositorios, incluyendo la configuración de flujos de trabajo eficientes y la resolución de conflictos."
             }
           ]
         }
@@ -206,20 +289,33 @@
         "image": "/icons/figma.png",
         "difficult": "intermedio",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Figma 100% práctico para crear prototipos de alta calidad. En este curso, aprenderás a utilizar Figma, una de las herramientas más populares para el diseño de interfaces y la creación de prototipos interactivos. A través de ejercicios prácticos y ejemplos reales, desarrollarás las habilidades necesarias para diseñar interfaces de usuario atractivas y funcionales, colaborar con tu equipo de manera eficiente y llevar tus ideas del concepto al prototipo final. ¡Empecemos a diseñar con Figma!",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:palette",
+              "title": "Fundamentos de Figma",
+              "description": "Aprenderás los conceptos básicos de Figma, incluyendo la interfaz, las herramientas principales y las funcionalidades esenciales para empezar a diseñar."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:puzzle-outline",
+              "title": "Creación de Componentes",
+              "description": "Descubrirás cómo crear y gestionar componentes reutilizables para mantener la consistencia y eficiencia en tus diseños."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:vector-square",
+              "title": "Diseño de Interfaces",
+              "description": "Explorarás técnicas avanzadas de diseño de interfaces, incluyendo el uso de auto-layout, grids y estilos globales para crear diseños flexibles y escalables."
+            },
+            {
+              "icon": "fe:prototype",
+              "title": "Prototipos Interactivos",
+              "description": "Aprenderás a crear prototipos interactivos que simulen el comportamiento de una aplicación real, permitiendo la validación y el testeo de tus diseños."
+            },
+            {
+              "icon": "mdi:account-group",
+              "title": "Colaboración en Figma",
+              "description": "Conocerás las herramientas y prácticas para colaborar eficientemente con tu equipo dentro de Figma, incluyendo comentarios, co-edición y control de versiones."
             }
           ]
         }
@@ -233,20 +329,28 @@
         "image": "/icons/css.png",
         "difficult": "intermedio",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Flexbox CSS. En este curso, explorarás Flexbox, una herramienta poderosa de CSS diseñada para crear layouts flexibles y eficientes para sitios web. A través de ejemplos prácticos y ejercicios guiados, aprenderás cómo utilizar Flexbox para controlar el diseño y la organización de elementos en tus páginas web, permitiendo diseños más responsivos y dinámicos. ¡Vamos a dominar Flexbox y llevar tus habilidades de diseño web al siguiente nivel!",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:format-align-center",
+              "title": "Conceptos Fundamentales",
+              "description": "Aprenderás los principios básicos de Flexbox, incluyendo contenedores flexibles, ejes principales y ejes cruzados."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:view-grid",
+              "title": "Diseño de Layouts",
+              "description": "Explorarás cómo crear layouts complejos y responsivos utilizando las propiedades de Flexbox como flex-direction, justify-content y align-items."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:swap-vertical",
+              "title": "Orden y Alineación",
+              "description": "Descubrirás cómo controlar el orden y la alineación de elementos dentro de un contenedor flex, utilizando las propiedades order, align-self y flex."
+            },
+            {
+              "icon": "mdi:brush",
+              "title": "Estilización Avanzada",
+              "description": "Explorarás técnicas avanzadas de estilización con Flexbox, incluyendo el uso de flex-wrap, flex-grow y flex-shrink para controlar el comportamiento de los elementos flexibles."
             }
           ]
         }
@@ -260,20 +364,33 @@
         "image": "/icons/css.png",
         "difficult": "intermedio",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Grid CSS. En este curso, explorarás CSS Grid, una herramienta revolucionaria para crear layouts de página complejos y personalizados con facilidad. A través de ejemplos prácticos y proyectos guiados, aprenderás cómo utilizar CSS Grid para diseñar layouts bidimensionales, controlar la disposición y alineación de elementos, y crear diseños responsivos y flexibles. ¡Prepárate para dominar CSS Grid y llevar tus habilidades de diseño web al siguiente nivel!",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:grid",
+              "title": "Fundamentos de CSS Grid",
+              "description": "Aprenderás los conceptos básicos de CSS Grid, incluyendo la creación de cuadrículas, filas y columnas."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:page-layout-header-footer",
+              "title": "Diseño de Layouts Complejos",
+              "description": "Explorarás cómo diseñar layouts complejos utilizando CSS Grid, incluyendo el uso de grid-template-areas y grid-template-columns."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:view-sequential",
+              "title": "Control de la Disposición de Elementos",
+              "description": "Descubrirás técnicas para controlar la disposición y alineación de elementos dentro de una cuadrícula CSS, utilizando propiedades como grid-row, grid-column y justify-items."
+            },
+            {
+              "icon": "mdi:arrow-collapse-all",
+              "title": "Diseño Responsivo",
+              "description": "Aprenderás estrategias para crear diseños responsivos utilizando CSS Grid, incluyendo el uso de media queries y grid-auto-flow."
+            },
+            {
+              "icon": "mdi:application-cog",
+              "title": "Optimización y Estilización Avanzada",
+              "description": "Explorarás técnicas avanzadas de optimización y estilización con CSS Grid, incluyendo el uso de grid-gap, grid-auto-rows y grid-auto-columns."
             }
           ]
         }
@@ -287,20 +404,33 @@
         "image": "/icons/css.png",
         "difficult": "intermedio",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Efectos, Animaciones y Movimiento en CSS. En este curso, explorarás cómo utilizar CSS para añadir dinamismo y vida a tus sitios web. Desde efectos simples hasta animaciones complejas, aprenderás las técnicas fundamentales para crear transiciones suaves, efectos de hover interactivos y animaciones de elementos. Este curso te proporcionará las habilidades necesarias para mejorar la experiencia de usuario a través del movimiento y la interactividad.",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:animation-outline",
+              "title": "Fundamentos de Animaciones CSS",
+              "description": "Aprenderás los conceptos básicos de animaciones CSS, incluyendo keyframes, duración y timing functions."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:gesture-double-tap",
+              "title": "Efectos de Hover Interactivos",
+              "description": "Explorarás cómo crear efectos de hover interactivos utilizando CSS para mejorar la interactividad de tus elementos."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:transition",
+              "title": "Transiciones Suaves",
+              "description": "Descubrirás técnicas para aplicar transiciones suaves a cambios de estado en elementos CSS, como color, tamaño y posición."
+            },
+            {
+              "icon": "mdi:rocket",
+              "title": "Animaciones Avanzadas",
+              "description": "Aprenderás a crear animaciones avanzadas en CSS, utilizando combinaciones de transformaciones, transiciones y keyframes."
+            },
+            {
+              "icon": "mdi:cards-playing-outline",
+              "title": "Ejemplos Prácticos y Proyectos",
+              "description": "Aplicarás lo aprendido en ejemplos prácticos y proyectos, donde combinarás efectos, animaciones y movimiento para crear experiencias visuales impactantes."
             }
           ]
         }
@@ -314,20 +444,28 @@
         "image": "/icons/responsive.png",
         "difficult": "difícil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Responsive Design. En este curso, aprenderás a crear sitios web que se adapten y funcionen correctamente en una variedad de dispositivos y tamaños de pantalla. Desde los principios fundamentales hasta técnicas avanzadas, explorarás cómo utilizar HTML, CSS y técnicas de diseño responsivo para garantizar una experiencia de usuario óptima en cualquier dispositivo, ya sea móvil, tablet o escritorio.",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:responsive",
+              "title": "Principios Fundamentales",
+              "description": "Entenderás los principios básicos del diseño responsivo y por qué es importante para la experiencia del usuario."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:image-filter-none",
+              "title": "Imágenes Responsivas",
+              "description": "Descubrirás cómo hacer que las imágenes se ajusten automáticamente según el tamaño de la pantalla para mejorar el rendimiento y la estética."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "circum:mobile-2",
+              "title": "Optimización para Dispositivos Móviles",
+              "description": "Explorarás técnicas específicas para optimizar tu sitio web para dispositivos móviles, como media queries y viewport meta tags."
+            },
+            {
+              "icon": "mdi:web",
+              "title": "Diseño Adaptativo",
+              "description": "Aprenderás a diseñar interfaces que se adapten de manera inteligente a diferentes resoluciones y orientaciones de pantalla."
             }
           ]
         }
@@ -341,20 +479,33 @@
         "image": "/icons/tailwindcss.png",
         "difficult": "fácil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "Bienvenido al curso de Tailwind CSS. En este curso, explorarás cómo utilizar Tailwind CSS para agilizar y simplificar el proceso de desarrollo de interfaces de usuario. Aprenderás a utilizar clases utilitarias predefinidas para diseñar rápidamente sitios web modernos y responsivos sin necesidad de escribir CSS personalizado extensivamente.",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:format-text",
+              "title": "Clases Utilitarias",
+              "description": "Dominarás el uso de clases utilitarias de Tailwind CSS para diseñar rápidamente tipografías, colores, espaciado, y más."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:grid",
+              "title": "Grid y Flexbox",
+              "description": "Aprenderás a utilizar las utilidades de Grid y Flexbox en Tailwind CSS para crear diseños complejos y responsivos."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:pencil-ruler",
+              "title": "Personalización",
+              "description": "Descubrirás cómo personalizar y extender Tailwind CSS para adaptarlo a las necesidades específicas de tu proyecto."
+            },
+            {
+              "icon": "mdi:chart-box",
+              "title": "Optimización del Tamaño",
+              "description": "Explorarás técnicas para optimizar el tamaño de tus estilos al utilizar Tailwind CSS en producción."
+            },
+            {
+              "icon": "mdi:code-tags",
+              "title": "Integración y Herramientas",
+              "description": "Aprenderás a integrar Tailwind CSS en tus proyectos existentes y a utilizar herramientas complementarias para mejorar tu flujo de trabajo."
             }
           ]
         }
@@ -372,20 +523,33 @@
         "image": "/icons/javascript.png",
         "difficult": "intermedio",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "¡Bienvenido al curso de JavaScript! Este curso te guiará a través del lenguaje de programación JavaScript, desde los conceptos básicos hasta técnicas avanzadas. Aprenderás a utilizar JavaScript para crear interactividad en páginas web, manipular el DOM, trabajar con eventos, gestionar datos mediante objetos y funciones, y mucho más.",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:code-braces",
+              "title": "Fundamentos de JavaScript",
+              "description": "Dominarás los fundamentos del lenguaje, incluyendo variables, tipos de datos, operadores, estructuras de control y funciones."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:script-text",
+              "title": "Manipulación del DOM",
+              "description": "Aprenderás a manipular el Document Object Model (DOM) utilizando JavaScript para crear y modificar contenido dinámicamente en páginas web."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:eventbrite",
+              "title": "Gestión de Eventos",
+              "description": "Explorarás cómo gestionar eventos del usuario y del navegador para crear interacciones interactivas en tus aplicaciones web."
+            },
+            {
+              "icon": "mdi:database",
+              "title": "Trabajo con Datos",
+              "description": "Conocerás cómo gestionar y manipular datos utilizando estructuras de datos como objetos y arrays, y cómo interactuar con APIs para obtener y enviar datos."
+            },
+            {
+              "icon": "mdi:function-variant",
+              "title": "Funciones Avanzadas",
+              "description": "Descubrirás funciones avanzadas de JavaScript, incluyendo funciones flecha, closures, funciones recursivas y manejo de errores."
             }
           ]
         }
@@ -399,20 +563,38 @@
         "image": "/icons/react.png",
         "difficult": "difícil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "¡Bienvenido al curso de React.js! En este curso, explorarás uno de los frameworks más populares y potentes para el desarrollo de aplicaciones web modernas. Aprenderás desde los conceptos básicos hasta técnicas avanzadas de React.js, incluyendo la creación de componentes, el uso del estado y props, el enrutamiento, la gestión de formularios, el consumo de APIs y mucho más.",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:react",
+              "title": "Fundamentos de React",
+              "description": "Dominarás los fundamentos de React.js, incluyendo la creación de componentes, JSX, renderizado condicional y listas."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "eos-icons:compare-states-outlined",
+              "title": "Manejo del Estado",
+              "description": "Aprenderás a gestionar el estado de los componentes utilizando useState y useContext, y cómo pasar datos mediante props."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:link-variant",
+              "title": "Enrutamiento",
+              "description": "Explorarás cómo implementar enrutamiento en una aplicación React utilizando React Router para navegar entre diferentes vistas."
+            },
+            {
+              "icon": "mdi:form-select",
+              "title": "Gestión de Formularios",
+              "description": "Conocerás cómo manejar formularios en React, desde la captura de datos hasta su validación y envío."
+            },
+            {
+              "icon": "mdi:api",
+              "title": "Consumo de APIs",
+              "description": "Descubrirás cómo integrar y consumir datos desde APIs externas utilizando fetch o librerías como Axios en aplicaciones React."
+            },
+            {
+              "icon": "mdi:code-braces",
+              "title": "Componentes Avanzados",
+              "description": "Aprenderás a crear componentes más avanzados en React, incluyendo componentes funcionales y de clase, ciclos de vida, y hooks adicionales."
             }
           ]
         }
@@ -426,20 +608,38 @@
         "image": "/icons/nextjs.png",
         "difficult": "difícil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "¡Bienvenido al curso de Next.js! En este curso, explorarás uno de los frameworks más populares y poderosos para el desarrollo de aplicaciones web y páginas web estáticas con React. Aprenderás desde los conceptos básicos hasta técnicas avanzadas de Next.js, incluyendo la configuración inicial de proyectos, la creación de páginas estáticas y dinámicas, la gestión de rutas, la integración con APIs externas y mucho más.",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "teenyicons:nextjs-outline",
+              "title": "Introducción a Next.js",
+              "description": "Conocerás los fundamentos de Next.js y cómo se diferencia de React.js, incluyendo la configuración inicial del entorno de desarrollo."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:file-tree",
+              "title": "Rutas y Páginas",
+              "description": "Aprenderás a gestionar rutas y crear páginas estáticas y dinámicas en Next.js, aprovechando la capacidad de generación estática y SSR."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:server",
+              "title": "APIs en Next.js",
+              "description": "Descubrirás cómo integrar y consumir datos desde APIs externas utilizando Next.js, tanto en el lado del cliente como en el servidor."
+            },
+            {
+              "icon": "tabler:layout-filled",
+              "title": "Layouts y Componentes",
+              "description": "Dominarás la creación de layouts y componentes reutilizables en Next.js para mejorar la organización y reusabilidad del código."
+            },
+            {
+              "icon": "mdi:cloud-upload",
+              "title": "Despliegue y Optimización",
+              "description": "Aprenderás a desplegar una aplicación Next.js en entornos de producción y aplicar técnicas de optimización para mejorar el rendimiento."
+            },
+            {
+              "icon": "mdi:book-open-variant",
+              "title": "Documentación y Recursos",
+              "description": "Te familiarizarás con la documentación oficial y otros recursos disponibles para seguir aprendiendo y avanzando con Next.js."
             }
           ]
         }
@@ -453,20 +653,38 @@
         "image": "/icons/astro.png",
         "difficult": "difícil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "¡Bienvenido al curso de Astro.js! En este curso, explorarás una nueva forma de construir sitios web modernos utilizando Astro.js. Aprenderás desde los conceptos básicos hasta técnicas avanzadas de Astro.js, incluyendo la configuración inicial de proyectos, la creación de componentes reutilizables, la gestión de datos y APIs, el enrutamiento y mucho más.",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "tabler:brand-astro",
+              "title": "Introducción a Astro.js",
+              "description": "Conocerás los fundamentos de Astro.js y cómo se diferencia de otros frameworks, incluyendo la instalación y configuración inicial."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:code-braces",
+              "title": "Componentes y Layouts",
+              "description": "Aprenderás a crear componentes y layouts reutilizables en Astro.js para mejorar la modularidad y organización del código."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:database-search",
+              "title": "Gestión de Datos y APIs",
+              "description": "Descubrirás cómo manejar datos y realizar llamadas a APIs externas en Astro.js, integrándolos eficientemente en tus aplicaciones."
+            },
+            {
+              "icon": "mdi:page-next-outline",
+              "title": "Enrutamiento",
+              "description": "Dominarás las técnicas de enrutamiento en Astro.js para gestionar la navegación y crear experiencias de usuario fluidas."
+            },
+            {
+              "icon": "mdi:cloud-check",
+              "title": "Despliegue y Optimización",
+              "description": "Aprenderás a desplegar una aplicación Astro.js en diferentes entornos y aplicar técnicas de optimización para mejorar el rendimiento."
+            },
+            {
+              "icon": "mdi:bookshelf",
+              "title": "Documentación y Recursos",
+              "description": "Te familiarizarás con la documentación oficial y otros recursos disponibles para seguir aprendiendo y avanzando con Astro.js."
             }
           ]
         }
@@ -484,20 +702,43 @@
         "image": "/icons/python.png",
         "difficult": "intermedio",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "¡Bienvenido al curso de Python! En este curso, te introducirás en el mundo de la programación utilizando Python, uno de los lenguajes más populares y versátiles. Aprenderás desde los conceptos básicos como variables y estructuras de control, hasta técnicas avanzadas como programación orientada a objetos y manipulación de datos.",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:file-document-outline",
+              "title": "Introducción a Python",
+              "description": "Comenzarás con los fundamentos de Python, incluyendo la sintaxis básica, tipos de datos y operadores."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:function-variant",
+              "title": "Funciones y Estructuras de Control",
+              "description": "Aprenderás a definir y utilizar funciones en Python, así como estructuras de control como condicionales y bucles."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:puzzle-outline",
+              "title": "Estructuras de Datos",
+              "description": "Explorarás diferentes estructuras de datos en Python como listas, tuplas, conjuntos y diccionarios, y cómo trabajar con ellas eficientemente."
+            },
+            {
+              "icon": "mdi:chart-timeline-variant",
+              "title": "Programación Orientada a Objetos",
+              "description": "Dominarás los conceptos de la programación orientada a objetos (POO) en Python, incluyendo clases, objetos, herencia y polimorfismo."
+            },
+            {
+              "icon": "mdi:database-search",
+              "title": "Manipulación de Datos",
+              "description": "Aprenderás a manipular datos utilizando bibliotecas populares como NumPy y Pandas, para análisis y manipulación eficiente de datos."
+            },
+            {
+              "icon": "mdi:source-branch",
+              "title": "Módulos y Paquetes",
+              "description": "Explorarás cómo organizar y reutilizar código en Python mediante el uso de módulos y la creación de paquetes."
+            },
+            {
+              "icon": "mdi:desktop-classic",
+              "title": "Aplicaciones y Proyectos",
+              "description": "Aplicarás tus conocimientos en la creación de proyectos prácticos en Python, integrando múltiples conceptos aprendidos a lo largo del curso."
             }
           ]
         }
@@ -511,20 +752,43 @@
         "image": "/icons/nodejs.png",
         "difficult": "difícil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "¡Bienvenido al curso de Node.js! En este curso, explorarás Node.js, un entorno de tiempo de ejecución de JavaScript que te permite desarrollar aplicaciones backend robustas y escalables. Aprenderás desde los fundamentos básicos de Node.js y su arquitectura no bloqueante, hasta la creación de APIs RESTful y la integración de bases de datos.",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:nodejs",
+              "title": "Introducción a Node.js",
+              "description": "Conocerás qué es Node.js, su arquitectura no bloqueante y cómo instalarlo y configurarlo en tu entorno de desarrollo."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:server",
+              "title": "Servidor HTTP y Módulos Core",
+              "description": "Explorarás cómo crear un servidor HTTP básico en Node.js y trabajar con los módulos core proporcionados por Node."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:api",
+              "title": "Desarrollo de APIs RESTful",
+              "description": "Aprenderás a desarrollar APIs RESTful utilizando Express.js, gestionando rutas, solicitudes HTTP, y respuestas."
+            },
+            {
+              "icon": "mdi:database",
+              "title": "Integración de Bases de Datos",
+              "description": "Explorarás cómo integrar bases de datos en aplicaciones Node.js utilizando MongoDB, Mongoose, y realizar operaciones CRUD."
+            },
+            {
+              "icon": "mdi:file-code",
+              "title": "Autenticación y Autorización",
+              "description": "Implementarás autenticación y autorización en tu API utilizando JSON Web Tokens (JWT) y middleware de seguridad."
+            },
+            {
+              "icon": "mdi:cloud-upload",
+              "title": "Despliegue en la Nube",
+              "description": "Aprenderás a desplegar tu aplicación Node.js en plataformas de nube como Heroku, utilizando buenas prácticas de despliegue."
+            },
+            {
+              "icon": "mdi:source-branch",
+              "title": "Testing y Manejo de Errores",
+              "description": "Explorarás técnicas para realizar pruebas unitarias y manejar errores eficazmente en tus aplicaciones Node.js."
             }
           ]
         }
@@ -538,20 +802,43 @@
         "image": "/icons/nodejs.png",
         "difficult": "difícil",
         "content": {
-          "introduction": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam numquam odio. Rem quos maxime blanditiis nihil excepturi eum, vitae corporis ratione officia nostrum! Pariatur nulla sunt reprehenderit quod veniam. Perspiciatis nobis ipsam nisi aliquam atque sunt, earum veritatis sapiente voluptates modi cumque at aut nulla unde nihil autem illum aperiam distinctio labore architecto beatae rerum eos ipsa. Totam, et.",
+          "introduction": "¡Bienvenido al curso de Desarrollo Web con Node.js y Express.js! En este curso, aprenderás a construir aplicaciones web robustas utilizando Node.js como entorno de tiempo de ejecución y Express.js como framework backend. Desde la configuración inicial hasta el despliegue en producción, explorarás cómo manejar rutas, integrar bases de datos, gestionar sesiones y autenticación, y mucho más.",
           "duration": "1h 30m",
           "courseInfo": [
             {
-              "title": "Title 1",
-              "description": "lorem ipsum 1"
+              "icon": "mdi:web",
+              "title": "Creación de Servidores con Express.js",
+              "description": "Aprenderás a crear servidores web utilizando Express.js, gestionando rutas, peticiones HTTP y respuestas."
             },
             {
-              "title": "Title 2",
-              "description": "lorem ipsum 2"
+              "icon": "mdi:database",
+              "title": "Integración de Bases de Datos",
+              "description": "Explorarás cómo integrar bases de datos relacionales y no relacionales en aplicaciones Express.js utilizando Sequelize y Mongoose."
             },
             {
-              "title": "Title 3",
-              "description": "lorem ipsum 3"
+              "icon": "mdi:account",
+              "title": "Autenticación y Autorización",
+              "description": "Implementarás estrategias de autenticación y autorización utilizando Passport.js y JSON Web Tokens (JWT)."
+            },
+            {
+              "icon": "mdi:format-list-checkbox",
+              "title": "Validación de Datos",
+              "description": "Aprenderás a validar datos entrantes utilizando bibliotecas como Joi para garantizar la integridad de los datos."
+            },
+            {
+              "icon": "mdi:file-code",
+              "title": "Middlewares y Gestión de Sesiones",
+              "description": "Explorarás cómo usar middlewares en Express.js para manejar solicitudes, y gestionar sesiones de usuario con express-session."
+            },
+            {
+              "icon": "mdi:cloud-upload",
+              "title": "Despliegue en Producción",
+              "description": "Aprenderás a desplegar tu aplicación Node.js y Express.js en plataformas de producción como Heroku."
+            },
+            {
+              "icon": "mdi:source-branch",
+              "title": "Testing y Depuración",
+              "description": "Explorarás técnicas para realizar pruebas unitarias y depurar aplicaciones Node.js y Express.js eficazmente."
             }
           ]
         }

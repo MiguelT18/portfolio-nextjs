@@ -13,7 +13,7 @@ import ContentLoader from 'react-content-loader'
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPost] = useState(0)
   const [isNavbarHidden, setIsNavbarHidden] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false)
 
   const { data: session, status } = useSession()

@@ -150,6 +150,9 @@ export default function CourseContent() {
         ))}
       </div>
 
+      <h1 className={styles.courseSection__title}>
+        Contáctame por si tienes dudas
+      </h1>
       <ContactForm />
     </section>
   )

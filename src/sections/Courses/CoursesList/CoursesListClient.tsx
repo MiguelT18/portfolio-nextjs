@@ -4,7 +4,7 @@ import CourseCard from '@/components/Courses/CourseCard/CourseCard'
 import { Course, CourseCategory } from '@/types/type'
 import styles from './styles.module.css'
 import { useForm } from 'react-hook-form'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
 export default function CoursesListClient({ courses }: CourseCategory) {
@@ -15,6 +15,31 @@ export default function CoursesListClient({ courses }: CourseCategory) {
   const [activeDifficultyFilters, setActiveDifficultyFilters] = useState<
     string[]
   >([])
+
+  useEffect(() => {
+    // Cargar valores desde localStorage
+    const savedLearningPath = localStorage.getItem('activeLearningPathFilter')
+    const savedDifficultyFilters = localStorage.getItem(
+      'activeDifficultyFilters'
+    )
+
+    if (savedLearningPath) {
+      setActiveLearningPathFilter(savedLearningPath)
+    }
+
+    if (savedDifficultyFilters) {
+      setActiveDifficultyFilters(JSON.parse(savedDifficultyFilters))
+    }
+  }, [])
+
+  useEffect(() => {
+    // Guardar valores en localStorage
+    localStorage.setItem('activeLearningPathFilter', activeLearningPathFilter)
+    localStorage.setItem(
+      'activeDifficultyFilters',
+      JSON.stringify(activeDifficultyFilters)
+    )
+  }, [activeLearningPathFilter, activeDifficultyFilters])
 
   const searchValue = watch('search')?.toLowerCase() || ''
 

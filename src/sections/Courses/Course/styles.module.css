@@ -19,8 +19,9 @@
 }
 
 .courseSection__header {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 24px;
   padding-bottom: 18px;
   align-items: center;
