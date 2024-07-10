@@ -4,6 +4,7 @@ import Navbar from '@/components/UI/Navbar/Navbar'
 import './globals.css'
 import Footer from '@/components/UI/Footer/Footer'
 import SessionProviderWrapper from '@/SessionProviderWrapper'
+import { UserCoursesProvider } from '@/components/Courses/UserCoursesContext'
 
 const inter = Roboto({
   weight: ['100', '300', '400', '700', '900'],
@@ -24,9 +25,11 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <SessionProviderWrapper>
-          <Navbar />
-          {children}
-          <Footer />
+          <UserCoursesProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </UserCoursesProvider>
         </SessionProviderWrapper>
       </body>
     </html>

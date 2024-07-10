@@ -85,6 +85,14 @@ export default function CourseContent() {
     )
   }
 
+  if (!courseData.content) {
+    return (
+      <section className={styles.courseSection}>
+        <p>El contenido del curso no está disponible en este momento.</p>
+      </section>
+    )
+  }
+
   return (
     <section className={styles.courseSection}>
       <h1 className={styles.courseSection__title}>{courseData.title}</h1>

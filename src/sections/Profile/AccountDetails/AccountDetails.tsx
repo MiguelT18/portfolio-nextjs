@@ -1,136 +1,68 @@
 'use client'
 
-import Image from 'next/image'
+import { UserCoursesContext } from '@/components/Courses/UserCoursesContext'
 import styles from './styles.module.css'
+import React, { useContext } from 'react'
 import useRequireAuth from '@/hooks/useRequireAuth'
-import DefaultAvatar from '@/images/user/panda.png'
-import ContentLoader from 'react-content-loader'
-import React, { useEffect, useRef, useState } from 'react'
+import SavedCourseCard from '@/components/Courses/SavedCourseCard/SavedCourseCard'
 
 export default function AccountDetails() {
+  const { courses, removeCourse } = useContext(UserCoursesContext)
   const { session, status } = useRequireAuth()
 
-  const [editDescription, setEditDescription] = useState(false)
-  const [description, setDescription] = useState(
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab aut cumque mollitia asperiores quo voluptatibus vero, dolorum, blanditiis rerum ex non eveniet quidem. Nam dolorum maxime unde reprehenderit, harum enim.'
-  )
-
-  const textareaRef = useRef<HTMLTextAreaElement>(null)
-  const mirrorRef = useRef<HTMLTextAreaElement>(null)
-
-  const handleEditDescription = () => {
-    setEditDescription(true)
+  if (status === 'loading') {
+    return (
+      <section className={styles.courseSection}>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='60px'
+          height='60px'
+          viewBox='0 0 24 24'
+        >
+          <path
+            fill='currentColor'
+            d='M12 2A10 10 0 1 0 22 12A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8A8 8 0 0 1 12 20Z'
+            opacity='0.5'
+          />
+          <path
+            fill='currentColor'
+            d='M20 12h2A10 10 0 0 0 12 2V4A8 8 0 0 1 20 12Z'
+          >
+            <animateTransform
+              attributeName='transform'
+              dur='1s'
+              from='0 12 12'
+              repeatCount='indefinite'
+              to='360 12 12'
+              type='rotate'
+            />
+          </path>
+        </svg>
+      </section>
+    )
   }
 
-  const handleSaveDescription = () => {
-    setEditDescription(false)
+  if (!session) {
+    return null
   }
-
-  const handleChangeDescription = (
-    event: React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
-    setDescription(event.target.value)
-  }
-
-  const adjustTextareaHeight = () => {
-    if (textareaRef.current && mirrorRef.current) {
-      const mirroredEle = mirrorRef.current
-      mirroredEle.textContent = textareaRef.current.value
-      const newHeight = mirroredEle.scrollHeight
-      textareaRef.current.style.height = `${newHeight}px`
-    }
-  }
-
-  useEffect(() => {
-    adjustTextareaHeight()
-
-    document.body.style.overflow = editDescription ? 'hidden' : 'auto'
-  }, [description, editDescription])
 
   return (
-    <section className={styles.sectionContainer}>
-      <article className={styles.userInfo}>
-        {status !== 'authenticated' ? (
-          <ContentLoader
-            uniqueKey='avatar-loader'
-            speed={2}
-            width={'100%'}
-            height={'100%'}
-            viewBox='0 0 476 124'
-            backgroundColor='#1d2939'
-            foregroundColor='#535b6b'
-          >
-            <circle cx='75' cy='60' r='60' />
-          </ContentLoader>
-        ) : (
-          <Image
-            src={DefaultAvatar}
-            alt={session?.user?.name || 'Avatar'}
-            width={150}
-            height={150}
-            className={styles.userInfo__avatar}
-          />
-        )}
+    <section>
+      <h1 className={styles.profileSectionTitle}>Tus cursos añadidos</h1>
 
-        <div className={styles.userInfo__container}>
-          {status !== 'authenticated' ? (
-            <ContentLoader
-              uniqueKey='account-loader'
-              speed={1}
-              width={'100%'}
-              height={'100%'}
-              viewBox='0 0 476 124'
-              backgroundColor='#1d2939'
-              foregroundColor='#535b6b'
-            >
-              <rect x='1' y='2' rx='3' ry='3' width='330' height='21' />
-              <rect x='1' y='34' rx='3' ry='3' width='52' height='12' />
-              <rect x='0' y='56' rx='3' ry='3' width='410' height='6' />
-              <rect x='0' y='72' rx='3' ry='3' width='380' height='6' />
-              <rect x='0' y='88' rx='3' ry='3' width='178' height='6' />
-            </ContentLoader>
-          ) : (
-            <div className={styles.userInfo__details}>
-              <h1>Hola {session?.user?.name} 👋</h1>
-              <h2>Sobre mí</h2>
-              <div>
-                {editDescription ? (
-                  <div className={styles.textareaContainer}>
-                    <textarea
-                      ref={textareaRef}
-                      className={styles.textarea}
-                      value={description}
-                      onChange={handleChangeDescription}
-                    ></textarea>
-                    <textarea
-                      ref={mirrorRef}
-                      className={styles.mirror}
-                      readOnly
-                    ></textarea>
-
-                    <button
-                      className={styles.buttonDescription}
-                      onClick={handleSaveDescription}
-                    >
-                      Guardar 💾
-                    </button>
-                  </div>
-                ) : (
-                  <>
-                    <p>{description}</p>
-                    <button
-                      className={styles.buttonDescription}
-                      onClick={handleEditDescription}
-                    >
-                      Editar ✏️
-                    </button>
-                  </>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
-      </article>
+      <ul className={styles.savedCoursesContainer}>
+        {courses.map((course, index) => (
+          <li key={index}>
+            <SavedCourseCard
+              id={course.id}
+              category={course.category}
+              title={course.title}
+              description={course.description}
+              removeCourse={removeCourse}
+            />
+          </li>
+        ))}
+      </ul>
     </section>
   )
 }

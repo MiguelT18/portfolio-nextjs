@@ -22,10 +22,13 @@ interface Course {
   title: string
   description: string
   image: StaticImageData
-  bg_color: string
-  url: string
+  bgColor?: Properties<string | number, string & {}>
+  path?: string
+  bg_color?: string
+  url?: string
   difficult: string
-  content: {
+  category: string
+  content?: {
     introduction: string
     duration: string
     courseInfo: {
@@ -40,17 +43,6 @@ interface CourseCategory {
 }
 export type CoursesData = {
   [index: number]: CourseCategory[]
-}
-export interface CourseCardProps {
-  title: string
-  description: string
-  image: StaticImageData
-  bgColor: Properties<string | number, string & {}>
-  url?: string
-  id?: string
-  url: string
-  path: string
-  difficult?: string
 }
 export interface ChildrenProp {
   children: ReactNode

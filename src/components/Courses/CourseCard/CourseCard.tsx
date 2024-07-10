@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Icon } from '@iconify/react'
 import styles from './styles.module.css'
 import Image from 'next/image'
-import type { CourseCardProps } from '@/types/type'
+import type { Course } from '@/types/type'
 import SecondaryButton from '@/components/UI/Buttons/SecondaryButton'
 import PrimarAnchor from '@/components/UI/Buttons/PrimaryAnchor'
+import { UserCoursesContext } from '../UserCoursesContext'
 
-export default function CourseCard(props: CourseCardProps) {
+export default function CourseCard(props: Course) {
   const { title, description, image, bgColor, path, difficult } = props
+  const { addCourse } = useContext(UserCoursesContext)
 
   const getDifficultyColor = () => {
     switch (difficult) {
@@ -23,6 +25,10 @@ export default function CourseCard(props: CourseCardProps) {
   }
 
   const difficultyColor = getDifficultyColor()
+
+  const handleAddCourse = () => {
+    addCourse(props)
+  }
 
   return (
     <div className={styles.courseCard__container}>
@@ -56,7 +62,7 @@ export default function CourseCard(props: CourseCardProps) {
         </div>
 
         <div className={styles.buttonsContainer}>
-          <SecondaryButton color='#02cf5f'>
+          <SecondaryButton color='#02cf5f' onClick={handleAddCourse}>
             <span>Añadir</span>
             <Icon icon='line-md:plus-circle-twotone' width={25} height={25} />
           </SecondaryButton>
