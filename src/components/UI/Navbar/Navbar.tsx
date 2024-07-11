@@ -21,17 +21,30 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY
-
       setIsNavbarHidden(currentScrollPos > prevScrollPos)
       setPrevScrollPost(currentScrollPos)
     }
 
+    const handleResize = () => {
+      if (window.innerWidth > 768 && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
     window.addEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleResize)
+
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
     }
-  }, [prevScrollPos])
+  }, [prevScrollPos, isMobileMenuOpen])
 
   const handleToggleItemsProfile = () => {
     setIsProfileMenuOpen(!isProfileMenuOpen)
@@ -39,12 +52,6 @@ export default function Navbar() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
-
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'auto'
-    } else {
-      document.body.style.overflow = 'hidden'
-    }
   }
 
   const navbarStyle = {
@@ -53,7 +60,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={styles.navbar} style={navbarStyle}>
+    <nav className={styles.navbar} style={!isMobileMenuOpen ? navbarStyle : {}}>
       <Link href='/'>
         <Image
           priority={true}
