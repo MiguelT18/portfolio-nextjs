@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Icon } from '@iconify/react'
 import styles from './styles.module.css'
 import Image from 'next/image'
@@ -8,8 +8,17 @@ import PrimarAnchor from '@/components/UI/Buttons/PrimaryAnchor'
 import { UserCoursesContext } from '../UserCoursesContext'
 
 export default function CourseCard(props: Course) {
-  const { title, description, image, bgColor, path, difficult, url } = props
-  const { addCourse } = useContext(UserCoursesContext)
+  const { title, id, url, description, image, bgColor, path, difficult } = props
+  const { addCourse, removeCourse, courses } = useContext(UserCoursesContext)
+
+  const [isAdded, setIsAdded] = useState(false)
+
+  useEffect(() => {
+    const courseExists = courses.some(
+      (course) => course.id === id && course.url === url
+    )
+    setIsAdded(courseExists)
+  }, [courses, id, url])
 
   const getDifficultyColor = () => {
     switch (difficult) {
@@ -27,10 +36,13 @@ export default function CourseCard(props: Course) {
   const difficultyColor = getDifficultyColor()
 
   const handleAddCourse = () => {
-    if (!url) {
-      console.error('La URL del curso no está definida.', props)
-    }
     addCourse(props)
+    setIsAdded(true)
+  }
+
+  const handleRemoveCourse = () => {
+    removeCourse(id, url)
+    setIsAdded(false)
   }
 
   return (
@@ -40,6 +52,7 @@ export default function CourseCard(props: Course) {
         className={styles.courseCard__header}
       >
         <Image
+          priority={false}
           style={{ backgroundColor: bgColor }}
           src={image}
           alt='Coding'
@@ -65,15 +78,22 @@ export default function CourseCard(props: Course) {
         </div>
 
         <div className={styles.buttonsContainer}>
-          <SecondaryButton color='#02cf5f' onClick={handleAddCourse}>
-            <span>Añadir</span>
-            <Icon icon='line-md:plus-circle-twotone' width={25} height={25} />
-          </SecondaryButton>
-
           <PrimarAnchor href={`/courses/${path}`}>
             <span>Ver más</span>
             <Icon icon='ic:round-navigate-next' width={30} height={30} />
           </PrimarAnchor>
+
+          {!isAdded ? (
+            <SecondaryButton color='#02cf5f' onClick={handleAddCourse}>
+              <span>Añadir</span>
+              <Icon icon='line-md:plus-circle-twotone' width={25} height={25} />
+            </SecondaryButton>
+          ) : (
+            <SecondaryButton color='#fff' onClick={handleRemoveCourse}>
+              <span>Borrar</span>
+              <Icon icon='ph:trash-duotone' width={25} height={25} />
+            </SecondaryButton>
+          )}
         </div>
       </div>
     </div>

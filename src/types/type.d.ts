@@ -40,6 +40,17 @@ interface Course {
 interface CourseCategory {
   [key: string]: Course[]
 }
+
+export interface SavedCourseCardProps {
+  id: string
+  url: string
+  title: string
+  description: string
+  image: StaticImageData
+  difficult: string
+  removeCourse: (id: string, url: string) => void
+}
+
 export type CoursesData = {
   [index: number]: CourseCategory[]
 }

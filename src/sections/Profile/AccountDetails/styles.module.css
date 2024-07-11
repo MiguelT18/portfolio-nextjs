@@ -21,9 +21,23 @@
 .savedCoursesContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
 }
 
 .savedCoursesContainer li {
   list-style: none;
+}
+
+.noCoursesMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.noCoursesMessage > span {
+  font-size: var(--font-size-sm);
 }

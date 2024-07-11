@@ -5,6 +5,7 @@ import styles from './styles.module.css'
 import React, { useContext } from 'react'
 import useRequireAuth from '@/hooks/useRequireAuth'
 import SavedCourseCard from '@/components/Courses/SavedCourseCard/SavedCourseCard'
+import { Icon } from '@iconify/react'
 
 export default function AccountDetails() {
   const { courses, removeCourse } = useContext(UserCoursesContext)
@@ -51,17 +52,31 @@ export default function AccountDetails() {
       <h1 className={styles.profileSectionTitle}>Tus cursos añadidos</h1>
 
       <ul className={styles.savedCoursesContainer}>
-        {courses.map((course, index) => (
-          <li key={index}>
-            <SavedCourseCard
-              id={course.id}
-              url={course.url}
-              title={course.title}
-              description={course.description}
-              removeCourse={removeCourse}
+        {courses.length > 0 ? (
+          courses.map((course, index) => (
+            <li key={index}>
+              <SavedCourseCard
+                difficult={course.difficult}
+                image={course.image}
+                id={course.id}
+                url={course.url}
+                title={course.title}
+                description={course.description}
+                removeCourse={removeCourse}
+              />
+            </li>
+          ))
+        ) : (
+          <div className={styles.noCoursesMessage}>
+            <Icon
+              icon='ph:empty-duotone'
+              width={60}
+              height={60}
+              color='#02cf5f'
             />
-          </li>
-        ))}
+            <span>No tienes cursos añadidos.</span>
+          </div>
+        )}
       </ul>
     </section>
   )

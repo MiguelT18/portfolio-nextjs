@@ -1,20 +1,41 @@
 .savedCourseCard {
+  font-size: var(--font-size-sm);
   max-width: 300px;
-  background-color: var(--color-quaternary);
-  padding: 14px;
+  background: var(--gradient-color-primary);
+  border: 2px solid var(--color-white);
+  padding: 18px;
   border-radius: 12px;
   text-align: center;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.savedCourseCard h3 {
-  font-size: var(--font-size-md);
-  margin-bottom: 14px;
+.savedCourseCard__buttonsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
-.savedCourseCard p {
-  margin-bottom: 24px;
+.savedCourseCard > h3 {
+  font-size: var(--font-size-md);
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+
+.savedCourseCard__img {
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+
+.difficultContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.savedCourseCard > p {
+  margin-bottom: 8px;
+  font-weight: 300;
 }
