@@ -61,6 +61,10 @@ export default function Login() {
     signIn('google', { callbackUrl: '/' })
   }
 
+  const handleSignInWithGithub = () => {
+    signIn('github', { callbackUrl: '/' })
+  }
+
   return (
     <main>
       <div className={styles.formContainer}>
@@ -159,7 +163,7 @@ export default function Login() {
               Google
               <Icon icon='logos:google-icon' width={24} height={24} />
             </SecondaryButton>
-            <SecondaryButton onClick={handleSignInWithGoogle}>
+            <SecondaryButton onClick={handleSignInWithGithub}>
               Github
               <Icon icon='bytesize:github' width={24} height={24} />
             </SecondaryButton>

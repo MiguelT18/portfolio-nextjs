@@ -147,8 +147,8 @@ export default function Navbar() {
             <ContentLoader
               uniqueKey='user-avatar-loader'
               speed={1}
-              width={28}
-              height={28}
+              width={35}
+              height={35}
               viewBox='0 0 30 30'
               backgroundColor='#1d2939'
               foregroundColor='#535b6b'
@@ -160,8 +160,8 @@ export default function Navbar() {
               className={styles.userAvatar}
               src={session?.user?.image || DefaultAvatar}
               alt='User profile picture'
-              width={28}
-              height={28}
+              width={35}
+              height={35}
               priority={false}
             />
           ) : (

@@ -111,7 +111,7 @@
   align-items: center;
   justify-content: space-around;
   /* padding: 16px 0; */
-  background-color: #0000007f;
+  background-color: #0000008f;
   border-bottom: 2px solid var(--color-primary);
   backdrop-filter: blur(8px);
 }
