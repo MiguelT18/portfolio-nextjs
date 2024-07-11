@@ -10,7 +10,7 @@ interface UserCoursesProviderProps {
 interface UserCoursesContextProps {
   courses: Course[]
   addCourse: (course: Course) => void
-  removeCourse: (id: string, category: string) => void
+  removeCourse: (id: string, url: string) => void
 }
 
 const defaultValue: UserCoursesContextProps = {
@@ -41,11 +41,9 @@ export const UserCoursesProvider = ({ children }: UserCoursesProviderProps) => {
     setCourses((prevCourses) => [...prevCourses, course])
   }
 
-  const removeCourse = (id: string, category: string) => {
+  const removeCourse = (id: string, url: string) => {
     setCourses((prevCourses) =>
-      prevCourses.filter(
-        (course) => !(course.id === id && course.category === category)
-      )
+      prevCourses.filter((course) => !(course.id === id && course.url === url))
     )
   }
 

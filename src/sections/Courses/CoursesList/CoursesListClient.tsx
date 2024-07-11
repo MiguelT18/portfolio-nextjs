@@ -220,6 +220,7 @@ export default function CoursesListClient({ courses }: CourseCategory) {
         {coursesToDisplay.length > 0 ? (
           coursesToDisplay.map((course, index) => (
             <CourseCard
+              url={course.url}
               key={index}
               bgColor={course.bg_color}
               description={course.description}

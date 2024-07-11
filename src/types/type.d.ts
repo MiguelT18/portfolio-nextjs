@@ -25,9 +25,8 @@ interface Course {
   bgColor?: Properties<string | number, string & {}>
   path?: string
   bg_color?: string
-  url?: string
+  url: string
   difficult: string
-  category: string
   content?: {
     introduction: string
     duration: string

@@ -55,7 +55,7 @@ export default function AccountDetails() {
           <li key={index}>
             <SavedCourseCard
               id={course.id}
-              category={course.category}
+              url={course.url}
               title={course.title}
               description={course.description}
               removeCourse={removeCourse}

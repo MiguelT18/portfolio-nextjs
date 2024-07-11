@@ -34,7 +34,7 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('resize', handleResize)
 
-    if (isMobileMenuOpen) {
+    if (isMobileMenuOpen && window.innerWidth < 768) {
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = 'auto'

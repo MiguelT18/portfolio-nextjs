@@ -4,17 +4,17 @@ import SecondaryButton from '@/components/UI/Buttons/SecondaryButton'
 
 interface SavedCourseCardProps {
   id: string
-  category: string
+  url: string
   title: string
   description: string
-  removeCourse: (id: string, category: string) => void
+  removeCourse: (id: string, url: string) => void
 }
 
 export default function SavedCourseCard(props: SavedCourseCardProps) {
-  const { id, category, title, description, removeCourse } = props
+  const { id, url, title, description, removeCourse } = props
 
   const handleRemove = () => {
-    removeCourse(id, category)
+    removeCourse(id, url)
   }
 
   return (

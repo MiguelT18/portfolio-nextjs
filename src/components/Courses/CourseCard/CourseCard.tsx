@@ -8,7 +8,7 @@ import PrimarAnchor from '@/components/UI/Buttons/PrimaryAnchor'
 import { UserCoursesContext } from '../UserCoursesContext'
 
 export default function CourseCard(props: Course) {
-  const { title, description, image, bgColor, path, difficult } = props
+  const { title, description, image, bgColor, path, difficult, url } = props
   const { addCourse } = useContext(UserCoursesContext)
 
   const getDifficultyColor = () => {
@@ -27,6 +27,9 @@ export default function CourseCard(props: Course) {
   const difficultyColor = getDifficultyColor()
 
   const handleAddCourse = () => {
+    if (!url) {
+      console.error('La URL del curso no está definida.', props)
+    }
     addCourse(props)
   }
 
