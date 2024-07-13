@@ -11,12 +11,14 @@ interface UserCoursesContextProps {
   courses: Course[]
   addCourse: (course: Course) => void
   removeCourse: (id: string, url: string) => void
+  isCourseAdded: (id: string, url: string) => boolean
 }
 
 const defaultValue: UserCoursesContextProps = {
   courses: [],
   addCourse: () => {},
-  removeCourse: () => {}
+  removeCourse: () => {},
+  isCourseAdded: () => false
 }
 
 export const UserCoursesContext =
@@ -47,8 +49,14 @@ export const UserCoursesProvider = ({ children }: UserCoursesProviderProps) => {
     )
   }
 
+  const isCourseAdded = (id: string, url: string) => {
+    return courses.some((course) => course.id === id && course.url === url)
+  }
+
   return (
-    <UserCoursesContext.Provider value={{ courses, addCourse, removeCourse }}>
+    <UserCoursesContext.Provider
+      value={{ courses, addCourse, removeCourse, isCourseAdded }}
+    >
       {children}
     </UserCoursesContext.Provider>
   )

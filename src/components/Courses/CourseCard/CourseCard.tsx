@@ -9,16 +9,8 @@ import { UserCoursesContext } from '../UserCoursesContext'
 
 export default function CourseCard(props: Course) {
   const { title, id, url, description, image, bgColor, path, difficult } = props
-  const { addCourse, removeCourse, courses } = useContext(UserCoursesContext)
-
-  const [isAdded, setIsAdded] = useState(false)
-
-  useEffect(() => {
-    const courseExists = courses.some(
-      (course) => course.id === id && course.url === url
-    )
-    setIsAdded(courseExists)
-  }, [courses, id, url])
+  const { addCourse, removeCourse, isCourseAdded } =
+    useContext(UserCoursesContext)
 
   const getDifficultyColor = () => {
     switch (difficult) {
@@ -37,12 +29,10 @@ export default function CourseCard(props: Course) {
 
   const handleAddCourse = () => {
     addCourse(props)
-    setIsAdded(true)
   }
 
   const handleRemoveCourse = () => {
     removeCourse(id, url)
-    setIsAdded(false)
   }
 
   return (
@@ -83,7 +73,7 @@ export default function CourseCard(props: Course) {
             <Icon icon='ic:round-navigate-next' width={30} height={30} />
           </PrimarAnchor>
 
-          {!isAdded ? (
+          {!isCourseAdded(id, url) ? (
             <SecondaryButton color='#02cf5f' onClick={handleAddCourse}>
               <span>Añadir</span>
               <Icon icon='line-md:plus-circle-twotone' width={25} height={25} />

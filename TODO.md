@@ -35,3 +35,4 @@
 1. ✅ **Hero - Social Media Icons**: Import new data to `loadData.ts` from `icons.json` -> `Hero.tsx`
 2. ✅ **Skills**: Import new data to `loadData.ts` from `skills.json` -> `Skills.tsx`
 3. ✅ **Portfolio**: Import new data to `loadData.ts` from `projects.json` -> `Portfolio.tsx`
+4. ❌ **Google SignIn Bug**: Fix the bug that occurs when the user tries to sign in with Google.

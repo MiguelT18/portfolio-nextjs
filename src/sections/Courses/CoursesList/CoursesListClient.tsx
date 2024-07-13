@@ -1,11 +1,12 @@
 'use client'
 
 import CourseCard from '@/components/Courses/CourseCard/CourseCard'
-import { Course, CourseCategory } from '@/types/type'
 import styles from './styles.module.css'
 import { useForm } from 'react-hook-form'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import { UserCoursesContext } from '@/components/Courses/UserCoursesContext'
+import type { Course, CourseCategory } from '@/types/type'
 
 export default function CoursesListClient({ courses }: CourseCategory) {
   const { register, watch, setValue } = useForm()
@@ -15,6 +16,10 @@ export default function CoursesListClient({ courses }: CourseCategory) {
   const [activeDifficultyFilters, setActiveDifficultyFilters] = useState<
     string[]
   >([])
+  const [activeAddedCoursesFilter, setActiveAddedCoursesFilter] =
+    useState<string>('')
+
+  const { courses: Course, isCourseAdded } = useContext(UserCoursesContext)
 
   useEffect(() => {
     // Cargar valores desde localStorage
@@ -22,6 +27,11 @@ export default function CoursesListClient({ courses }: CourseCategory) {
     const savedDifficultyFilters = localStorage.getItem(
       'activeDifficultyFilters'
     )
+    const savedAddedCoursesFilter = localStorage.getItem('addedCourses')
+
+    if (savedAddedCoursesFilter) {
+      setActiveAddedCoursesFilter(savedAddedCoursesFilter)
+    }
 
     if (savedLearningPath) {
       setActiveLearningPathFilter(savedLearningPath)
@@ -34,12 +44,17 @@ export default function CoursesListClient({ courses }: CourseCategory) {
 
   useEffect(() => {
     // Guardar valores en localStorage
+    localStorage.setItem('addedCourses', activeAddedCoursesFilter)
     localStorage.setItem('activeLearningPathFilter', activeLearningPathFilter)
     localStorage.setItem(
       'activeDifficultyFilters',
       JSON.stringify(activeDifficultyFilters)
     )
-  }, [activeLearningPathFilter, activeDifficultyFilters])
+  }, [
+    activeLearningPathFilter,
+    activeDifficultyFilters,
+    activeAddedCoursesFilter
+  ])
 
   const searchValue = watch('search')?.toLowerCase() || ''
 
@@ -58,7 +73,19 @@ export default function CoursesListClient({ courses }: CourseCategory) {
           return [...prevFilters, id]
         }
       })
+    } else if (filterType === 'addedCourses') {
+      setActiveAddedCoursesFilter(id === activeAddedCoursesFilter ? '' : id)
     }
+  }
+
+  // Filters
+  const filterByAddedCourses = (course: Course) => {
+    if (activeAddedCoursesFilter === '') return true
+    if (activeAddedCoursesFilter === 'added')
+      return isCourseAdded(course.id, course.url)
+    if (activeAddedCoursesFilter === 'nonAdded')
+      return !isCourseAdded(course.id, course.url)
+    return true
   }
 
   const filterByLearningPath = (course: Course) => {
@@ -75,6 +102,7 @@ export default function CoursesListClient({ courses }: CourseCategory) {
     (course) =>
       (course.title.toLowerCase().includes(searchValue) ||
         course.description.toLowerCase().includes(searchValue)) &&
+      filterByAddedCourses(course) &&
       filterByLearningPath(course) &&
       filterByDifficulty(course)
   )
@@ -210,6 +238,33 @@ export default function CoursesListClient({ courses }: CourseCategory) {
                   type='checkbox'
                 />
                 <span>Difícil</span>
+              </label>
+            </div>
+          </div>
+
+          <div className={styles.addedCoursesFilter}>
+            <h3>De tu Biblioteca</h3>
+
+            <div>
+              <label>
+                <input
+                  {...register('added')}
+                  onChange={() => handleCheckboxChange('addedCourses', 'added')}
+                  checked={activeAddedCoursesFilter === 'added'}
+                  type='checkbox'
+                />
+                <span>Añadidos</span>
+              </label>
+              <label>
+                <input
+                  {...register('nonAdded')}
+                  onChange={() =>
+                    handleCheckboxChange('addedCourses', 'nonAdded')
+                  }
+                  checked={activeAddedCoursesFilter === 'nonAdded'}
+                  type='checkbox'
+                />
+                <span>No añadidos</span>
               </label>
             </div>
           </div>

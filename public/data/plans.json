@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "type": "monthly",
+    "name": "Basic Plan",
+    "price": 1000
+  },
+  {
+    "id": 2,
+    "type": "semi-annually",
+    "name": "Pro Plan",
+    "price": 5000
+  },
+  {
+    "id": 3,
+    "type": "annually",
+    "name": "Premium Plan",
+    "price": 8000
+  }
+]

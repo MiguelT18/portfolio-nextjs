@@ -55,20 +55,23 @@
 }
 
 .learningPathFilter h3,
-.difficultContainer h3 {
+.difficultContainer h3,
+.addedCoursesFilter h3 {
   font-size: var(--font-size-sm);
   color: var(--color-primary);
 }
 
 .learningPathFilter div,
-.difficultContainer div {
+.difficultContainer div,
+.addedCoursesFilter div {
   display: flex;
   flex-direction: column;
   margin-top: 6px;
 }
 
 .learningPathFilter div label,
-.difficultContainer div label {
+.difficultContainer div label,
+.addedCoursesFilter div label {
   display: block;
   width: fit-content;
   font-size: var(--font-size-sm);
@@ -76,6 +79,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
+  cursor: pointer;
 }
 
 .SearchInput input:hover {
@@ -111,7 +115,7 @@
 
 @media not all and (min-width: 768px) {
   .FilterContainer {
-    gap: 12px;
+    gap: 18px;
   }
 
   .CoursesFormText {

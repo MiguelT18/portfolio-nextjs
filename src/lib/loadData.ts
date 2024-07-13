@@ -5,6 +5,13 @@ import path from 'path'
 
 const dataDirectory = path.join(process.cwd(), '/public/data')
 
+// 👇 Get plans data 👇
+export async function getPlansData() {
+  const filePath = path.join(dataDirectory, 'plans.json')
+  const fileContents = fs.readFileSync(filePath, 'utf8')
+  return fileContents
+}
+
 // 👇 Get courses data 👇
 export async function getCoursesData() {
   const filePath = path.join(dataDirectory, 'courses.json')

@@ -8,11 +8,16 @@ import CourseInfoCard from '@/components/Courses/CourseInfoCard/CourseInfoCard'
 import SecondaryButton from '@/components/UI/Buttons/SecondaryButton'
 import { getCoursesData } from '@/lib/loadData'
 import type { Course, CourseCategory } from '@/types/type'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import ContactForm from '@/components/UI/ContactForm/ContactForm'
+import { UserCoursesContext } from '@/components/Courses/UserCoursesContext'
 
-export default function CourseContent() {
+export default function CourseContent(props: Course) {
+  const { id, url } = props
+  const { addCourse, removeCourse, isCourseAdded } =
+    useContext(UserCoursesContext)
+
   const { category, courseId } = useParams() as {
     category: string | string[]
     courseId: string | string[]
@@ -93,6 +98,14 @@ export default function CourseContent() {
     )
   }
 
+  const handleAddCourse = () => {
+    addCourse(props)
+  }
+
+  const handleRemoveCourse = () => {
+    removeCourse(id, url)
+  }
+
   return (
     <section className={styles.courseSection}>
       <h1 className={styles.courseSection__title}>{courseData.title}</h1>
@@ -130,15 +143,27 @@ export default function CourseContent() {
               >
                 Ver completo
               </PrimaryAnchor>
-              <SecondaryButton>
-                <Icon
-                  icon='line-md:plus-circle-twotone'
-                  color='#fff'
-                  width={25}
-                  height={25}
-                />
-                Añadir
-              </SecondaryButton>
+              {!isCourseAdded(id, url) ? (
+                <SecondaryButton onClick={handleAddCourse}>
+                  <Icon
+                    icon='line-md:plus-circle-twotone'
+                    color='#fff'
+                    width={25}
+                    height={25}
+                  />
+                  Añadir
+                </SecondaryButton>
+              ) : (
+                <SecondaryButton onClick={handleRemoveCourse}>
+                  <Icon
+                    icon='ph:trash-duotone'
+                    color='#fff'
+                    width={25}
+                    height={25}
+                  />
+                  Borrar
+                </SecondaryButton>
+              )}
             </div>
           </div>
         </article>

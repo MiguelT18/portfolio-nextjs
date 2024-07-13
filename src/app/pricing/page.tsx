@@ -1,17 +1,13 @@
-import React from 'react'
+import { getPlansData } from '@/lib/loadData'
+import PlansCardClient from '../../components/Pricing/PlansCardClient/PlansCardClient'
 
-export default function SuscriptionPage() {
+export default async function SuscriptionPage() {
+  const resJSON = await getPlansData()
+  const plans = JSON.parse(resJSON)
+
   return (
     <main>
-      <div>
-        <h1>Hello World!</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, nisi
-          molestias porro nobis perspiciatis eius voluptatem ipsum optio ut
-          accusamus minus ducimus eligendi sit officia quidem sint voluptate
-          dolore incidunt!
-        </p>
-      </div>
+      <PlansCardClient plans={plans} />
     </main>
   )
 }

@@ -25,7 +25,14 @@ export default async function CoursePage({ params }: ParamsProps) {
     if (course) {
       return (
         <main>
-          <Course />
+          <Course
+            id={course.id}
+            url={course.url}
+            title={course.title}
+            description={course.description}
+            image={course.image}
+            difficult={course.difficult}
+          />
         </main>
       )
     }
