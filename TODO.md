@@ -15,7 +15,7 @@
 #### Accessibility (for UX improvement)
 
 1. ✅ **Search Input**: Add a search input for the courses section.
-2. ✅ **Course Route Component**: Make sure 404 page is displayed when the user tries to access a non-existing course route.
+2. ✅ **Course Route Component**: Make sure 404 page is displayed when the user tries to access a non-existing course route...
 
 #### Interface (for UI improvement)
 

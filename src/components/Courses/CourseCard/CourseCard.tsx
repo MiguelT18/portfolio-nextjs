@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { Icon } from '@iconify/react'
 import styles from './styles.module.css'
 import Image from 'next/image'
@@ -42,7 +42,7 @@ export default function CourseCard(props: Course) {
         className={styles.courseCard__header}
       >
         <Image
-          priority={false}
+          priority={true}
           style={{ backgroundColor: bgColor }}
           src={image}
           alt='Coding'

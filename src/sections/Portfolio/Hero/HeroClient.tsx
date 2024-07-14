@@ -28,6 +28,12 @@ export default function HeroClient({ projects }: HeroClientProps) {
 
         <form className={styles.portfolio__hero__formSearch}>
           <h2>Buscas algún proyecto en particular?</h2>
+          <p>
+            Aquí encontrarás todos los proyectos en los que tuve la oportunidad
+            de trabajar para diferentes empresas, todos estos proyectos reflejan
+            mi experiencia en este campo laboral, si buscas algún proyecto en
+            particular puedes buscarlo a través de la barra de búsqueda.
+          </p>
           <input {...register('search')} type='text' placeholder='Buscar...' />
         </form>
       </div>

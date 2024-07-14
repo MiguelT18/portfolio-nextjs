@@ -19,12 +19,12 @@
 }
 
 .savedCoursesContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 48px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--items-gap);
+  margin-top: 32px;
+  margin-bottom: 56px;
 }
 
 .savedCoursesContainer li {
@@ -32,10 +32,10 @@
 }
 
 .noCoursesMessage {
+  padding: 4px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
 }
 
 .noCoursesMessage > span {

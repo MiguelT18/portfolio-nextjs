@@ -24,6 +24,10 @@
   /* responsive design */
   --max-md: 768px;
   --min-md: 769px;
+
+  /* global sizes */
+  --rounded-lg: 18px;
+  --items-gap: 32px;
 }
 
 body {
@@ -44,8 +48,6 @@ main {
   min-height: 78vh;
   max-width: 70%;
   margin: 0 auto;
-  display: grid;
-  place-content: center;
 }
 
 a {

@@ -1,7 +1,8 @@
 .CoursesContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 48px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: start;
+  gap: var(--items-gap);
   margin-top: 32px;
   margin-bottom: 56px;
 }

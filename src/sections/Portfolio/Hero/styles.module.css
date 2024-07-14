@@ -1,6 +1,4 @@
 .portfolio__hero__section {
-  max-width: 90%;
-  margin: 0 auto;
   padding: 20px 0 6rem;
 }
 
@@ -20,6 +18,16 @@
   width: 100%;
 }
 
+.portfolio__hero__formSearch > h2 {
+  font-size: var(--font-size-lg);
+  text-transform: upp;
+}
+
+.portfolio__hero__formSearch > p {
+  font-size: var(--font-size-sm);
+  margin: 8px 0;
+}
+
 .portfolio__hero__formSearch > input {
   width: 100%;
   padding: 10px;
@@ -37,11 +45,11 @@
 }
 
 .portfolio__hero__projects {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 48px;
+  max-width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--items-gap);
 }
 
 @media not all and (min-width: 1024px) {

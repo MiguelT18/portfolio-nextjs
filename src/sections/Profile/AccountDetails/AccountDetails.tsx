@@ -50,11 +50,22 @@ export default function AccountDetails() {
   return (
     <section>
       <h1 className={styles.profileSectionTitle}>Tus cursos añadidos</h1>
+      {courses.length === 0 && (
+        <div className={styles.noCoursesMessage}>
+          <Icon
+            icon='ph:empty-duotone'
+            width={60}
+            height={60}
+            color='#02cf5f'
+          />
+          <span>No tienes cursos añadidos.</span>
+        </div>
+      )}
 
-      <ul className={styles.savedCoursesContainer}>
-        {courses.length > 0 ? (
+      <article className={styles.savedCoursesContainer}>
+        {courses.length > 0 &&
           courses.map((course, index) => (
-            <li key={index}>
+            <div key={index}>
               <SavedCourseCard
                 difficult={course.difficult}
                 image={course.image}
@@ -64,20 +75,9 @@ export default function AccountDetails() {
                 description={course.description}
                 removeCourse={removeCourse}
               />
-            </li>
-          ))
-        ) : (
-          <div className={styles.noCoursesMessage}>
-            <Icon
-              icon='ph:empty-duotone'
-              width={60}
-              height={60}
-              color='#02cf5f'
-            />
-            <span>No tienes cursos añadidos.</span>
-          </div>
-        )}
-      </ul>
+            </div>
+          ))}
+      </article>
     </section>
   )
 }
