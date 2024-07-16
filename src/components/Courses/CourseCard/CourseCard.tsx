@@ -6,6 +6,8 @@ import type { Course } from '@/types/type'
 import SecondaryButton from '@/components/UI/Buttons/SecondaryButton'
 import PrimarAnchor from '@/components/UI/Buttons/PrimaryAnchor'
 import { UserCoursesContext } from '../UserCoursesContext'
+import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 
 export default function CourseCard(props: Course) {
   const { title, id, url, description, image, bgColor, path, difficult } = props

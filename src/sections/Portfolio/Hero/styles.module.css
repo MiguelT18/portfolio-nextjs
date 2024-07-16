@@ -5,6 +5,7 @@
 .portfolio__hero__header {
   display: flex;
   align-items: center;
+  padding-bottom: 32px;
 }
 
 .portfolio__hero__section > div {
