@@ -116,6 +116,12 @@ textarea:focus {
   border-color: var(--color-white);
 }
 
+.notFound-container {
+  min-height: 70vh;
+  display: grid;
+  place-content: center;
+}
+
 .notFound-icon {
   width: 100%;
   margin: 0 auto;
